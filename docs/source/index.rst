@@ -1,7 +1,11 @@
-User's Guide for DOLPHOT's NIRCAM and NIRISS modules
+User's Guide for DOLPHOT NIRCAM and NIRISS modules
 ===================================
 
-**DOLPHOT** is a widely used software package for resolved stellar photometry that is written and maintained by Andrew Dolphin.  The main `DOLPHOT webpage <http://americano.dolphinsim.com/dolphot/>`_ hosts all necessary DOLPHOT files and the DOLPHOT user manuals.  This page provides information and examples for DOLPHOT applied to JWST imaging taken as part of the `Resolved Stellar Populations Early Release Science Program <https://ers-stars.github.io>`_.
+**DOLPHOT** is a widely used software package for resolved stellar photometry that is written and maintained by Andrew Dolphin.  General information about DOLPHOT can be found on its `homepage <http://americano.dolphinsim.com/dolphot/>`_.
+
+This page contains information and examples for applying DOLPHOT to NIRCam and NIRISS images acquired as part of the `JWST Early Release Science Program for Resolved Stellar Populations <https://ers-stars.github.io>`_. (DD-ERS-1334).
+
+If you make use of DOLPHOT in your work please cite (XXX) and (YYY) for the JWST data specifically.
 
 
 
