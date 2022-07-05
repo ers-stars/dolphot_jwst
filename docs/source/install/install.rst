@@ -30,7 +30,7 @@ All DOLPHOT files can be downloaded from the `DOLPHOT homepage <http://americano
 * PSF models specific to each camera and filter
 
 .. note::
-Only PAMs and PSF models for the camera/filter of interest need to be downloaded. 
+ Only PAMs and PSF models for the camera/filter of interest need to be downloaded. 
 
 Makefile
 ------------
