@@ -22,5 +22,4 @@ Contents
 .. toctree::
    :maxdepth: 3
    
-   examples/M92/nircam
-   examples/M92/niriss
+   examples/m92
