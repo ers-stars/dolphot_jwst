@@ -10,12 +10,17 @@
 Requirements
 ------------
 
-Required: DOLPHOT is written in c/c++ and requires a c compiler (e.g., gcc) for installation.
+* C complier (e.g., gcc)
+* PGPLOT (optional) to generate diagnostic plots 
+ * `A workaround <https://github.com/kazuakiyama/homebrew-pgplot>`_) for installing PGPLOT via `Homebrew <https://brew.sh>`_
+* Fortran complier (optional; e.g., g77, gfortan) to link to PGPLOT
 
-Optional: DOLPHOT can generate diagnostic plots (e.g., PSF residuals).  Doing so requires a Fortran compiler (e.g., g77, gfortan) and PGPLOT.  PGPLOT can be obtained from its `homepage <https://sites.astro.caltech.edu/~tjp/pgplot/>`_ or using `Homebrew <https://brew.sh>`_ via this `workaround <https://github.com/kazuakiyama/homebrew-pgplot.`_.
+DOLPHOT can be compiled and run without PGPLOT and Fortan, but it will not be able to generate diagnostic plots.
 
 Downloads
 ------------
+
+All DOLPHOT files can be downloaded from the `DOLPHOT homepage <http://americano.dolphinsim.com/dolphot/>`_.
 
 Makefile
 ------------
