@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'ERS Stars'
-copyright = '2022, Weisz'
+copyright = '2022, Dan Weisz'
 author = 'Weisz et al.'
 
 release = '0.1'
