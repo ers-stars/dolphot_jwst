@@ -1,8 +1,0 @@
-NIRCAM
-=====
-
-.. _requirements:
-
-
-Requirements
-------------
