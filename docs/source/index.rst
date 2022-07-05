@@ -7,11 +7,6 @@ This page contains information and examples for applying DOLPHOT to NIRCam and N
 
 If you make use of DOLPHOT in your work please cite (XXX) and (YYY) for the JWST data specifically.
 
-
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
 .. note::
 
    This project is under active development.
@@ -20,6 +15,7 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 2
 
    installation
    examples/M92
