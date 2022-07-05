@@ -37,18 +37,20 @@ Makefile
 
 The Makefile may require some editing before compiling DOLPHOT.  Here are a few lines to edit
 
-.. code-block::
+.. code-block:: bash
+   
    #export PGHEAD = \"/usr/local/include/cpgplot.h\"
    #export PGPLOT = -L/usr/local/lib -lcpgplot -lpgplot -lpng -L/usr/X11R6/lib -lX11 -L/usr/lib -lgcc
  
  PGPLOT is not linked by default.  To link PGPLOT to DOLPHOT, uncomment these lines and modify the PGPLOT file location as necessary.
  
-.. code-block:: 
+.. code-block:: bash
+   
    #export USEACS=1
 
 Individual camera models are not installed by default.  For example, to install the HST/ACS module, uncomment the above line.
   
-.. code-block::
+.. code-block:: bash
    export CFLAGS+= -DMAXNIMG=100
    export CFLAGS+= -DMAXNSTARS=2000000
 
