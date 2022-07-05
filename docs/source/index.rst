@@ -15,13 +15,13 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Installation
 
    install/install
    
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: M92
    
    m92/nircam
