@@ -42,7 +42,7 @@ The Makefile may require some editing before compiling DOLPHOT.  Here are a few 
    #export PGHEAD = \"/usr/local/include/cpgplot.h\"
    #export PGPLOT = -L/usr/local/lib -lcpgplot -lpgplot -lpng -L/usr/X11R6/lib -lX11 -L/usr/lib -lgcc
  
- PGPLOT is not linked by default.  To link PGPLOT to DOLPHOT, uncomment these lines and modify the PGPLOT file location as necessary.
+PGPLOT is not linked by default.  To link PGPLOT to DOLPHOT, uncomment these lines and modify the PGPLOT file location as necessary.
  
 .. code-block:: bash
    
@@ -51,14 +51,24 @@ The Makefile may require some editing before compiling DOLPHOT.  Here are a few 
 Individual camera models are not installed by default.  For example, to install the HST/ACS module, uncomment the above line.
   
 .. code-block:: bash
+
    export CFLAGS+= -DMAXNIMG=100
    export CFLAGS+= -DMAXNSTARS=2000000
 
 DOLPHOT allocates memory based on a pre-set maximum number of images (DMAXNIMG) and stars (DMAXNSTARS). The default values are good for most cases, but if larger number of images or stars are expected, edit these lines in the Makefile. 
 
 .. tip::
- Remeber to re-compile DOLPHOT if the number of images or stars are edited in the Makefile.
+   Remeber to re-compile DOLPHOT if the number of images or stars is edited in the Makefile.
 
 
 Compiling
 ------------
+
+To compile DOLPHOT, enter the DOLPHOT directory and type:
+
+.. code-block:: bash
+
+   make all
+   
+.. tip::
+   Some compliers may thrown warnings, but these do not generally affect the DOLPHOT installation.  
