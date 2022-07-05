@@ -71,4 +71,5 @@ To compile DOLPHOT, enter the DOLPHOT directory and type:
    make all
    
 .. tip::
-   Some compliers may thrown warnings, but these do not generally affect the DOLPHOT installation.  
+  *  Some compliers may throw warnings, but these do not generally affect the DOLPHOT installation. 
+  *  It is recommended to add the "bin" sub-directory of DOLPHOT to your $PATH environment.
