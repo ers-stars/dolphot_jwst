@@ -15,7 +15,7 @@ Requirements
 * Fortran complier (optional; e.g., g77, gfortan) to link to PGPLOT
 
 .. note::
-   * DOLPHOT can be compiled and run without PGPLOT and Fortan, but it will not be able to generate diagnostic plots.
+   * DOLPHOT can be compiled and run without PGPLOT and Fortran, but it will not be able to generate diagnostic plots.
    * DOLPHOT generally complies fine on UNIX/LINUX/MacOS, but it untested on other operating systems (e.g., Windows).
    * See `this workaround <https://github.com/kazuakiyama/homebrew-pgplot>`_ for installing PGPLOT via `Homebrew <https://brew.sh>`_.
 
