@@ -37,5 +37,5 @@ If you make use of DOLPHOT in your work please cite (XXX) and (YYY) for the JWST
    :maxdepth: 1
    :caption: WLM
    
-   WLM/nircam
-   WLM/niriss 
+   wlm/nircam
+   wlm/niriss 
