@@ -22,4 +22,4 @@ Contents
 .. toctree::
 
    installation
-   examaples/M92
+   examples/M92
