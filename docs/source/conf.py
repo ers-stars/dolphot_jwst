@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'ERS Stars'
+project = 'DOLPHOT JWST'
 copyright = '2022, Dan Weisz'
 author = 'Weisz et al.'
 
