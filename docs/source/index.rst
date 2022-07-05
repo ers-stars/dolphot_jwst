@@ -18,4 +18,8 @@ Contents
    :maxdepth: 2
 
    installation
+   
+.. toctree::
+   :maxdepth: 2
+   
    examples/M92
