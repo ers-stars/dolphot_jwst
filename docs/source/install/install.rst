@@ -22,7 +22,12 @@ Requirements
 Downloads
 ------------
 
-All DOLPHOT files can be downloaded from the `DOLPHOT homepage <http://americano.dolphinsim.com/dolphot/>`_.
+All DOLPHOT files can be downloaded from the `DOLPHOT homepage <http://americano.dolphinsim.com/dolphot/>`_.  Files to download and unpack are:
+
+* DOLPHOT base source files
+* DOLPHOT module-specific source files
+* Pixel Area Maps specific to each camera
+* PSF models specific to each camera and filter
 
 Makefile
 ------------
