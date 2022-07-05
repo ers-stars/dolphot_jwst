@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'ERS Stars'
+copyright = '2022, Weisz'
+author = 'Weisz et al.'
 
 release = '0.1'
 version = '0.1.0'
