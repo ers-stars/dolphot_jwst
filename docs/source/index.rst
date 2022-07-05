@@ -20,6 +20,7 @@ Contents
    installation
    
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    
-   examples/M92
+   examples/M92/nircam
+   examples/M92/niriss
