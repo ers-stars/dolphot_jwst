@@ -11,8 +11,6 @@ If you make use of DOLPHOT in your work please cite (XXX) and (YYY) for the JWST
 
    This project is under active development.
 
-Contents
---------
 
 .. toctree::
    :maxdepth: 1
@@ -26,3 +24,18 @@ Contents
    
    m92/nircam
    m92/niriss
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Draco II
+   
+   dracoII/nircam
+   dracoII/niriss
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: WLM
+   
+   WLM/nircam
+   WLM/niriss 
