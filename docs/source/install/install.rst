@@ -26,8 +26,11 @@ All DOLPHOT files can be downloaded from the `DOLPHOT homepage <http://americano
 
 * DOLPHOT base source files
 * DOLPHOT module-specific source files
-* Pixel Area Maps specific to each camera
+* Pixel Area Maps (PAMs) specific to each camera
 * PSF models specific to each camera and filter
+
+.. note::
+Only PAMs and PSF models for the camera/filter of interest need to be downloaded. 
 
 Makefile
 ------------
