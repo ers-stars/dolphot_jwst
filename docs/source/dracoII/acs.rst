@@ -116,7 +116,7 @@ The final preprocessing step is to run the DOLPHOT utility *calcsky*.  *calcsky*
  ...
  > calcsky jdan18010_f606w_drc.chip1 15 35 -128 2.25 2.00 >> phot.log
 
-The numerical values in the command line call are described in the DOLPHOT and DOLPHOT ACS module manuals.
+The numerical values in the command line call are described in the DOLPHOT and DOLPHOT ACS module manuals.  Note that the '.fits' extension should not be appended to the filenames when running calcsky.
 
 .. warning::
  DW: how much detail do we want to go into RE the DOLPHOT parameters in these examples? e.g., describe the meanings of :math:`r_{in}`, :math:`r_{out}`, step, :math:`\sigma`, etc.
@@ -137,14 +137,52 @@ The results of *calcsky* are saved as *sky.fits files
 Parameter File
 ------------
 
+The final step before running DOLPHOT is setting up the parameter file.  For this example, a good starting point is to download the parameter **(DW: for JWST this will link to our parameter file on MAST)** file for this dataset.
+
+.. warning:: 
+ DW: Do we now walk through the parameter file for each dataset?  Or perhaps have a separate section on the site that explains the parameter file, and then for each dataset we just note the recommended values?
+
+
 Running DOLPHOT
 ------------
+
+Executing DOLPHOT is done from the command line
+
+.. code-block::
+ > dolphot DracoII_ACS.phot -pphot.param >> phot.log
+ 
+This command specifies the parameter file ('phot.param'), sends the command line output to 'phot.log', and stores all the information recorded by DOLPHOT for each object (e.g., position, flux, goodness of fit, etc.) in the output file 'DracoII_ACS.phot'.
+
+.. warning:: 
+ DW: mention runtime and memory usage for this dataset
 
 Examining Output
 ------------
 
+* Look at alignment in phot.log
+* Look at .warnings file
+* Diagnostic plots (DW: I generally don't do this because I can't get PGPLOT installed)
+
 Creating Stellar Catalogs
 ------------
 
+* Process to go from .phot file to stellar catalogs
+* Depends on use case
+ * case of 2 bands
+ * case of N bands
+* example commands of how to cull catalog
+* show example CMDs for 2 and N band criteria
+
 Artificial Star Tests
 ------------
+
+* Generating AST input list
+ * 2 band case
+ * N band case
+* Running ASTs
+ * syntax in parameter file
+ * advice (e.g., run in parallel on many cores)
+* Suggestions for how to cull ASTs
+ * will depend on use case
+ 
+ 
