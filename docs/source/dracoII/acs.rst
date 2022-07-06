@@ -18,6 +18,7 @@ Files
 We first set up a local directory structure that will house the flc and drc files downloaded from MAST and handle the main DOLPHOT operations. 
 
 .. code-block:: bash
+ 
  > pwd
  > photometry/dracoii/acs/
  > ls
@@ -28,6 +29,7 @@ In this case, DOLPHOT will operate on files in the 'acs' directory and downloade
 For this dataset, the contents of the raw subdirectory are
 
 .. code-block:: bash
+ 
  > pwd
  > photometry/dracoii/acs/
  > ls raw/
@@ -38,6 +40,7 @@ For this dataset, the contents of the raw subdirectory are
 The next step is to copy the raw files up a level to the 'acs' directory.  Because DOLPHOT modifies the fits files, we want to preserve the original files in case we need to re-analyze them.
 
 .. code-block:: bash
+ 
  > pwd
  > photometry/dracoii/acs/raw
  > cp *.flc.fits.gz ../
