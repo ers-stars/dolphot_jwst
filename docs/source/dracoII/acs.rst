@@ -53,7 +53,7 @@ The next step is to copy the raw files up a level to the 'acs' directory.  Becau
  > ls *drc.fits
  > jdan18010_f606w_drc.fits
  
-.. note::
+.. warning::
  DW: In this case, a python script also renamed the files to add the filter name.  We'll have to decide how to include little things (like this) in the documentation.
 
 Preprocessing
@@ -118,8 +118,8 @@ The final preprocessing step is to run the DOLPHOT utility *calcsky*.  *calcsky*
 
 The numerical values in the command line call are described in the DOLPHOT and DOLPHOT ACS module manuals.
 
-.. note::
- DW: how much detail do we want to go into RE the DOLPHOT parameters in these examples? e.g., describe the meanings of :math:`r_{in}`, ``$r_{out}$``, step, ``$\sigma$``, etc.
+.. warning::
+ DW: how much detail do we want to go into RE the DOLPHOT parameters in these examples? e.g., describe the meanings of :math:`r_{in}`, :math:`r_{out}`, step, :math:`\sigma`, etc.
 
 The results of *calcsky* are saved as *sky.fits files
 
