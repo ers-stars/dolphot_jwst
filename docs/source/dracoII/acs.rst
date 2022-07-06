@@ -93,8 +93,8 @@ The result is a set of fits files with "chip1" and "chip2" in the files names
 
  > ls *chip1.fits
  > jdan18010_f606w_drc.chip1.fits	jdan18byq_f606w_flc.chip1.fits	jdan19xoq_f814w_flc.chip1.fits	jdan19xxq_f814w_flc.chip1.fits
-    jdan18boq_f606w_flc.chip1.fits	jdan18c0q_f606w_flc.chip1.fits	jdan19xqq_f814w_flc.chip1.fits	jdan19y1q_f814w_flc.chip1.fits
-    jdan18bsq_f606w_flc.chip1.fits	jdan18c5q_f606w_flc.chip1.fits	jdan19xvq_f814w_flc.chip1.fits
+   jdan18boq_f606w_flc.chip1.fits	jdan18c0q_f606w_flc.chip1.fits	jdan19xqq_f814w_flc.chip1.fits	jdan19y1q_f814w_flc.chip1.fits
+   jdan18bsq_f606w_flc.chip1.fits	jdan18c5q_f606w_flc.chip1.fits	jdan19xvq_f814w_flc.chip1.fits
  > ls *.chip2.fits
  > jdan18boq_f606w_flc.chip2.fits	jdan18byq_f606w_flc.chip2.fits	jdan18c5q_f606w_flc.chip2.fits	jdan19xqq_f814w_flc.chip2.fits	
    jdan19xxq_f814w_flc.chip2.fits jdan18bsq_f606w_flc.chip2.fits	jdan18c0q_f606w_flc.chip2.fits	jdan19xoq_f814w_flc.chip2.fits
