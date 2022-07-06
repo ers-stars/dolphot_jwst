@@ -52,10 +52,17 @@ The next step is to copy the raw files up a level to the 'acs' directory.  Becau
    jdan18bsq_f606w_flc.fits  jdan18c0q_f606w_flc.fits  jdan19xoq_f814w_flc.fits  jdan19xvq_f814w_flc.fits	jdan19y1q_f814w_flc.fits
  > ls *drc.fits
  > jdan18010_f606w_drc.fits
-
+ 
+ .. note::
+ DW: In this case, a python script also renamed the files to add the filter name.  We'll have to decide how to include little things (like this) in the documentation.
 
 Preprocessing
 ------------
+
+acsmask
+^^^^^^^^^^^^
+
+
 
 Parameter File
 ------------
