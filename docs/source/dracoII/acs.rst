@@ -66,7 +66,8 @@ acsmask
 
 The first preprocessing step is to run the DOLPHOT utility acsmask.  This program masks out pixels flagged in the data quality extension (e.g., bad pixels, cosmic rays) and applies the pixel area mask.  It needs to be run on each flc and the drc image.
 
-.. code-block::
+.. code-block:: bash
+
  > acsmask jdan18boq_f606w_flc.fits > phot.log
  > acsmask jdan19xoq_f814w_flc.fits >> phot.log
  ...
@@ -79,7 +80,8 @@ splitgroups
 
 The next preprocessing step is to run the DOLPHOT utility splitgroups.  The ACS camera has two chips, 1 and 2.  splitgroups creates .fits files for each of the chips.  It needs to be run on each flc and the drc image.
 
-.. code-block::
+.. code-block:: bash
+
  > splitgroups jdan18boq_f606w_flc.fits >> phot.log
  > splitgroups jdan19xoq_f814w_flc.fits >> phot.log
  ...
@@ -87,7 +89,8 @@ The next preprocessing step is to run the DOLPHOT utility splitgroups.  The ACS 
  
 The result is a set of fits files with "chip1" and "chip2" in the files names
  
-.. code-block::
+.. code-block:: bash
+
   > ls *chip1.fits
   > jdan18010_f606w_drc.chip1.fits	jdan18byq_f606w_flc.chip1.fits	jdan19xoq_f814w_flc.chip1.fits	jdan19xxq_f814w_flc.chip1.fits
     jdan18boq_f606w_flc.chip1.fits	jdan18c0q_f606w_flc.chip1.fits	jdan19xqq_f814w_flc.chip1.fits	jdan19y1q_f814w_flc.chip1.fits
