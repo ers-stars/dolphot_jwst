@@ -64,7 +64,7 @@ The images downloaded from MAST need a few modifications before they can be run 
 acsmask
 ^^^^^^^^^^^^
 
-The first preprocessing step is to run the DOLPHOT utility acsmask.  This program masks out pixels flagged in the data quality extension (e.g., bad pixels, cosmic rays) and applies the pixel area mask.  It needs to be run on each flc and the drc image.
+The first preprocessing step is to run the DOLPHOT utility *acsmask*.  This program masks out pixels flagged in the data quality extension (e.g., bad pixels, cosmic rays) and applies the pixel area mask.  It needs to be run on each flc and the drc image.
 
 .. code-block:: bash
 
@@ -78,7 +78,7 @@ DOLPHOT reports output to the command line by default.  Here, we've redirected i
 splitgroups
 ^^^^^^^^^^^^
 
-The next preprocessing step is to run the DOLPHOT utility splitgroups.  The ACS camera has two chips, 1 and 2.  splitgroups creates .fits files for each of the chips.  It needs to be run on each flc and the drc image.
+The next preprocessing step is to run the DOLPHOT utility *splitgroups*.  The ACS camera has two chips, 1 and 2.  *splitgroups* creates .fits files for each of the chips.  It needs to be run on each flc and the drc image.
 
 .. code-block:: bash
 
@@ -91,8 +91,8 @@ The result is a set of fits files with "chip1" and "chip2" in the files names
  
 .. code-block:: bash
 
-  > ls *chip1.fits
-  > jdan18010_f606w_drc.chip1.fits	jdan18byq_f606w_flc.chip1.fits	jdan19xoq_f814w_flc.chip1.fits	jdan19xxq_f814w_flc.chip1.fits
+ > ls *chip1.fits
+ > jdan18010_f606w_drc.chip1.fits	jdan18byq_f606w_flc.chip1.fits	jdan19xoq_f814w_flc.chip1.fits	jdan19xxq_f814w_flc.chip1.fits
     jdan18boq_f606w_flc.chip1.fits	jdan18c0q_f606w_flc.chip1.fits	jdan19xqq_f814w_flc.chip1.fits	jdan19y1q_f814w_flc.chip1.fits
     jdan18bsq_f606w_flc.chip1.fits	jdan18c5q_f606w_flc.chip1.fits	jdan19xvq_f814w_flc.chip1.fits
  > ls *.chip2.fits
@@ -100,10 +100,38 @@ The result is a set of fits files with "chip1" and "chip2" in the files names
    jdan19xxq_f814w_flc.chip2.fits jdan18bsq_f606w_flc.chip2.fits	jdan18c0q_f606w_flc.chip2.fits	jdan19xoq_f814w_flc.chip2.fits
    jdan19xvq_f814w_flc.chip2.fits	jdan19y1q_f814w_flc.chip2.fits
    
-Note that there while splitgroups is run on the drc image, one a "chip1" file is produced.
+Note that there while splitgroups is run on the drc image, only a "chip1" file is produced.
 
 calcsky
 ^^^^^^^^^^^^
+
+The final preprocessing step is to run the DOLPHOT utility *calcsky*.  *calcsky* makes an initial estimate of the sky and provides smoothed images that are used for initial guesses at star locations.  *calcsky* needs to be run on each image produced by splitgroups, i.e., all chip1 and chip2 files.
+
+.. code-block:: bash
+ 
+ > calcsky jdan18boq_f606w_flc.chip1 15 35 -128 2.25 2.00 >> phot.log
+ > calcsky jdan18boq_f606w_flc.chip2 15 35 -128 2.25 2.00 >> phot.log
+ > calcsky jdan19xoq_f814w_flc.chip1 15 35 -128 2.25 2.00 >> phot.log
+ > calcsky jdan19xoq_f814w_flc.chip2 15 35 -128 2.25 2.00 >> phot.log
+ ...
+ > calcsky jdan18010_f606w_drc.chip1 15 35 -128 2.25 2.00 >> phot.log
+
+The numerical values in the command line call are described in the DOLPHOT and DOLPHOT ACS module manuals.
+
+.. note::
+ DW: how much detail do we want to go into RE the DOLPHOT parameters in these examples? e.g., describe the meanings of rin, rout, step, sigma, etc.
+
+The results of *calcsky* are saved in *sky.fits files
+
+.. code-block:: bash
+
+ > ls *sky.fits
+ > jdan18010_f606w_drc.chip1.sky.fits  jdan18byq_f606w_flc.chip2.sky.fits	jdan19xoq_f814w_flc.chip2.sky.fits  jdan19xxq_f814w_flc.chip2.sky.fits
+   jdan18boq_f606w_flc.chip1.sky.fits  jdan18c0q_f606w_flc.chip1.sky.fits	jdan19xqq_f814w_flc.chip1.sky.fits  jdan19y1q_f814w_flc.chip1.sky.fits
+   jdan18boq_f606w_flc.chip2.sky.fits  jdan18c0q_f606w_flc.chip2.sky.fits	jdan19xqq_f814w_flc.chip2.sky.fits  jdan19y1q_f814w_flc.chip2.sky.fits
+   jdan18bsq_f606w_flc.chip1.sky.fits  jdan18c5q_f606w_flc.chip1.sky.fits	jdan19xvq_f814w_flc.chip1.sky.fits
+   jdan18bsq_f606w_flc.chip2.sky.fits  jdan18c5q_f606w_flc.chip2.sky.fits	jdan19xvq_f814w_flc.chip2.sky.fits
+   jdan18byq_f606w_flc.chip1.sky.fits  jdan19xoq_f814w_flc.chip1.sky.fits	jdan19xxq_f814w_flc.chip1.sky.fits
 
 
 Parameter File
