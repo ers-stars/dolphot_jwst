@@ -64,7 +64,7 @@ The images downloaded from MAST need a few modifications before they can be run 
 acsmask
 ^^^^^^^^^^^^
 
-The first preprocessing step is to run the DOLPHOT utility *acsmask*.  This program masks out pixels flagged in the data quality extension (e.g., bad pixels, cosmic rays) and applies the pixel area mask.  It needs to be run on each flc and the drc image.
+The first preprocessing step is to run the DOLPHOT utility *acsmask*.  This program masks pixels flagged in the data quality extension (e.g., bad pixels, cosmic rays) and applies the pixel area mask.  It needs to be run on each flc and the drc image.
 
 .. code-block:: bash
 
@@ -119,7 +119,7 @@ The final preprocessing step is to run the DOLPHOT utility *calcsky*.  *calcsky*
 The numerical values in the command line call are described in the DOLPHOT and DOLPHOT ACS module manuals.
 
 .. note::
- DW: how much detail do we want to go into RE the DOLPHOT parameters in these examples? e.g., describe the meanings of `$r_{in}$`, `$r_{out}$`, step, `$\sigma$`, etc.
+ DW: how much detail do we want to go into RE the DOLPHOT parameters in these examples? e.g., describe the meanings of ``$r_{in}$``, ``$r_{out}$``, step, ``$\sigma$``, etc.
 
 The results of *calcsky* are saved as *sky.fits files
 
