@@ -119,7 +119,7 @@ The final preprocessing step is to run the DOLPHOT utility *calcsky*.  *calcsky*
 The numerical values in the command line call are described in the DOLPHOT and DOLPHOT ACS module manuals.
 
 .. note::
- DW: how much detail do we want to go into RE the DOLPHOT parameters in these examples? e.g., describe the meanings of ``$r_{in}$``, ``$r_{out}$``, step, ``$\sigma$``, etc.
+ DW: how much detail do we want to go into RE the DOLPHOT parameters in these examples? e.g., describe the meanings of :math:`r_{in}`, ``$r_{out}$``, step, ``$\sigma$``, etc.
 
 The results of *calcsky* are saved as *sky.fits files
 
