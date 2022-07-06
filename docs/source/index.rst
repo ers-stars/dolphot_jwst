@@ -31,6 +31,7 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
    
    dracoII/nircam
    dracoII/niriss
+   dracoII/acs
    
 .. toctree::
    :maxdepth: 1
