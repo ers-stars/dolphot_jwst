@@ -1,9 +1,4 @@
-Template for the Read the Docs tutorial
+User's Guide for DOLPHOT NIRCAM and NIRISS modules
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
-
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+These pages contain information and examples for running photometry with DOLPHOT on JWST NIRCAM and NIRISS imaging acquired as part of the James Webb Early Release Science Program for Resolved Stellar Populations (DD-ERS-1334; PI D. Weisz).
