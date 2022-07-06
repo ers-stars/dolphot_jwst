@@ -53,15 +53,54 @@ The next step is to copy the raw files up a level to the 'acs' directory.  Becau
  > ls *drc.fits
  > jdan18010_f606w_drc.fits
  
- .. note::
+.. note::
  DW: In this case, a python script also renamed the files to add the filter name.  We'll have to decide how to include little things (like this) in the documentation.
 
 Preprocessing
 ------------
 
+The images downloaded from MAST need a few modifications before they can be run through DOLPHOT.  
+
 acsmask
 ^^^^^^^^^^^^
 
+The first preprocessing step is to run the DOLPHOT utility acsmask.  This program masks out pixels flagged in the data quality extension (e.g., bad pixels, cosmic rays) and applies the pixel area mask.  It needs to be run on each flc and the drc image.
+
+.. code-block::
+ > acsmask jdan18boq_f606w_flc.fits > phot.log
+ > acsmask jdan19xoq_f814w_flc.fits >> phot.log
+ ...
+ > acsmask jdan18010_f606w_drc.fits >> phot.log
+ 
+DOLPHOT reports output to the command line by default.  Here, we've redirected it to a log file 'phot.log' that we'll use to keep track of all DOLPHOT outputs.
+
+splitgroups
+^^^^^^^^^^^^
+
+The next preprocessing step is to run the DOLPHOT utility splitgroups.  The ACS camera has two chips, 1 and 2.  splitgroups creates .fits files for each of the chips.  It needs to be run on each flc and the drc image.
+
+.. code-block::
+ > splitgroups jdan18boq_f606w_flc.fits >> phot.log
+ > splitgroups jdan19xoq_f814w_flc.fits >> phot.log
+ ...
+ > splitgroups jdan18010_f606w_drc.fits >> phot.log
+ 
+The result is a set of fits files with "chip1" and "chip2" in the files names
+ 
+.. code-block::
+  > ls *chip1.fits
+  > jdan18010_f606w_drc.chip1.fits	jdan18byq_f606w_flc.chip1.fits	jdan19xoq_f814w_flc.chip1.fits	jdan19xxq_f814w_flc.chip1.fits
+    jdan18boq_f606w_flc.chip1.fits	jdan18c0q_f606w_flc.chip1.fits	jdan19xqq_f814w_flc.chip1.fits	jdan19y1q_f814w_flc.chip1.fits
+    jdan18bsq_f606w_flc.chip1.fits	jdan18c5q_f606w_flc.chip1.fits	jdan19xvq_f814w_flc.chip1.fits
+ > ls *.chip2.fits
+ > jdan18boq_f606w_flc.chip2.fits	jdan18byq_f606w_flc.chip2.fits	jdan18c5q_f606w_flc.chip2.fits	jdan19xqq_f814w_flc.chip2.fits	
+   jdan19xxq_f814w_flc.chip2.fits jdan18bsq_f606w_flc.chip2.fits	jdan18c0q_f606w_flc.chip2.fits	jdan19xoq_f814w_flc.chip2.fits
+   jdan19xvq_f814w_flc.chip2.fits	jdan19y1q_f814w_flc.chip2.fits
+   
+Note that there while splitgroups is run on the drc image, one a "chip1" file is produced.
+
+calcsky
+^^^^^^^^^^^^
 
 
 Parameter File
