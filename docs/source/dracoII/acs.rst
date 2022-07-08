@@ -10,7 +10,7 @@ HST/ACS
 .. _asts:
 
 
-For this example, we will produce run DOLPHOT on the HST/ACS F606W and F814W imaging of Draco II taken as part of program GO-14734.
+For this example, we will run DOLPHOT on the HST/ACS F606W and F814W imaging of Draco II taken as part of program GO-14734.
 
 Files
 ------------
