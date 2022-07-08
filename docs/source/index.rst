@@ -11,6 +11,11 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
 
    DOLPHOT and this documentation are under active development.
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Overview
+
+   overview
 
 .. toctree::
    :maxdepth: 1
