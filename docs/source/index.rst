@@ -13,7 +13,6 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
 
 .. toctree::
    :maxdepth: 1
-   :caption: Overview
 
    overview
 
