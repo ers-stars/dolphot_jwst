@@ -53,4 +53,6 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
    :caption: Examples with JWST Data
    
    examples/m92
+   examples/dracoii
+   examples/wlm
  
