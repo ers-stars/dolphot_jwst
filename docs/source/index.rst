@@ -38,8 +38,8 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
    :maxdepth: 1
    :caption: Parameter file
 
-   parameter file/setup
-   parameter file/definitions
+   parameter_file/setup
+   parameter_file/definitions
    
 .. toctree::
    :maxdepth: 1
