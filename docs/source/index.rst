@@ -45,12 +45,12 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
    :maxdepth: 1
    :caption: Post-Processing
 
-   post-procesing/output
+   post-processing/output
    post-processing/catalogs
    
 .. toctree::
    :maxdepth: 1
-   :caption: Examples
+   :caption: Examples with JWST Data
    
    m92/nircam
    m92/niriss
