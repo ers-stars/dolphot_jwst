@@ -14,6 +14,7 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
 .. toctree::
    :maxdepth: 1
    :Caption: Overview
+   :name: overview
 
    overview/workflow
    overview/usage
@@ -21,12 +22,14 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
 .. toctree::
    :maxdepth: 1
    :caption: Installation
+   :name: install
 
    install/install
    
 .. toctree::
    :maxdepth: 1
    :caption: Pre-processing
+   :name: preprocess
    
    pre-processing/directory
    pre-processing/files
@@ -37,6 +40,7 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
 .. toctree::
    :maxdepth: 1
    :caption: Parameter file
+   :name: param
 
    parameter_file/setup
    parameter_file/definitions
@@ -44,6 +48,7 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
 .. toctree::
    :maxdepth: 1
    :caption: Post-Processing
+   :name: postprocess
 
    post-processing/output
    post-processing/catalogs
@@ -52,6 +57,7 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
 .. toctree::
    :maxdepth: 1
    :caption: Artificial Star Tests
+   :name: asts
 
    asts/create
    asts/running
@@ -60,6 +66,7 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
 .. toctree::
    :maxdepth: 2
    :caption: Examples with JWST Data
+   :name: examples
    
    examples/m92
    examples/dracoii
