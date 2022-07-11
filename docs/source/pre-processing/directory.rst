@@ -1,4 +1,4 @@
-Directory Stucture
+File Stucture
 =========
 
 
