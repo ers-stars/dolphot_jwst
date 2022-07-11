@@ -27,15 +27,15 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
    install/install
    
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Pre-processing
    :name: preprocess
    
    pre-processing/directory
-   pre-processing/files
-   pre-processing/nircam
-   pre-processing/niriss
-   pre-processing/acs
+   pre-processing/masking
+   pre-processing/sky
+   
+   
    
 .. toctree::
    :maxdepth: 1
