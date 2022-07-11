@@ -49,23 +49,8 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
    post-processing/catalogs
    
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Examples with JWST Data
    
-   m92/nircam
-   m92/niriss
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Draco II
-   
-   dracoII/nircam
-   dracoII/niriss
-   dracoII/acs
-   
-.. toctree::
-   :maxdepth: 1
-   :caption: WLM
-   
-   wlm/nircam
-   wlm/niriss 
+   examples/m92
+ 
