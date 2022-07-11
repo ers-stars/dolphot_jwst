@@ -48,6 +48,15 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
    post-processing/output
    post-processing/catalogs
    
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: Artificial Star Tests
+
+   asts/create
+   asts/running
+   asts/output
+   
 .. toctree::
    :maxdepth: 2
    :caption: Examples with JWST Data
