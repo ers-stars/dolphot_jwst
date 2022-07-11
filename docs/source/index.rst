@@ -43,14 +43,14 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
    
 .. toctree::
    :maxdepth: 1
-   :caption: Parameter file
+   :caption: Post-Processing
 
    post-procesing/output
    post-processing/catalogs
    
 .. toctree::
    :maxdepth: 1
-   :caption: M92
+   :caption: Examples
    
    m92/nircam
    m92/niriss
