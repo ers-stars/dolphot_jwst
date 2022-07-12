@@ -14,8 +14,8 @@ Alignment
 * **UseWCS**:
 * **aligntol**:
 * **Rotate**:
-* **img_shift**:
-* **img_xform**:
+* **img_shift** *(int int)*: The offset of a science image relative to reference image. This value can be an initial guess that is later adjusted by DOLPHOT. Values are x and y on the image minus x and y on the reference image. Note that this parameter should not be set for the reference image.
+* **img_xform** *(int int int)*: The scale ratio, cubic distortion, and rotation of a science image relative to the reference image. This value can be an initial guess that is later adjusted by DOLPHOT. This parameter should not be set for the reference image, only for science images (i.e., img1_xform to imgN_xform).
 
 
 Star Finding Parameters
