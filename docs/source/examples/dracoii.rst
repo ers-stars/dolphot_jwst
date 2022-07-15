@@ -23,21 +23,7 @@ HST/ACS
 
 For this example, we will run DOLPHOT on the HST/ACS F606W and F814W imaging of Draco II taken as part of program GO-14734.
 
-Files
-------------
-
-We first set up a local directory structure that will house the flc and drc files downloaded from MAST and handle the main DOLPHOT operations. 
-
-.. code-block:: bash
- 
- > pwd
- > photometry/dracoii/acs/
- > ls
- > raw
- 
-In this case, DOLPHOT will operate on files in the 'acs' directory and downloaded images will be in the 'raw' subdirectory.
-
-For this dataset, the contents of the raw subdirectory are
+We first examine our files that were downloaded from MAST.
 
 .. code-block:: bash
  
@@ -48,7 +34,7 @@ For this dataset, the contents of the raw subdirectory are
    jdan18boq_flc.fits.gz  jdan18byq_flc.fits.gz  jdan18c5q_flc.fits.gz  jdan19xoq_flc.fits.gz  jdan19xvq_flc.fits.gz  jdan19y1q_flc.fits.gz
  
 
-The next step is to copy the raw files up a level to the 'acs' directory.  Because DOLPHOT modifies the fits files, we want to preserve the original files in case we need to re-analyze them.
+and then copy and unzip them in the main directory.
 
 .. code-block:: bash
  
@@ -64,18 +50,7 @@ The next step is to copy the raw files up a level to the 'acs' directory.  Becau
  > ls *drc.fits
  > jdan18010_f606w_drc.fits
  
-.. warning::
- DW: In this case, a python script also renamed the files to add the filter name.  We'll have to decide how to include little things (like this) in the documentation.
-
-Preprocessing
-------------
-
-The images downloaded from MAST need a few modifications before they can be run through DOLPHOT.  
-
-acsmask
-^^^^^^^^^^^^
-
-The first preprocessing step is to run the DOLPHOT utility *acsmask*.  This program masks pixels flagged in the data quality extension (e.g., bad pixels, cosmic rays) and applies the pixel area mask.  It needs to be run on each flc and the drc image.
+We now run pre-processing steps.  First is *acsmask*:
 
 .. code-block:: bash
 
@@ -84,12 +59,7 @@ The first preprocessing step is to run the DOLPHOT utility *acsmask*.  This prog
  ...
  > acsmask jdan18010_f606w_drc.fits >> phot.log
  
-DOLPHOT reports output to the command line by default.  Here, we've redirected it to a log file 'phot.log' that we'll use to keep track of all DOLPHOT outputs.
-
-splitgroups
-^^^^^^^^^^^^
-
-The next preprocessing step is to run the DOLPHOT utility *splitgroups*.  The ACS camera has two chips, 1 and 2.  *splitgroups* creates .fits files for each of the chips.  It needs to be run on each flc and the drc image.
+next is *splitgroups*:
 
 .. code-block:: bash
 
@@ -98,7 +68,7 @@ The next preprocessing step is to run the DOLPHOT utility *splitgroups*.  The AC
  ...
  > splitgroups jdan18010_f606w_drc.fits >> phot.log
  
-The result is a set of fits files with "chip1" and "chip2" in the files names
+The result is a set of fits files with "chip1" and "chip2" in the files names.  
  
 .. code-block:: bash
 
@@ -111,12 +81,7 @@ The result is a set of fits files with "chip1" and "chip2" in the files names
    jdan19xxq_f814w_flc.chip2.fits jdan18bsq_f606w_flc.chip2.fits	jdan18c0q_f606w_flc.chip2.fits	jdan19xoq_f814w_flc.chip2.fits
    jdan19xvq_f814w_flc.chip2.fits	jdan19y1q_f814w_flc.chip2.fits
    
-Note that there while splitgroups is run on the drc image, only a "chip1" file is produced.
-
-calcsky
-^^^^^^^^^^^^
-
-The final preprocessing step is to run the DOLPHOT utility *calcsky*.  *calcsky* makes an initial estimate of the sky and provides smoothed images that are used for initial guesses at star locations.  *calcsky* needs to be run on each image produced by splitgroups, i.e., all chip1 and chip2 files.
+Finally, we run *calcsky*:
 
 .. code-block:: bash
  
@@ -126,11 +91,6 @@ The final preprocessing step is to run the DOLPHOT utility *calcsky*.  *calcsky*
  > calcsky jdan19xoq_f814w_flc.chip2 15 35 -128 2.25 2.00 >> phot.log
  ...
  > calcsky jdan18010_f606w_drc.chip1 15 35 -128 2.25 2.00 >> phot.log
-
-The numerical values in the command line call are described in the DOLPHOT and DOLPHOT ACS module manuals.  Note that the '.fits' extension should not be appended to the filenames when running calcsky.
-
-.. warning::
- DW: how much detail do we want to go into RE the DOLPHOT parameters in these examples? e.g., describe the meanings of :math:`r_{in}`, :math:`r_{out}`, step, :math:`\sigma`, etc.
 
 The results of *calcsky* are saved as *sky.fits files
 
@@ -145,34 +105,57 @@ The results of *calcsky* are saved as *sky.fits files
    jdan18byq_f606w_flc.chip1.sky.fits  jdan19xoq_f814w_flc.chip1.sky.fits	jdan19xxq_f814w_flc.chip1.sky.fits
 
 
-Parameter File
-------------
+Next, we download the parameter file created for this example.  It can be found `here <xxx>`_.  No modifications of the parameter file are required for this example.
 
-The final step before running DOLPHOT is setting up the parameter file.  For this example, a good starting point is to download the parameter **(DW: for JWST this will link to our parameter file on MAST)** file for this dataset.
-
-.. warning:: 
- DW: Do we now walk through the parameter file for each dataset?  Or perhaps have a separate section on the site that explains the parameter file, and then for each dataset we just note the recommended values?
+The next step is to execute DOLPHOT.
 
 
-Running DOLPHOT
-------------
 
-Executing DOLPHOT is done from the command line
-
-.. code-block::
- > dolphot DracoII_ACS.phot -pphot.param >> phot.log
+.. code-block:: bash
+ > dolphot dracoii_acs.phot -pphot.param >> phot.log &
  
-This command specifies the parameter file ('phot.param'), sends the command line output to 'phot.log', and stores all the information recorded by DOLPHOT for each object (e.g., position, flux, goodness of fit, etc.) in the output file 'DracoII_ACS.phot'.
+The 'dracoii_acs.phot' will host the raw photometric output from DOLPHOT.  This name will also serve as the base for other DOLPHOT outputs for this run, e.g., 'dracoii_acs.phot.columns' contains a list of what all the columns in the raw photometry file are.
 
-.. warning:: 
- DW: mention runtime and memory usage for this dataset
+We found that this run of DOLPHOT took **~XX hours** and used **~YY GB** of RAM.
 
-Examining Output
-------------
+Once the run is complete, we examine the log file, primarily to look at the alignment staistics.  
 
-* Look at alignment in phot.log
-* Look at .warnings file
-* Diagnostic plots (DW: I generally don't do this because I can't get PGPLOT installed)
+.. code-block:: bash
+ > cat phot.log
+ > 1363 stars for alignment
+   image 1:
+     coarse alignment = 0.04 -0.03
+     429 matched, 389 used, 0.03 -0.03 0.999999 0.00000 -0.000, sig=0.24
+   image 2:
+     coarse alignment = -0.01 -0.01
+     409 matched, 356 used, -0.01 -0.00 1.000009 0.00000 -0.001, sig=0.24
+   image 3:
+     coarse alignment = 0.04 -0.05
+     465 matched, 398 used, 0.03 -0.05 1.000021 0.00000 -0.001, sig=0.24
+   image 4:
+     coarse alignment = 0.02 0.03
+     417 matched, 363 used, 0.02 0.04 1.000021 0.00000 -0.001, sig=0.26
+   image 5:
+     coarse alignment = 0.04 0.09
+     71 matched, 51 used, 0.06 0.11 0.999940 0.00000 -0.002, sig=0.10
+    ...
+    
+The alignment statistics for the first 5 images look pretty good.  Overally, 1363 stars are used as reference stars.  Images 1-4 are aligned to ~0.25 pixels from ~400 matched stars each.  Image 5 has many fewer matched alignment stars (~50) and reports a very good alignment precision of 0.1 pix. Looks earlier in the log file, we see that image 5 (jdan18byq_f606w_flc.chip1.fits) has an integreation time of ~47s, whereas the first 4 images have ~1150s each.  This type of alignment behavior is common when there are such large differences in exposure times.  The rest of the images in the log file show similarly good alignment.
+
+We also check to see if DOLPHOT produced any warnings
+
+.. code-block:: bash
+ > cat DracoII_ACS.phot.warnings
+ Only 38 aperture stars in image 5, jdan18byq_f606w_flc.chip1 (ACS_F606W, 47.0 sec)
+ Only 33 aperture stars in image 6, jdan18byq_f606w_flc.chip2 (ACS_F606W, 47.0 sec)
+ Only 34 aperture stars in image 15, jdan19xvq_f814w_flc.chip1 (ACS_F814W, 47.0 sec)
+ Only 31 aperture stars in image 16, jdan19xvq_f814w_flc.chip2 (ACS_F814W, 47.0 sec)
+
+Here we see that the short exposures did not have many stars for aperture corrections.  But no other warnings are generated.
+
+We did not generate any diagnostic plots (e.g., PSF residuals) for this example, but based on the alignment alone, we expect ths photometry to be OK.
+
+
 
 Creating Stellar Catalogs
 ------------
