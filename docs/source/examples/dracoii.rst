@@ -112,6 +112,7 @@ The next step is to execute DOLPHOT.
 
 
 .. code-block:: bash
+
  > dolphot dracoii_acs.phot -pphot.param >> phot.log &
  
 The 'dracoii_acs.phot' will host the raw photometric output from DOLPHOT.  This name will also serve as the base for other DOLPHOT outputs for this run, e.g., 'dracoii_acs.phot.columns' contains a list of what all the columns in the raw photometry file are.
@@ -121,6 +122,7 @@ We found that this run of DOLPHOT took **~XX hours** and used **~YY GB** of RAM.
 Once the run is complete, we examine the log file, primarily to look at the alignment staistics.  
 
 .. code-block:: bash
+
  > cat phot.log
  > 1363 stars for alignment
    image 1:
@@ -145,6 +147,7 @@ The alignment statistics for the first 5 images look pretty good.  Overally, 136
 We also check to see if DOLPHOT produced any warnings
 
 .. code-block:: bash
+
  > cat DracoII_ACS.phot.warnings
  Only 38 aperture stars in image 5, jdan18byq_f606w_flc.chip1 (ACS_F606W, 47.0 sec)
  Only 33 aperture stars in image 6, jdan18byq_f606w_flc.chip2 (ACS_F606W, 47.0 sec)
@@ -156,28 +159,9 @@ Here we see that the short exposures did not have many stars for aperture correc
 We did not generate any diagnostic plots (e.g., PSF residuals) for this example, but based on the alignment alone, we expect ths photometry to be OK.
 
 
+* creating stellar catalogs
+* running ASTs
+* plots & diagnostics
 
-Creating Stellar Catalogs
-------------
-
-* Process to go from .phot file to stellar catalogs
-* Depends on use case
- * case of 2 bands
- * case of N bands
-* example commands of how to cull catalog
-* show example CMDs for 2 and N band criteria
-
-Artificial Star Tests
-------------
-
-* Generating AST input list
- * 2 band case
- * N band case
-* Running ASTs
- * syntax in parameter file
- * advice (e.g., run in parallel on many cores)
-* Suggestions for how to cull ASTs
- * will depend on use case
- 
  
 
