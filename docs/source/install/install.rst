@@ -10,7 +10,7 @@
 Requirements
 ------------
 
-* C complier (e.g., gcc)
+* C complier (e.g., GCC)
 * `PGPLOT <https://sites.astro.caltech.edu/~tjp/pgplot/>`_ (optional) to generate diagnostic plots 
 * Fortran complier (optional; e.g., g77, gfortan) to link to PGPLOT
 
@@ -18,6 +18,8 @@ Requirements
    * DOLPHOT can be compiled and run without PGPLOT and Fortran, but it will not be able to generate diagnostic plots.
    * DOLPHOT generally complies fine on UNIX/LINUX/MacOS, but it untested on other operating systems (e.g., Windows).
    * See `this workaround <https://github.com/kazuakiyama/homebrew-pgplot>`_ for installing PGPLOT via `Homebrew <https://brew.sh>`_.
+   * DOLPHOT can be built using a number of different C compilers (e.g., GCC, ICC). However, due to differences in floating point math treatment, DOLPHOT      output can show minor differences depending on the used compiler. During our testing, we have found the GCC compiler to be the most adeherent to IEEE floating point standards and, therefore, recommend it for DOLPHOT installation.
+   
 
 Downloads
 ------------
