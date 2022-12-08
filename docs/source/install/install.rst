@@ -129,5 +129,5 @@ Repeat the process for every filter of interest. DOLPHOT is now set up to work w
    You can store different binary PSF grids and replace the files in 'nircam/data/' or 'niriss/data' every time you want to change PSFs. DOLPHOT does not need to be recompiled after you change PSFs.
    
 .. note::
-   Similar routines (e.g., *acsmakepsf*, *wfc3makepsf*) exist to create binary PSF files for the HST instruments, starting from `Tiny Tim <https://www.stsci.edu/hst/instrumentation/focus-and-pointing/focus/tiny-tim-hst-psf-modeling>`_ output. usage and syntax is analogous to *nircammakepsf*.
+   Similar routines (e.g., *acsmakepsf*, *wfc3makepsf*) exist to create binary PSF files for the HST instruments, starting from `Tiny Tim <https://www.stsci.edu/hst/instrumentation/focus-and-pointing/focus/tiny-tim-hst-psf-modeling>`_ output. Usage and syntax is analogous to *nircammakepsf*.
  
