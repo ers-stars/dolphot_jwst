@@ -18,7 +18,7 @@ Requirements
    * DOLPHOT can be compiled and run without PGPLOT and Fortran, but it will not be able to generate diagnostic plots.
    * DOLPHOT generally complies fine on UNIX/LINUX/MacOS, but it untested on other operating systems (e.g., Windows).
    * See `this workaround <https://github.com/kazuakiyama/homebrew-pgplot>`_ for installing PGPLOT via `Homebrew <https://brew.sh>`_.
-   * DOLPHOT can be built using a number of different C compilers (e.g., GCC, ICC). However, due to differences in floating point math treatment, DOLPHOT      output can show minor differences depending on the used compiler. During our testing, we have found the GCC compiler to be the most adeherent to IEEE floating point standards and, therefore, recommend it for DOLPHOT installation.
+   
    
 
 Downloads
@@ -75,6 +75,59 @@ To compile DOLPHOT, enter the DOLPHOT directory and type:
 .. note::
   *  Some compliers may throw warnings, but these do not generally affect the DOLPHOT installation. 
   *  Errors reported during compiling will prevent DOLPHOT from running correctly or at all.
+  * DOLPHOT can be built using a number of different C compilers (e.g., GCC, ICC). However, due to differences in floating point math treatment, DOLPHOT      output can show minor differences depending on the compiler used. During our testing, we have found the GCC compiler to be the most adeherent to IEEE floating point standards and, therefore, recommend it for DOLPHOT installation.
   
 .. tip::  
   *  It is recommended to add the "bin" subdirectory of DOLPHOT to your system PATH environment.
+  
+Using custom PSF models
+------------
+
+Pre-computed PSF models are available for download on the `DOLPHOT homepage <http://americano.dolphinsim.com/dolphot/>`_. These include up-to-date NIRCam and NIRISS PSF models. These models have been generated with `WebbPSF <https://webbpsf.readthedocs.io/en/latest/>`_ v1.0.1, and have the following characteristics:
+
+* Detector position: 3x3 (NIRCam) or 5x5 (NIRISS) spatial grid distributed uniformly on each of the chips.
+* PSF FoV: 51x51 px square FoV
+* Spatial oversampling factor: 5
+* Number of used wavelenghts: 5 for W filters, 3 for M filters and 1 for N filters, sampling flux from a G5V Phoenix atmosphere model.
+* Optical Path Delay (OPD) map from Jul. 24th, 2022 (O2022072401-NRCA3_FP1-1.fits).
+
+However, users who want to use different PSF grids (e.g., to use different OPD maps) can do so with help of the *nircammakepsf/nirissmakepsf* routines. First, we create a 'tmp' subdirectory in the DOLPHOT folder:
+
+.. code-block:: bash
+ 
+ > pwd
+ > ~/dolphot2.0/
+ > mkdir tmp
+
+Then we place a folder, containing our preferred PSF models, in the 'tmp' directory. As of writing, *nircammakepsf* and *nirissmakepsf* can ingest standard output from WebbPSF, in .fits file format:
+
+.. code-block:: bash
+ 
+ > cd tmp
+ > cp ~/PSFpath/MyPSFs ./
+
+Finally, we run *nircammakepsf/nirissmakepsf* specifying the desired filter and the PSF grid to use. The routine will convert the requested PSFs to binary files that are ready to use with DOLPHOT. The binary psfs will be located in the 'dolphot2.0/nircam/data/' or 'dolphot2.0/niriss/data/' subdirectory. For instance, if we want to create new PFSs for the NIRCam F090W filter:
+
+.. code-block:: bash
+
+   >cd ../
+   > nircammakepsf F090W -base=MyPSFs
+   > ls nircam/data
+   > F090W.nrca1.psf
+   > F090W.nrca2.psf
+   > F090W.nrca3.psf
+   > F090W.nrca4.psf
+   > F090W.nrcb1.psf
+   > F090W.nrcb2.psf
+   > F090W.nrcb3.psf
+   > F090W.nrcb4.psf
+ 
+Repeat the process for every filter of interest. DOLPHOT is now set up to work with the new PSF grid.
+ 
+.. tip::
+
+   You can store different binary PSF grids and replace the files in 'nircam/data/' every time you want to change PSFs. DOLPHOT does not need to be recompiled after you change PSFs.
+   
+.. note::
+   Similar routines (e.g., *acsmakepsf*, *wfc3makepsf*) exist to create binary PSF files for the HST instruments, starting from `Tiny Tim <https://www.stsci.edu/hst/instrumentation/focus-and-pointing/focus/tiny-tim-hst-psf-modeling>`_ output. usage and syntax is analogous to *nircammakepsf*.
+ 
