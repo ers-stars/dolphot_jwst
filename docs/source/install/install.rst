@@ -32,7 +32,8 @@ All DOLPHOT files can be downloaded from the `DOLPHOT homepage <http://americano
 * PSF models specific to each camera and filter
 
 .. note::
- Only PAMs and PSF models for the camera(s)/filter(s) of interest need to be downloaded. 
+ * Only PAMs and PSF models for the camera(s)/filter(s) of interest need to be downloaded. 
+ * PAMs need to be donwloaded only for HST instruments. JWST frames include a PAM array in the .fits itself, and no extenral PAM is required for them.
 
 Makefile
 ------------
