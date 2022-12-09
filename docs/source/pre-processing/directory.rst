@@ -73,3 +73,6 @@ Because DOLPHOT modifies the image files, we want to preserve the original files
  >jw01334-o001_t001_nircam_clear-f090w_i2d.fits
  >jw01334-o001_t001_nircam_clear-f150w_i2d.fits
  
+.. note::
+ DOLPHOT works best when used on non-drizzled images (i.e., CAL or CRF file in the case of JWST). However, it is useful to include a deeper stacked image, to help image alignment and improve the overall photometry. In this example, we are going to use the stacked I2D image in the F150W band.
+ 
