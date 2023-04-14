@@ -28,12 +28,8 @@ All DOLPHOT files can be downloaded from the `DOLPHOT homepage <http://americano
 
 * DOLPHOT base source files
 * DOLPHOT module-specific source files
-* Pixel Area Maps (PAMs) specific to each camera
 * PSF models specific to each camera and filter
 
-.. note::
- * Only PAMs and PSF models for the camera(s)/filter(s) of interest need to be downloaded. 
- * PAMs need to be donwloaded only for HST instruments. JWST frames include a PAM array in the .fits itself, and no extenral PAM is required for them.
 
 Makefile
 ------------
@@ -49,9 +45,9 @@ PGPLOT is not linked by default.  To link PGPLOT to DOLPHOT, uncomment these lin
  
 .. code-block:: bash
    
-   #export USEACS=1
+   #export USENIRCAM=1
 
-Individual camera models are not installed by default.  For example, to install the HST/ACS module, uncomment the above line.
+Individual camera models are not installed by default.  For example, to install the NIRCAM module, uncomment the above line.
   
 .. code-block:: bash
 
