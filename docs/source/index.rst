@@ -39,11 +39,11 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
    
 .. toctree::
    :maxdepth: 1
-   :caption: Parameter file
+   :caption: Running DOLPHOT
    :name: param
 
-   parameter_file/setup
-   parameter_file/definitions
+   running_dolphot/setup
+   running_dolphot/definitions
    
 .. toctree::
    :maxdepth: 1
@@ -65,7 +65,7 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
    
 .. toctree::
    :maxdepth: 2
-   :caption: Examples with JWST Data
+   :caption: Examples
    :name: examples
    
    examples/m92
