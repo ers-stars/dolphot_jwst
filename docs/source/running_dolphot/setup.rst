@@ -19,6 +19,15 @@ Any omitted parameter will be set at the default value (cf. `Parameters`_). If w
 
   > dolphot <outputname> -p<parameterfile>
   
-  While running, *dolphot* will print diagnostics on the reduction on the standard output. Since these are useful to assess the outcome of the reduction and troubleshoot problems, we may wish to save them in a log file. 
+While running, *dolphot* will print diagnostics on the reduction on the standard output. Since these are useful to assess the outcome of the reduction and troubleshoot problems, we may wish to save them in a log file. 
+
+Continuing with our example dataset, we will run the reduction on our M92 images:
+.. code-block:: bash
+
+  > dolphot M92_example.phot -pphot.param > phot.log
+  
+In this example, **phot.param** file contains the following input:
+
+
   
   
