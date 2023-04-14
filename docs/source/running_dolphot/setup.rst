@@ -13,4 +13,4 @@ The **outputname** file is where the photometric catalog will be stored. A numbe
 
   > dolphot <outputname> <parametername>=<parametervalue>
   
-  Any omitted parameter will be set at the default value. If we want to 
+Any omitted parameter will be set at the default value (cf. `Parameters`_). If we want to 
