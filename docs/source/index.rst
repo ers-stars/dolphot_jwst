@@ -68,7 +68,5 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
    :caption: Examples
    :name: examples
    
-   examples/m92
-   examples/dracoii
-   examples/wlm
+   examples/m92_niriss
  
