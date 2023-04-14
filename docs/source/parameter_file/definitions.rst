@@ -41,7 +41,7 @@ Photometry
 * **SkySig**: Sigma rejection threshold for sky fit; only used if FitSky is set to 1.
 * **MaxIT**: Maximum number of photometry iterations.
 * **NoiseMult**: To allow for imperfect PSFs, the noise is increased by this value times the star brightness in the pixel when computing chi values.
-* **SigPSF**:
+* **SigPSF**: Minimum signal-to-noise for a PSF solution to be attempted on a star. Fainter detections are assigned type 2.
 * **CombineChi** *(HST modules)*: CombineChi affects the combined photometry blocks. If set to zero (default), photometry will be combined weighted by 1/σ2 to maximize signal to noise. If set to one, weights will be 1/σ2max(1, χ2) to reduce the impact of epochs with bad photometry. Note that using CombineChi of one will require tuning NoiseMult so that well measured stars have χ = 1 at all magnitudes (plots of chi vs. magnitude should show this). Note also that this will result in larger uncertainties for combined (but not individual image) magnitudes and normalized count rates, as the individual image uncertainties are effectively multiplied by χ when calculating combined magnitudes.
 
 Camera Specific
@@ -50,19 +50,14 @@ Camera Specific
 * **img_rsky** *(int int)*: Inner and outer radii for computing sky values, if FitSky=1 is being used. Also used in a few places if using FitSky = 2, 3, or 4, so should always be set. The inner radius (first number) should be outside the bulk of the light from the star; the outer (second) should be sufficiently large to compute an accurate sky.
 * **img_psf**:
 * **img_apsky** *(int int)*: Set the inner and outer radii of the annulus used for calculating sky values for aperture corrections.
-* **ACSuseCTE**:
-* **WFC3useCTE**:
-* **ACSpsfType**:
-* **WFC3IRpsfType**:
-* **WFC3UVISpsfType**:
 
 Other
 ---------
 
 * **DiagPlotType**: Generate diagnostic plots showing aperture corrections, PSF correction image, and alignment residuals. Options are PS, GIF, and PNG. Plots are generated only if PGPLOT is used.
-* **xytfile**:
-* **xytpsf**:
-* **psfstars**:
+* **VerboseData**: Generates a file named “.data” that includes all numbers output to the console while running (alignment, PSF solution, aperture corrections).  Turned off (set to 0) by default.
+* **xytfile**: Used for the DOLPHOT warmstart option in which you can predetermine a list of stars to be photometered. The format of the warmstart file is the extension, Z, X, Y, type, and signal-to-noise of each star. The extension, Z, and type must be provided in regular integer format - no decimals are allowed. To run in this mode the warmstart file should be specified with the xytfile option set to the star list filename.
+* **psfstars**: Specify coordinates of the PSF stars. The file must contain extension, chip, X, and Y (the first four columns of DOLPHOT output).
 * **ApCor**: Make aperture corrections? Allowed values are 0 (no) and 1 (yes). Default aperture corrections always have the potential for error, so it is strongly recom- mended that you manually examine the raw output from this process.
 * **Force1**: Force all objects to be of class 1 or 2 (i.e., stars)? Allowed values are 0 (no) and 1 (yes). For crowded stellar fields, this should be set to 1 and the χ and sharpness values used to discard extended objects.
 * **FlagMask** *(HST modules)*: FlagMask is a bitwise mask that determines what error flags will not be accepted when producing the combined photometry blocks for each filter. Note that error flag values of eight or more (when the “extreme case”) always cause the photometry to be ignored. A value of zero allows photometry with an error flag less than eight to be used. Adding one eliminates stars close to the chip edge, adding two eliminates stars with too many bad pixels, and adding four eliminates stars with saturated cores.
