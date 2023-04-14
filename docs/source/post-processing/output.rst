@@ -21,6 +21,8 @@ The first file we wish to examine is the log file where we captured *dolphot* st
   Reading IMAGE extension: 2048x2048
    GAIN=1.94 EXP=311s NOISE=11.85 BAD=-253.31 SAT=397041.56
   ...
+  
+If anything did not proceed correctly with the pre-processing routines (e.g., *nircammask*) it will usually manifest in the image parameters. Make sure that **GAIN**, **BAD** and **SAT** are *reasonable* values (i.e., low unity, moderatley negative numbers, and large positive numbers, respectively). 
 
 
 
