@@ -27,6 +27,7 @@ If anything did not proceed correctly with the pre-processing routines (e.g., *n
 If the images are read in correctely, a common source of problems has to do with the astrometric alignment of the frames. DOLPHOT calculates geometric transformations between each of the science frames and the reference image. If the transformations are not sufficiently accurate, the photometry will typically suboptimal. In our M92 example, we can check the aligment in the log file:
 
 .. code-block:: bash
+
   38234 stars for alignment
   image 1: 1829 matched, 1781 used, 0.15 -0.02 1.000000 0.00000 -0.004, sig=0.10
   image 2: 2043 matched, 1971 used, 0.18 -0.12 1.000000 0.00000 0.003, sig=0.12
