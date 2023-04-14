@@ -36,7 +36,7 @@ If the images are read in correctely, a common source of problems has to do with
   image 5: 1436 matched, 1404 used, 0.13 -0.01 1.000000 0.00000 -0.004, sig=0.13
   image 6: 1506 matched, 1458 used, 0.15 -0.10 1.000000 0.00000 0.003, sig=0.11
   
-The two key metrics to monitor here are the number of matched stars for each image, and the **sig** values, which is the rms residual in *px* around the adopted trasnformation. The acceptable values for matched stars and **sig** depend somewhat on how dense the stellar field is and what camera is being analyzed. For a moderately populated NIRCam field, we want to have at least 
+The two key metrics to monitor here are the number of matched stars for each image, and the **sig** values, which is the rms residual in *px* around the adopted trasnformation. The acceptable values for matched stars and **sig** depend somewhat on how dense the stellar field is and what camera is being analyzed. For a moderately populated NIRCam field, we want most of the images to have at least 100 matched stars and **sig** values below 0.30. 
 
 
 
