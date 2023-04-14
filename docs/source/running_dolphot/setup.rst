@@ -13,4 +13,12 @@ The **outputname** file is where the photometric catalog will be stored. A numbe
 
   > dolphot <outputname> <parametername>=<parametervalue>
   
-Any omitted parameter will be set at the default value (cf. `Parameters`_). If we want to 
+Any omitted parameter will be set at the default value (cf. `Parameters`_). If we want to specify a large number of parameters, we can store them in a parameter file:
+
+.. code-block:: bash
+
+  > dolphot <outputname> -p<parameterfile>
+  
+  While running, *dolphot* will print diagnostics on the reduction on the standard output. Since these are useful to assess the outcome of the reduction and troubleshoot problems, we may wish to save them in a log file. 
+  
+  
