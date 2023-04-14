@@ -14,7 +14,7 @@ Files
 Alignment 
 ---------
 
-* **Align** = 0: Align images to reference? Allowed values are 0 (no), 1 (x/y offsets only), 2 (x/y offsets plus scale difference), 3 (x/y offsets plus distortion), and 4 (full third-order polynomial fit). Default = 1.
+* **Align** = 1: Align images to reference? Allowed values are 0 (no), 1 (x/y offsets only), 2 (x/y offsets plus scale difference), 3 (x/y offsets plus distortion), and 4 (full third-order polynomial fit). Default = 1.
 * **UseWCS** = 0: Use WCS header information for alignment? Allowed values are 0 (no), 1 (use to estimate shift, scale, and rotation), or 2 (use to estimate a full distortion solution). Note that any shifts or rotations selected by img shift and img xform are applied in addition to what is determined by the WCS solution. If reducing HST data, selecting UseWCS=1 can eliminate the need for running the fitdistort utilities. UseWCS=2 generally is not recommended for HST data since the distortion coefficients provided with DOLPHOT provide higher-order corrections than do the WCS headers.
 * **aligntol** = 0: Tolerance on initial alignment solution. If greater than zero, DOLPHOT will search for matches out to the specified distance (in image pixels) from the initial guess. Must be a non-negative value.
 * **Rotate** = 0: Correct for rotation in alignment? Allowed values are 0 (no) and 1 (yes).
