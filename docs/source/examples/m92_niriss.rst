@@ -1,8 +1,6 @@
-M92
+M92 NIRISS
 ======
 
-NIRcam
---------
 
 NIRISS
 --------
