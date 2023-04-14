@@ -24,8 +24,18 @@ The first file we wish to examine is the log file where we captured *dolphot* st
   
 If anything did not proceed correctly with the pre-processing routines (e.g., *nircammask*) it will usually manifest in the image parameters. Make sure that **GAIN**, **BAD** and **SAT** are *reasonable* values (i.e., low unity, moderatley negative numbers, and large positive numbers, respectively). 
 
+If the images are read in correctely, a common source of problems has to do with the astrometric alignment of the frames. DOLPHOT calculates geometric transformations between each of the science frames and the reference image. If the transformations are not sufficiently accurate, the photometry will typically suboptimal. In our M92 example, we can check the aligment in the log file:
 
-
+.. code-block:: bash
+  38234 stars for alignment
+  image 1: 1829 matched, 1781 used, 0.15 -0.02 1.000000 0.00000 -0.004, sig=0.10
+  image 2: 2043 matched, 1971 used, 0.18 -0.12 1.000000 0.00000 0.003, sig=0.12
+  image 3: 4142 matched, 3964 used, 0.06 0.00 1.000000 0.00000 0.000, sig=0.12
+  image 4: 4885 matched, 4661 used, 0.07 -0.13 1.000000 0.00000 -0.004, sig=0.13
+  image 5: 1436 matched, 1404 used, 0.13 -0.01 1.000000 0.00000 -0.004, sig=0.13
+  image 6: 1506 matched, 1458 used, 0.15 -0.10 1.000000 0.00000 0.003, sig=0.11
+  
+The two key metrics to monitor here are the number of matched stars for each image, and the **sig** values, which is the rms residual in *px* around the adopted trasnformation. The acceptable values for matched stars and **sig** depend somewhat on how dense the stellar field is and what camera is being analyzed. For a moderately populated NIRCam field, we want to have at least 
 
 
 
