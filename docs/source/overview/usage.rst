@@ -2,7 +2,7 @@ How to use this guide
 =========
 
 .. note::
-   * You can download all files needed to run this example through DOLPHOT here.
+   * You can download all input and output files for our M92 NIRCam DOLPHOT example here.
 
 This guide provides worked examples for NIRCam and NIRISS using a subset of the ERS data for M92.  We detail each step of the process for running DOLPHOT on M92 NIRCam data.  The pages here contain key pieces of information (e.g., snippets to explain the setup and exectution of DOLPHOT on this data.  All files involved with this example (i.e., images, parameter files, photometry output) can be downloaded from our high level science product directory on MAST.  We provide a shorter walkthrough with NIRISS M92 data. Our team has found that the DOLPHOT parameters and procdures applied to M92 work equally well over a wide range of data types (e.g., our uncrowded Draco II data and modestly crowded WLM data).  
 
