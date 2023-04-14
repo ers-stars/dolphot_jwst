@@ -33,8 +33,6 @@ In this example, **phot.param** file contains the following input:
 
   Nimg = 16
   img0_file = jw01334-o001_t001_nircam_clear-f150w_i2d
-  img0_shift = 0 0
-  img0_xform = 1 0 0
   img1_file = jw01334001001_02101_00001_nrca1_cal
   img2_file = jw01334001001_02101_00001_nrca2_cal
   img3_file = jw01334001001_02101_00001_nrca3_cal
@@ -52,8 +50,6 @@ In this example, **phot.param** file contains the following input:
   img15_file = jw01334001001_02101_00002_nrcb3_cal
   img16_file = jw01334001001_02101_00002_nrcb4_cal
 
-  img1_shift = 0 0
-  img1_xform = 1 0 0
   raper = 2
   rchi = 1.5
   rsky0 = 15
@@ -66,22 +62,11 @@ In this example, **phot.param** file contains the following input:
   FlagMask = 4
   SecondPass = 5
   PSFPhotIt = 2
-  ApCor = 1
-  FSat = 0.999
   NoiseMult = 0.1
-  WFC3useCTE = 0
   RCombine = 1.5
   CombineChi = 0
-  MaxIT = 25
   InterpPSFlib = 1
-  SigFindMult = 0.85
-  PSFPhot = 1
-  Force1 = 0
-  SkySig = 2.25
-  SkipSky = 1
   UseWCS = 2
-  PSFres = 1
-  PosStep = 0.25
 
 
   
