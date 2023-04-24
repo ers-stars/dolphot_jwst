@@ -40,7 +40,7 @@ After the images are read in correctely, a common source of problems involves th
 The two key metrics to monitor here are the number of matched stars for each image, and the **sig** values, which is the rms residual in *px* around the best-fit transformation. The acceptable values for matched stars and **sig** depend somewhat on how dense the stellar field is and what camera is being analyzed. For a moderately populated NIRCam field, we want most of the images to have at least 100 matched stars and **sig** values below 0.30. 
 
 .. tip::
-  If the alignment solutions are sub-optimal, you may try using a different frame as reference image. This is sometimes sufficient to solve te issue.
+  If the alignment solutions are sub-optimal, you may try using a different frame as reference image. This is sometimes sufficient to solve the issue.
 
 Once we have made sure that the frames are properly aligned, we may wish to assess that the subsequent steps of the reduction have been successful. This includes making sure that enough PSF stars have been identified:
 
@@ -56,19 +56,50 @@ Once we have made sure that the frames are properly aligned, we may wish to asse
   image 6: 193 stars, -0.033044
   ...
   
-In a moderately populated NIRCam field, having at least 100 PSF stars per image would be desirable. Besides the number of PSF stars used for every image, *dolphot* also list the average PSF adjustment. This is the fractional flux difference in the central PSF pixel, between the model PSFs and the profile of the PSF stars. Ideally, this number should be as close to 0 as possible. Absolute PSF adjustments below 0.05 should provide enough photometric accuracy for most applications.
+In a moderately populated NIRCam field, having at least 100 PSF stars per image would be desirable. Besides the number of PSF stars used for every image, *dolphot* also lists the average PSF adjustment. This is the fractional flux difference in the central PSF pixel, between the model PSFs and the profile of the PSF stars. Ideally, this number should be as close to 0 as possible. Absolute PSF adjustments below 0.05 should provide enough photometric accuracy for most applications.
 
 .. note::
-  Due to current model limitations, NIRCam PSF models are known to be too concentrated compared to actual data (i.e. negative PSF adjustments). For filters in the short wavelength channel, this effect is between 2% and 4% of the central pixel flux. Filters in the long wavelength channel can be affted more severely.
+  Due to current model limitations, NIRCam PSF models are known to be too concentrated compared to actual data (i.e. negative PSF adjustments). For filters in the short wavelength channel, this effect is between 2% and 4% of the central pixel flux. Filters in the long wavelength channel can be affected more severely.
 
+Finally, the log file contains details about the aperture correction step. Again, make sure that at least 100 stars are used in each image:
 
+.. code-block:: bash
 
+  Aperture corrections:
+  image 1: 200 total aperture stars
+    200 stars used, -0.003 (-0.003 +/- 0.000, 0.001)
+    200 stars used,  0.003 (0.003 +/- 0.000, 0.001)
+    200 stars used,  0.128 (0.128 +/- 0.000, 0.001)
+  image 2: 200 total aperture stars
+    200 stars used, -0.003 (-0.003 +/- 0.000, 0.001)
+    199 stars used,  0.002 (0.002 +/- 0.000, 0.001)
+    200 stars used,  0.096 (0.097 +/- 0.000, 0.001)
+  image 3: 200 total aperture stars
+    200 stars used, -0.006 (-0.006 +/- 0.000, 0.001)
+    200 stars used,  0.003 (0.002 +/- 0.000, 0.001)
+    200 stars used,  0.139 (0.138 +/- 0.000, 0.001)
+  image 4: 200 total aperture stars
+    200 stars used, -0.005 (-0.005 +/- 0.000, 0.001)
+    200 stars used,  0.006 (0.006 +/- 0.000, 0.001)
+    200 stars used,  0.102 (0.102 +/- 0.000, 0.001)
+  image 5: 200 total aperture stars
+    200 stars used, -0.006 (-0.006 +/- 0.000, 0.001)
+    200 stars used, -0.006 (-0.006 +/- 0.000, 0.001)
+    200 stars used,  0.094 (0.094 +/- 0.000, 0.001)
+  image 6: 200 total aperture stars
+    200 stars used, -0.009 (-0.009 +/- 0.000, 0.001)
+    198 stars used, -0.005 (-0.005 +/- 0.000, 0.001)
+    200 stars used,  0.126 (0.126 +/- 0.000, 0.001)
+  ...
 
-
-When *dolphot* is run with the following syntax:
+If inspection of the log file does not reveal any anomaly, the reduction has most likely been successful. When *dolphot* is run with the following syntax:
 
 .. code-block:: bash
 
   > dolphot <outputname> <options> > <logfile>
+
+Additional diagnostic files are generated, using **outputname** as root. In particular, **outputname**.warnings contains potential anomalies that have been encountered during reduction and could have compromised photometric quality. Be sure to inspect the content of this file. In our M92 example, M92_example.phot.warnings is empty.
+
+
   
 the output photometric catalog is stored in the **outputname** file. This file contains a output line for each point-source identified during the reduction run. For each line, the **outputname** file contains a long list of outputs. These include photometric measurements and quality flags on each indivual frame, as well as combined photometry from multiple images that use the same filter.
