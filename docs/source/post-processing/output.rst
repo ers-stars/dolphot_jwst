@@ -24,7 +24,7 @@ The first file we may want to examine is the log file where we captured *dolphot
   
 If anything did not proceed correctly with the pre-processing routines (e.g., *nircammask*) it will usually manifest in the image parameters. Make sure that **GAIN**, **BAD** and **SAT** are *reasonable* values (i.e., low unity, moderatley negative numbers, and large positive numbers, respectively). 
 
-After the images are read in correctely, a common source of problems has to do with the astrometric alignment of the frames. DOLPHOT calculates geometric transformations between each of the science frames and the reference image. If the transformations are not sufficiently accurate, the photometry will typically be suboptimal. In our M92 example, we can check the aligment in the log file:
+After the images are read in correctely, a common source of problems involves the astrometric alignment of the frames. DOLPHOT calculates geometric transformations between each of the science frames and the reference image. If the transformations are not sufficiently accurate, the photometry will typically be suboptimal. In our M92 example, we can check the aligment in the log file:
 
 .. code-block:: bash
 
@@ -35,8 +35,31 @@ After the images are read in correctely, a common source of problems has to do w
   image 4: 4885 matched, 4661 used, 0.07 -0.13 1.000000 0.00000 -0.004, sig=0.13
   image 5: 1436 matched, 1404 used, 0.13 -0.01 1.000000 0.00000 -0.004, sig=0.13
   image 6: 1506 matched, 1458 used, 0.15 -0.10 1.000000 0.00000 0.003, sig=0.11
+  ...
   
-The two key metrics to monitor here are the number of matched stars for each image, and the **sig** values, which is the rms residual in *px* around the adopted trasnformation. The acceptable values for matched stars and **sig** depend somewhat on how dense the stellar field is and what camera is being analyzed. For a moderately populated NIRCam field, we want most of the images to have at least 100 matched stars and **sig** values below 0.30. 
+The two key metrics to monitor here are the number of matched stars for each image, and the **sig** values, which is the rms residual in *px* around the best-fit transformation. The acceptable values for matched stars and **sig** depend somewhat on how dense the stellar field is and what camera is being analyzed. For a moderately populated NIRCam field, we want most of the images to have at least 100 matched stars and **sig** values below 0.30. 
+
+.. tip::
+  If the alignment solutions are sub-optimal, you may try using a different frame as reference image. This is sometimes sufficient to solve te issue.
+
+Once we have made sure that the frames are properly aligned, we may wish to assess that the subsequent steps of the reduction have been successful. This includes making sure that enough PSF stars have been identified:
+
+.. code-block:: bash
+
+  10961 PSF stars; 766403 neighbors
+  Central pixel PSF adjustments:
+  image 1: 281 stars, -0.009912
+  image 2: 264 stars, -0.010519
+  image 3: 241 stars, -0.020580
+  image 4: 255 stars, -0.017795
+  image 5: 255 stars, -0.032865
+  image 6: 193 stars, -0.033044
+  ...
+  
+In a moderately populated NIRCam field, having at least 100 PSF stars per image would be desirable. Besides the number of PSF stars used for every image, *dolphot* also list the average PSF adjustment. This is the fractional flux difference in the central PSF pixel, between the model PSFs and the profile of the PSF stars. Ideally, this number should be as close to 0 as possible. Absolute PSF adjustments below 0.05 should provide enough photometric accuracy for most applications.
+
+.. note::
+  Due to current model limitations, NIRCam PSF models are known to be too concentrated compared to actual data (i.e. negative PSF adjustments). For filters in the short wavelength channel, this effect is between 2% and 4% of the central pixel flux. Filters in the long wavelength channel can be affted more severely.
 
 
 
