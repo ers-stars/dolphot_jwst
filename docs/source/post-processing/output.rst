@@ -106,6 +106,7 @@ Examining the catalog
 The output photometric catalog is stored in the **outputname** file. This file contains a output line for each point-source identified during the reduction run. For each line, the **outputname** file contains a long list of outputs. These include photometric measurements and quality flags on each indivual frame, as well as combined photometry from multiple images that use the same filter. The detailed list of all output columns can be found in the **outputname**.columns file. In our example, these are the fir 50 columns of our output file:
 
 .. code-block:: bash
+
   1. Extension (zero for base image)
   2. Chip (for three-dimensional FITS image)
   3. Object X position on reference image (or first image, if no reference)
@@ -156,6 +157,7 @@ The output photometric catalog is stored in the **outputname** file. This file c
   48. Roundness, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
   49. Crowding, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
   50. Photometry quality flag, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
+  ...
 
 
 While the frame-by-frame photometric output can be useful for, e.g., variable star work, for the purpose of generating a photometric catlog, we are only interested in
