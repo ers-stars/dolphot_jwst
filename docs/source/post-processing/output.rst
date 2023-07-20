@@ -103,7 +103,7 @@ Additional diagnostic files are generated, using **outputname** as root. In part
 Examining the catalog
 ============
   
-The output photometric catalog is stored in the **outputname** file. This file contains a output line for each point-source identified during the reduction run. For each line, the **outputname** file contains a long list of outputs. These include photometric measurements and quality flags on each indivual frame, as well as combined photometry from multiple images that use the same filter. The detailed list of all output columns can be found in the **outputname**.columns file. In our example, these are the fir 50 columns of our output file:
+The output photometric catalog is stored in the **outputname** file. This file contains a output line for each point-source identified during the reduction run. For each line, the **outputname** file contains a long list of outputs. These include photometric measurements and quality flags on each indivual frame, as well as combined photometry from multiple images that use the same filter. The detailed list of all output columns can be found in the **outputname**.columns file. In our example, these are the first 50 columns of our output file:
 
 .. code-block:: bash
 
@@ -160,4 +160,4 @@ The output photometric catalog is stored in the **outputname** file. This file c
   ...
 
 
-While the frame-by-frame photometric output can be useful for, e.g., variable star work, for the purpose of generating a photometric catlog, we are only interested in
+While the frame-by-frame photometric output (columns 38 and below, in our example) can be useful for, e.g. variable star work, for the purpose of generating a photometric catlog, we are only interested in the global properties of the source (columns 3-11) and in the combined photometry properties (columns 12-37).
