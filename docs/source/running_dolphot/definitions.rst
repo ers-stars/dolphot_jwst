@@ -34,7 +34,7 @@ Star Finding Parameters
 * **PosStep** = 0.25: Typical stepsize in x and y during photometry iterations. Should be set to a factor of a few smaller than the PSF FHWM.
 * **dPosMax** = 3.0: Maximum position change of a star during a single photometry itera- tion. Note that this parameter is currently ignored.
 * **RCombine** = 2.0: Minimum separation of two stars (they will be combined if they become closer than this value). This value can generally be about 2/3 of the PSF FWHM, but setting below 1.4 will not always be effective.
-* **FSat**: Fraction of nominal saturation for which pixels are considered saturated.
+* **FSat** = 0.999: Fraction of nominal saturation for which pixels are considered saturated.
 
 Photometry
 ---------
