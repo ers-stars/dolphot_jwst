@@ -103,4 +103,59 @@ Additional diagnostic files are generated, using **outputname** as root. In part
 Examining the catalog
 ============
   
-The output photometric catalog is stored in the **outputname** file. This file contains a output line for each point-source identified during the reduction run. For each line, the **outputname** file contains a long list of outputs. These include photometric measurements and quality flags on each indivual frame, as well as combined photometry from multiple images that use the same filter.
+The output photometric catalog is stored in the **outputname** file. This file contains a output line for each point-source identified during the reduction run. For each line, the **outputname** file contains a long list of outputs. These include photometric measurements and quality flags on each indivual frame, as well as combined photometry from multiple images that use the same filter. The detailed list of all output columns can be found in the **outputname**.columns file. In our example, these are the fir 50 columns of our output file:
+
+.. code-block:: bash
+  1. Extension (zero for base image)
+  2. Chip (for three-dimensional FITS image)
+  3. Object X position on reference image (or first image, if no reference)
+  4. Object Y position on reference image (or first image, if no reference)
+  5. Chi for fit
+  6. Signal-to-noise
+  7. Object sharpness
+  8. Object roundness
+  9. Direction of major axis (if not round)
+  10. Crowding
+  11. Object type (1=bright star, 2=faint, 3=elongated, 4=hot pixel, 5=extended)
+  12. Total counts, NIRCAM_F090W
+  13. Total sky level, NIRCAM_F090W
+  14. Normalized count rate, NIRCAM_F090W
+  15. Normalized count rate uncertainty, NIRCAM_F090W
+  16. Instrumental VEGAMAG magnitude, NIRCAM_F090W
+  17. Transformed UBVRI magnitude, NIRCAM_F090W
+  18. Magnitude uncertainty, NIRCAM_F090W
+  19. Chi, NIRCAM_F090W
+  20. Signal-to-noise, NIRCAM_F090W
+  21. Sharpness, NIRCAM_F090W
+  22. Roundness, NIRCAM_F090W
+  23. Crowding, NIRCAM_F090W
+  24. Photometry quality flag, NIRCAM_F090W
+  25. Total counts, NIRCAM_F150W
+  26. Total sky level, NIRCAM_F150W
+  27. Normalized count rate, NIRCAM_F150W
+  28. Normalized count rate uncertainty, NIRCAM_F150W
+  29. Instrumental VEGAMAG magnitude, NIRCAM_F150W
+  30. Transformed UBVRI magnitude, NIRCAM_F150W
+  31. Magnitude uncertainty, NIRCAM_F150W
+  32. Chi, NIRCAM_F150W
+  33. Signal-to-noise, NIRCAM_F150W
+  34. Sharpness, NIRCAM_F150W
+  35. Roundness, NIRCAM_F150W
+  36. Crowding, NIRCAM_F150W
+  37. Photometry quality flag, NIRCAM_F150W
+  38. Measured counts, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
+  39. Measured sky level, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
+  40. Normalized count rate, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
+  41. Normalized count rate uncertainty, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
+  42. Instrumental VEGAMAG magnitude, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
+  43. Transformed UBVRI magnitude, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
+  44. Magnitude uncertainty, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
+  45. Chi, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
+  46. Signal-to-noise, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
+  47. Sharpness, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
+  48. Roundness, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
+  49. Crowding, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
+  50. Photometry quality flag, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 311.4 sec)
+
+
+While the frame-by-frame photometric output can be useful for, e.g., variable star work, for the purpose of generating a photometric catlog, we are only interested in
