@@ -163,4 +163,4 @@ The output photometric catalog is stored in the **outputname** file. This file c
 While the frame-by-frame photometric output (columns 38 and below, in our example) can be useful for, e.g. variable star work, for the purpose of generating a photometric catlog, we are only interested in the global properties of the source (columns 3-11) and in the combined photometry properties (columns 12-37).
 
 
-.. image:: https://github.com/ers-stars/dolphot_jwst/blob/main/docs/source/images/M92_Doc_Catplot.pdf
+.. image:: https://github.com/ers-stars/dolphot_jwst/blob/main/docs/source/images/M92_Doc_Catplot.png
