@@ -5,6 +5,6 @@ A useful capability of DOLPHOT is to perform artifical star tests (ASTs) to eval
 
 .. code-block: bash
 
-  >1 1 X Y M1 M2 M3...
+  > 1 1 X Y M1 M2 M3...
 
 
