@@ -5,4 +5,14 @@ Once we have a mock star input list, we can perform ASTs on our dataset. This is
 
 .. code-block:: bash
 
-  dolphot <outputname> -p<fakeparam> > fake.log
+  dolphot <photname> -p<fakeparam> > fake.log
+
+Where **photname** is the name of the photometric catalog from the original *dolphot* run. The file **fakeparam** is identical to the parameter file of the original *dolphot* run, but has additional keywords:
+
+* **FakeStars**: If this keyword is set, 
+* **Fakeout**:
+* **FakeMatch** = 3.0:
+* **FakePSF** = 1.5:
+* **FakeStarPSF** = 0:
+* **FakePad** = 0:
+* **RandomFake** = 1:
