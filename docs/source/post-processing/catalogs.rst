@@ -14,5 +14,5 @@ In order to reduce these contaminants and obtain a catalog that contains mostly 
 * **Crowding**: The amount of contamination from neighboring sources. The value of Crowding is in magnitudes and represents how much brighter the star would have been measured had nearby stars not been fit simultaneously.
 * **Quality Flag** (only given per filter): 0 if the source was fit without issues. A value of 1 is added if the photometry aperture extends off chip. A value of 2 is added is there are too many bad or saturated pixels. A value of 4 is added is the source is saturated at the center. A value of 8 is added for extreme cases of these problems. Multiple values can be added to flag.
 
-
+Here we provide guidelines on how to use these metrics and standard recommendations, for the sake of homogeneity. However, experimentation and visual inspection of the color-magnitude diagram may be required, to tailor selection to your specific needs.
 
