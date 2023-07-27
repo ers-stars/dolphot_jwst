@@ -16,3 +16,6 @@ In order to reduce these contaminants and obtain a catalog that contains mostly 
 
 Here we provide guidelines on how to use these metrics and standard recommendations, for the sake of homogeneity. However, experimentation and visual inspection of the color-magnitude diagram may be required, to tailor selection to your specific needs.
 
+.. Tip::
+  * SNR and Sharpness are, by far, the most useful metrics to select good stars. You may want to select stars with SNR above a threshold of 4 or 5.
+  * Good Sharpness values should be as close as 0 as possible. This is usually done by selecting for Sharp^2 to be below a certain threshold. Inspect the Sharpness vs Magnitude diagram to identify the appropriate cuts. You shoud be able to see high-SNR stars tightly clustered around 0, for a large range of magnitudes. 
