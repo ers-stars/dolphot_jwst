@@ -5,6 +5,7 @@ We now have completed a successful DOLPHOT reduction and built our photometric c
 
 .. image:: https://github.com/ers-stars/dolphot_jwst/blob/main/docs/source/images/M92_Doc_raw.png
   :width: 500
+  :align: center
 
 In order to reduce these contaminants and obtain a catalog that contains mostly bona-fide stars, it is useful to inspect the quality parameters that DOLPHOT has calculated for each source. These parameters are listed both for the global photometry and for each individual filter, and include:
 
@@ -37,6 +38,7 @@ Those criteria should be satisfied by all sufficiently deep filters. In our M92 
 
 .. image:: https://github.com/ers-stars/dolphot_jwst/blob/main/docs/source/images/M92_Doc_Complete.png
   :width: 500
+  :align: center
 
 As a rule of thumb, higher purity can be achieved by applying stricter cuts to **Sharpness* and **Crowding**. However, completeness, especially at low **SNR**, will also be decreased. For F090W and F150W, we have developed a strict, purity-oriented selection in **CITE(WARFIELD23)**:
 
@@ -49,5 +51,6 @@ To be satisfied in F090W and F150W simultaneously. This selection has been shown
 
 .. image:: https://github.com/ers-stars/dolphot_jwst/blob/main/docs/source/images/M92_Doc_Pure.png
   :width: 500
+  :align: center
 
 
