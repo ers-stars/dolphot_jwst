@@ -7,4 +7,9 @@ A useful capability of DOLPHOT is to perform artifical star tests (ASTs) to eval
 
   > 1 1 X Y M1 M2 M3...
 
+Where the first two numbers are the extension number and chip number in the image (both 1, for a typical JWST reduction); X and Y are the pixel coordinate of the mock star, in the coordinate system of the reference image; and the following numbers are the input magnitudes in each of the photometered filters.
+
+...note:
+
+  The extension number will need to be set to 0, if the frames have been processed through *splitgroups*. This is the case, for instance, is the images are reduced together with HST frames.
 
