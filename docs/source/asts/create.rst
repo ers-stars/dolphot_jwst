@@ -16,3 +16,9 @@ Where the first two numbers are the extension number and chip number in the imag
 
   The extension number will need to be set to 0, if the frames have been processed through *splitgroups*. This is the case, for instance, is the images are reduced together with HST frames.
 
+The input star list can be created by hand or generated using the routine *fakelist*, which uses the following syntax:
+
+.. code-block:: bash
+
+  > fakelist <photname> <filter1> <filter2> <f1min> <f1min> <cmin> <cmax> > <listname>
+
