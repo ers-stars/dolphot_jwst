@@ -164,3 +164,4 @@ While the frame-by-frame photometric output (columns 38 and below, in our exampl
 
 
 .. image:: https://github.com/ers-stars/dolphot_jwst/blob/main/docs/source/images/M92_Doc_Catplot.png
+  :width: 400
