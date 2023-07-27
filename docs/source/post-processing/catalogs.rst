@@ -22,3 +22,11 @@ Here we provide guidelines on how to use these metrics and standard recommendati
   * Selecting only sources with low **Flag** values (e.g., below 2-4) can help reject badly photometered stars. Depending on the **Force1** settings, **Type** can also be used to reject bad sources. If the field is very crowded, you may wish to ignore **Type** and do a more careful selection in **Sharpness*, **Crowding**, etc.
   * **Round** and **Crodwing** can also help reject bad sources, for instance artifact stemming from diffraction spikes. Their efficacy, however, somewhat depends on the crowding properties of the field.
   * Due to details of the fit-procedure, we advise against using **Chi** to select good sources.
+
+A loose, completenss-oriented, selection to reject obvious outliers but preserve as many stars as possible can be done using the following parameters:
+
+* SNR <= 4
+* Sharp^2 <= 0.2
+* Crowding <= 2.25
+* Flag <= 2
+* Type <= 2
