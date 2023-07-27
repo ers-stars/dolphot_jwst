@@ -18,7 +18,7 @@ Here we provide guidelines on how to use these metrics and standard recommendati
 
 .. Tip::
   * **SNR** and **Sharpness** are, by far, the most useful metrics to select good stars. You may want to select stars with **SNR** above a threshold of 4 or 5.
-  * Good **Sharpness** values should be as close as 0 as possible. This is usually done by selecting for **Sharp**^2 to be below a certain threshold. Inspect the **Sharpness** vs Magnitude diagram to identify the appropriate cuts. You shoud be able to see high-SNR stars tightly clustered around 0, for a large range of magnitudes. 
+  * Good **Sharpness** values should be as close to 0 as possible. This is usually done by selecting for **Sharp**^2 to be below a certain threshold. Inspect the **Sharpness** vs Magnitude diagram to identify the appropriate cuts. You shoud be able to see high-SNR stars tightly clustered around 0, for a large range of magnitudes. 
   * Selecting only sources with low **Flag** values (e.g., below 2-4) can help reject badly photometered stars. Depending on the **Force1** settings, **Type** can also be used to reject bad sources. If the field is very crowded, you may wish to ignore **Type** and do a more careful selection in **Sharpness*, **Crowding**, etc.
   * **Round** and **Crodwing** can also help reject bad sources, for instance artifact stemming from diffraction spikes. Their efficacy, however, somewhat depends on the crowding properties of the field.
   * Due to details of the fit-procedure, we advise against using **Chi** to select good sources.
