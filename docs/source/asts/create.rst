@@ -22,7 +22,7 @@ The input star list can be created by hand or generated using the routine *fakel
 
   > fakelist <photname> <filter1> <filter2> <f1min> <f1min> <cmin> <cmax> <options> > <listname>
 
-Where **photname** is the name of the dolphot output; **filter1** and **filter2** are the name of the two filters; and **f1min**, **f1max**, **cmin** and **cmax** set the range in magnitude and color of the input mock stars. Commonly used options of *fakelist* include:
+Where **photname** is the name of the *dolphot* output; **filter1** and **filter2** are the name of the two filters; and **f1min**, **f1max**, **cmin** and **cmax** set the range in magnitude and color of the input mock stars. Commonly used options of *fakelist* include:
 
 * **nstar**: set the number of input stars to be generated. Default is 1.
 * **usexy**: provide the name of a file containing a list of positions (in the format '1 1 X Y'). The generated star list will follow the same spatial probability distribution. Default is uniform spatial distribution.
@@ -54,4 +54,4 @@ To obtain a file called fake.inputlist, with the following content:
   1 1 6603.46 1673.33 17.239 16.038
   ...
 
-
+We are now ready to run the ASTs on DOLPHOT.
