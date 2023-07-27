@@ -35,7 +35,7 @@ A loose, completenss-oriented, selection to reject obvious outliers but preserve
 
 Those criteria should be satisfied by all sufficiently deep filters. In our M92 example, we apply these cuts to both F090W and F150W, and obtain the following color-magnitude diagram.
 
-.. image:: https://github.com/ers-stars/dolphot_jwst/blob/main/docs/source/images/M92_Doc_st.pn
+.. image:: https://github.com/ers-stars/dolphot_jwst/blob/main/docs/source/images/M92_Doc_st.png
   :width: 500
 
 As a rule of thumb, higher purity can be achieved by applying stricter cuts to **Sharpness* and **Crowding**. However, completeness, especially at low **SNR**, will also be decreased. For F090W and F150W, we have developed a strict, purity-oriented selection in **CITE(WARFIELD23)**:
