@@ -23,9 +23,23 @@ Here we provide guidelines on how to use these metrics and standard recommendati
   * Selecting only sources with low **Flag** values (e.g., below 2-4) can help reject badly photometered stars. Depending on the **Force1** settings, **Type** can also be used to reject bad sources. If the field is very crowded, you may wish to ignore **Type** and do a more careful selection in **Sharpness**, **Crowding**, etc.
   * Due to details of the fit-procedure, we advise against using **Chi** to select good sources.
 
-A loose, completenss-oriented, selection to reject obvious outliers but preserve as many stars as possible can be done using the following parameters: :math: `SNR \\le 4`
+A loose, completenss-oriented, selection to reject obvious outliers but preserve as many stars as possible can be done using the following parameters:
 
+*SNR >=4
 * Sharp^2 <= 0.2
 * Crowding <= 2.25
 * Flag <= 2
 * Type <= 2
+
+Those criteria should be satisfied by all sufficiently deep filters. In our M92 example, we apply these cuts to both F090W and F150W, and obtain the following color-magnitude diagram.
+
+As a rule of thumb, higher purity can be achieved by applying stricter cuts to **Sharpness* and **Crowding**. However, completeness, especially at low **SNR**, will also be decreased. For F090W and F150W, we have developed a strict, purity-oriented selection in **CITE(WARFIELD23)**:
+
+* Sharp^2 <= 0.01
+* Crowding <= 0.5
+* Flag <= 2
+* Type <= 2
+
+To be satisfied in F090W and F150W simultaneously. This selection has been shown to be highly pure down to **SNR** of 10. Some residual contaminants might remain below that threshold. Applying these cuts to our M92 catalog, we obtain the following color-magnitude diagram.
+
+
