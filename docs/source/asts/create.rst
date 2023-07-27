@@ -20,5 +20,5 @@ The input star list can be created by hand or generated using the routine *fakel
 
 .. code-block:: bash
 
-  > fakelist <photname> <filter1> <filter2> <f1min> <f1min> <cmin> <cmax> > <listname>
+  > fakelist <photname> <filter1> <filter2> <f1min> <f1min> <cmin> <cmax> <options> > <listname>
 
