@@ -5,3 +5,10 @@ We now have completed a successful DOLPHOT reduction and built our photometric c
 
 
 In order to reduce these contaminants and obtain a catalog that contains mostly bona-fide stars, it is useful to inspect the quality flags that DOLPHOT has calculated for each source. For each filter in the datset these include:
+
+* **Chi**: The Chi-squared from the PSF-fit
+* **SNR**: The signal-to-noise ratio of the source
+* **Sharpness**:
+* **Roundness**:
+* **Crowding**:
+* **Quality Flag**:
