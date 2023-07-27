@@ -25,7 +25,7 @@ Here we provide guidelines on how to use these metrics and standard recommendati
 
 A loose, completenss-oriented, selection to reject obvious outliers but preserve as many stars as possible can be done using the following parameters:
 
-* SNR <= 4
+* :math: `SNR \le 4`
 * Sharp^2 <= 0.2
 * Crowding <= 2.25
 * Flag <= 2
