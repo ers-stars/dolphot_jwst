@@ -21,7 +21,7 @@ Here we provide guidelines on how to use these metrics and standard recommendati
 
 .. Tip::
   * **SNR** and **Sharpness** are, by far, the most useful metrics to select good stars. You may want to select stars with **SNR** above a threshold of 4 or 5.
-  * Good **Sharpness** values should be as close to 0 as possible. This is usually done by selecting for **Sharp**^2 to be below a certain threshold. Inspect the **Sharpness** vs Magnitude diagram to identify the appropriate cuts. You shoud be able to see high-SNR stars tightly clustered around 0, for a large range of magnitudes. 
+  * Good **Sharpness** values should be as close to 0 as possible. This is usually done by selecting for **Sharp** ^2 to be below a certain threshold. Inspect the **Sharpness** vs Magnitude diagram to identify the appropriate cuts. You shoud be able to see high-SNR stars tightly clustered around 0, for a large range of magnitudes. 
   * **Round** and **Crodwing** can also help reject bad sources, for instance artifact stemming from diffraction spikes. Their efficacy, however, somewhat depends on the crowding properties of the field.
   * Selecting only sources with low **Flag** values (e.g., below 2-4) can help reject badly photometered stars. Depending on the **Force1** settings, **Type** can also be used to reject bad sources. If the field is very crowded, you may wish to ignore **Type** and do a more careful selection in **Sharpness**, **Crowding**, etc.
   * Due to details of the fit-procedure, we advise against using **Chi** to select good sources.
@@ -47,7 +47,7 @@ As a rule of thumb, higher purity can be achieved by applying stricter cuts to *
 * Flag <= 2
 * Type <= 2
 
-To be satisfied in F090W and F150W simultaneously. This selection has been shown to be highly pure down to **SNR** of 10. Some residual contaminants might remain below that threshold. Applying these cuts to our M92 catalog, we obtain the following color-magnitude diagram.
+To be satisfied in F090W and F150W simultaneously. This selection has been shown to be mostly pure down to **SNR** of 10. A higher level of residual contaminants might remain below that threshold. Applying these cuts to our M92 catalog, we obtain the following color-magnitude diagram.
 
 .. figure:: ../images/M92_Doc_Pure.png
   :width: 500
