@@ -41,6 +41,7 @@ Those criteria should be satisfied by all sufficiently deep filters. In our M92 
   :align: center
 
 As a rule of thumb, higher purity can be achieved by applying stricter cuts to **Sharpness** and **Crowding**. However, completeness, especially at low **SNR**, will also be decreased. For F090W and F150W, we have developed a strict, purity-oriented selection in 
+
 ..
   `Warfield et al. (2023) <https://ui.adsabs.harvard.edu/abs/2023RNAAS...7...23W/abstract>`_:
 
