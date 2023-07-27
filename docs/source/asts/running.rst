@@ -70,3 +70,5 @@ With the file **fake.param** having the following content:
   FakeMatch=3.0
   FakePad=0
   FakeStarPSF=1.5
+
+This way, *dolphot* will inject the mock stars, one at the time, in the images and measure its properties. The output file, **M92_example.fake** will contain an entry for each artifical star successfully processed (this might be slightly lower than the number of stars in the input list). For each star, the output will consist of the same columns present in the original photometry file, preceeded by a number of additional columns listing the input paramters of the mock star in each image.
