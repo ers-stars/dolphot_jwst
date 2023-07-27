@@ -8,7 +8,7 @@ In order to reduce these contaminants and obtain a catalog that contains mostly 
 
 * **Chi**: The Chi-squared from the PSF-fit
 * **SNR**: The signal-to-noise ratio of the source
-* **Sharpness**:
+* **Sharpness**: The angular extent of the source, compared to the PSF FWHM. A perfect point source would have a Sharpness of 0. A large positive Sharpness means that the source is extended (e.g., a background galaxy). A large negative Sharpness means that the source is narrower than the PSF (e.g., a hot pixel).
 * **Roundness**:
 * **Crowding**:
 * **Quality Flag**:
