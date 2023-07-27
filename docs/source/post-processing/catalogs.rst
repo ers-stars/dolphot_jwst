@@ -3,7 +3,7 @@ Culling the catalog
 
 We now have completed a successful DOLPHOT reduction and built our photometric catalog. However, practical applications require further post-processing to ensure we work with a meaningful source list. The catalog in **outputname**.phot, in fact, contains a fairly large number of contaminant sources, including background galaxies, artifacts, blends, poorly photometered stars, etc. This is obvious by inspecting the color-magnitude diagram.
 
-.. image:: ../images/M92_Doc_raw.png
+.. figure:: ../images/M92_Doc_raw.png
   :width: 500
   :align: center
 
@@ -36,7 +36,7 @@ A loose, completenss-oriented, selection to reject obvious outliers but preserve
 
 Those criteria should be satisfied by all sufficiently deep filters. In our M92 example, we apply these cuts to both F090W and F150W, and obtain the following color-magnitude diagram.
 
-.. image:: ../images/M92_Doc_Complete.png
+.. figure:: ../images/M92_Doc_Complete.png
   :width: 500
   :align: center
 
@@ -49,7 +49,7 @@ As a rule of thumb, higher purity can be achieved by applying stricter cuts to *
 
 To be satisfied in F090W and F150W simultaneously. This selection has been shown to be highly pure down to **SNR** of 10. Some residual contaminants might remain below that threshold. Applying these cuts to our M92 catalog, we obtain the following color-magnitude diagram.
 
-.. image:: ../images/M92_Doc_Pure.png
+.. figure:: ../images/M92_Doc_Pure.png
   :width: 500
   :align: center
 
