@@ -162,5 +162,5 @@ The output photometric catalog is stored in the **outputname** file. This file c
 
 While the frame-by-frame photometric output (columns 38 and below, in our example) can be useful for, e.g. variable star work, for the purpose of generating a photometric catlog, we are only interested in the global properties of the source (columns 3-11) and in the combined photometry properties (columns 12-37). We can use these quantity for instance, to perform a first inspection of the photometry and confirm that the reduction has produced good quality output. In our example, we can see in the plot below that the photometric error and the signal-to-noise follow expected and well-defined trends as function of source magnitude. The sharpness values (see XXX for more details) are also close to 0 for a large range of magnitudes, demonstrating the good outcome of the PSF-photometry. 
 
-..image:: https://github.com/ers-stars/dolphot_jwst/blob/main/docs/source/images/M92_Doc_Catplot.png
+.. image:: https://github.com/ers-stars/dolphot_jwst/blob/main/docs/source/images/M92_Doc_Catplot.png
   :width: 800
