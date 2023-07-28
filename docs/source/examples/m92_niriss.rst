@@ -66,6 +66,7 @@ RUNNING DOLPHOT
 Now that we have pre-processed the images, we can create the photometry parameter file, **phot.param**:
 
 .. code-block:: bash
+
  Nimg = 4
  img0_file = jw01334-o001_t001_niriss_clear-f150w_i2d
  img1_file = jw01334001001_02201_00001_nis_cal
