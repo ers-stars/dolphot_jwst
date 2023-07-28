@@ -21,4 +21,4 @@ Alternatively, we can use the number of ASTs recovered, as a function of magnitu
   :width: 800
   :align: center
 
-It is important to remeber that the ASTs needs to be postprocessed **exactly** in the same way as the primary photometric catalog. This includes spatial cuts, color cuts and culling through the photometric quality metrics. In our M92 example, we can apply the 
+It is important to remeber that the ASTs needs to be postprocessed **exactly** in the same way as the primary photometric catalog. This includes spatial cuts, color cuts and culling through the photometric quality metrics. This is necessary to ensure that the ASTs provide a truthful reprensenation of the final photometric performance. In our M92 example, we can apply the 
