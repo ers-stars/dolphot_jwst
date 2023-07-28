@@ -21,9 +21,9 @@ And on each of the CRF files:
 
 .. code-block:: bash
 
-  > calcsky jw01334001001_02101_00001_nrca1_o001_crf 10 25 -64 2.25 2.00
-  > calcsky jw01334001001_02101_00001_nrca2_o001_crf 10 25 -64 2.25 2.00
-  > calcsky jw01334001001_02101_00001_nrca3_o001_crf 10 25 -64 2.25 2.00
+  > calcsky jw01334001001_02101_00001_nrca1_o001_cal 10 25 -64 2.25 2.00
+  > calcsky jw01334001001_02101_00001_nrca2_o001_cal 10 25 -64 2.25 2.00
+  > calcsky jw01334001001_02101_00001_nrca3_o001_cal 10 25 -64 2.25 2.00
   ...
 
 
