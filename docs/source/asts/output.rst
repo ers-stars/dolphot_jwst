@@ -13,8 +13,10 @@ From this file, we can use the measured properties of the input ASTs to characte
 
 .. figure:: ../images/M92_Doc_rawAST.png
   :width: 800
+  :align: center
 
 Alternatively, we can use the number of ASTs recovered, as a function of magnitude, to estimate the selection function of our photometry:
 
 .. figure:: ../images/M92_Doc_rawComplete.png
   :width: 800
+  :align: center
