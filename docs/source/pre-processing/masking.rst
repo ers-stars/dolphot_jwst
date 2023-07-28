@@ -14,7 +14,7 @@ Continuing our M92 example, we are going to execute *nircammask* on the referenc
 
   > nircammask jw01334-o001_t001_nircam_clear-f150w_i2d.fits
   
-And on each of the CRF files:
+And on each of the CAL files:
 
 .. code-block:: bash
 
