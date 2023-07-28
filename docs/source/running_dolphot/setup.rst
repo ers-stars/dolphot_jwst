@@ -37,18 +37,18 @@ In this example, **phot.param** file contains the following input:
   img2_file = jw01334001001_02101_00001_nrca2_cal
   img3_file = jw01334001001_02101_00001_nrca3_cal
   img4_file = jw01334001001_02101_00001_nrca4_cal
-  img5_file = jw01334001001_02101_00001_nrcb1_cal
-  img6_file = jw01334001001_02101_00001_nrcb2_cal
-  img7_file = jw01334001001_02101_00001_nrcb3_cal
-  img8_file = jw01334001001_02101_00001_nrcb4_cal
+  img5_file = jw01334001001_04101_00001_nrca1_cal
+  img6_file = jw01334001001_04101_00001_nrca2_cal
+  img7_file = jw01334001001_04101_00001_nrca3_cal
+  img8_file = jw01334001001_04101_00001_nrca4_cal
   img9_file = jw01334001001_02101_00002_nrca1_cal
   img10_file = jw01334001001_02101_00002_nrca2_cal
   img11_file = jw01334001001_02101_00002_nrca3_cal
   img12_file = jw01334001001_02101_00002_nrca4_cal
-  img13_file = jw01334001001_02101_00002_nrcb1_cal
-  img14_file = jw01334001001_02101_00002_nrcb2_cal
-  img15_file = jw01334001001_02101_00002_nrcb3_cal
-  img16_file = jw01334001001_02101_00002_nrcb4_cal
+  img13_file = jw01334001001_04101_00002_nrcb1_cal
+  img14_file = jw01334001001_04101_00002_nrcb2_cal
+  img15_file = jw01334001001_04101_00002_nrcb3_cal
+  img16_file = jw01334001001_04101_00002_nrcb4_cal
 
   raper = 2
   rchi = 1.5
