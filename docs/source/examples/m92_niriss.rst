@@ -139,6 +139,7 @@ The reduction return the following information in the log:
  ...
 
  ...
+ Aperture corrections:
  image 1: 102 total aperture stars
    98 stars used, -0.044 (-0.046 +/- 0.000, 0.004)
    94 stars used, -0.033 (-0.027 +/- 0.001, 0.008)
