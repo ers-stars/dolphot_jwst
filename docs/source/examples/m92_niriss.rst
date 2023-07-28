@@ -91,3 +91,7 @@ Now that we have pre-processed the images, we can create the photometry paramete
  CombineChi = 0
  InterpPSFlib = 1
  UseWCS = 2
+
+.. note::
+
+ Note that certain keywords (**raper**, **rchi** and **rsky2**) differ from the NIRCam case. Those keywords are camera specific, and should be used following the recommendations of `Weisz et al. 2023 <dud>`
