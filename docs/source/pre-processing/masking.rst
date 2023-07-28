@@ -18,9 +18,9 @@ And on each of the CRF files:
 
 .. code-block:: bash
 
-  > nircammask jw01334001001_02101_00001_nrca1_o001_crf.fits
-  > nircammask jw01334001001_02101_00001_nrca2_o001_crf.fits
-  > nircammask jw01334001001_02101_00001_nrca3_o001_crf.fits
+  > nircammask jw01334001001_02101_00001_nrca1_o001_cal.fits
+  > nircammask jw01334001001_02101_00001_nrca2_o001_cal.fits
+  > nircammask jw01334001001_02101_00001_nrca3_o001_cal.fits
   ...
 
 .. note::
