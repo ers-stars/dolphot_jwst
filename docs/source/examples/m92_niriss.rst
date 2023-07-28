@@ -63,4 +63,30 @@ And calculate the sky maps:
 RUNNING DOLPHOT
 -----------
 
-We create the 
+Now that we have pre-processed the images, we can create the photometry parameter file, **phot.param**:
+
+.. code-block:: bash
+ Nimg = 4
+ img0_file = jw01334-o001_t001_niriss_clear-f150w_i2d
+ img1_file = jw01334001001_02201_00001_nis_cal
+ img2_file = jw01334001001_02201_00002_nis_cal
+ img3_file = jw01334001001_04201_00001_nis_cal
+ img4_file = jw01334001001_04201_00002_nis_cal
+ 
+ raper = 3
+ rchi = 2.0
+ rsky0 = 15
+ rsky1 = 35
+ rsky2 = 4 10
+ rpsf = 15
+ apsky = 20 35
+ FitSky = 2
+ SigPSF = 5.0
+ FlagMask = 4
+ SecondPass = 5
+ PSFPhotIt = 2
+ NoiseMult = 0.1
+ RCombine = 1.5
+ CombineChi = 0
+ InterpPSFlib = 1
+ UseWCS = 2
