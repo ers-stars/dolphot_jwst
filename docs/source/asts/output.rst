@@ -1,7 +1,7 @@
 Working with Artifical Star Tests
 ==========
 
-Now that we have an AST output file, we can use it to evaluate the photometric performance of our run. If working with *Nimage* frames, the first (4+2*Nimage*) columns out the AST output file will be:
+Now that we have an AST output file, we can use it to evaluate the photometric performance of our run. If working with *Nimage* frames, the first (4+2 *Nimage*) columns out the AST output file will be:
 
 .. code-block:: bash
 
