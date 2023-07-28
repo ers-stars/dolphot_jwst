@@ -49,7 +49,7 @@ Because DOLPHOT modifies the image files, we want to preserve the original files
  
  > pwd
  > photometry/m92/nircam/raw
- > cp *crf.fits ../
+ > cp *cal.fits ../
  > cp *i2d.fits ../
  > cd ../
  > ls *cal.fits
