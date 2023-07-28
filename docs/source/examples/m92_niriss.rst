@@ -3,7 +3,63 @@ M92 NIRISS
 
 Here we provide a working example of the reduction of M92 NIRISS data. The workflow is completely analogous to what presented in the main documentation, provided all the relevant NIRCam routines are replaced by the corresponding NIRISS routines.
 
-Pre-processing
+PRE-PROCESSING
 ---------------
 
-We start by setting up a directory in which we will perform the NIRISS reduction.
+We start by setting up a directory in which we will perform the NIRISS reduction:
+
+.. code-block:: bash
+ 
+ > pwd
+ > photometry/m92/niriss
+ > ls
+ > raw
+ > ls raw/
+ >jw01334-o001_t001_niriss_clear-f090w_i2d.fits
+ >jw01334-o001_t001_niriss_clear-f150w_i2d.fits
+ >jw01334001001_02201_00001_nis_cal.fits
+ >jw01334001001_04201_00001_nis_cal.fits
+ >jw01334001001_02201_00002_nis_cal.fits
+ >jw01334001001_04201_00002_nis_cal.fits
+
+We copy the image of interests in the main reduction directory:
+
+.. code-block:: bash
+  > pwd
+  > photometry/m92/niriss/raw
+ > cp *cal.fits ../
+ > cp *i2d.fits ../
+ > cd ../
+ > ls *cal.fits
+ >jw01334001001_02201_00001_nis_cal.fits
+ >jw01334001001_04201_00001_nis_cal.fits
+ >jw01334001001_02201_00002_nis_cal.fits
+ >jw01334001001_04201_00002_nis_cal.fits
+ > ls *i2d.fits
+ >jw01334-o001_t001_niriss_clear-f090w_i2d.fits
+ >jw01334-o001_t001_niriss_clear-f150w_i2d.fits
+
+We run the images through the masking routine:
+
+.. code-block:: bash
+
+  > nirissmask jw01334-o001_t001_niriss_clear-f150w_i2d.fits
+  > nirissmask jw01334001001_02201_00001_nis_cal.fits
+  > nirissmask jw01334001001_04201_00001_nis_cal.fits
+  > nirissmask jw01334001001_02201_00002_nis_cal.fits
+  > nirissmask jw01334001001_04201_00002_nis_cal.fits
+
+And calculate the sky maps:
+
+.. code-block:: bash
+
+  > calcsky jw01334-o001_t001_niriss_clear-f150w_i2d 10 25 -64 2.25 2.00
+  > calcsky jw01334001001_02201_00001_nis_cal 10 25 -64 2.25 2.00
+  > calcsky jw01334001001_04201_00001_nis_cal 10 25 -64 2.25 2.00
+  > calcsky jw01334001001_02201_00002_nis_cal 10 25 -64 2.25 2.00
+  > calcsky jw01334001001_04201_00002_nis_cal 10 25 -64 2.25 2.00
+
+RUNNING DOLPHOT
+-----------
+
+We create the 
