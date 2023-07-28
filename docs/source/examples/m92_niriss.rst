@@ -25,19 +25,20 @@ We start by setting up a directory in which we will perform the NIRISS reduction
 We copy the image of interests in the main reduction directory:
 
 .. code-block:: bash
+
   > pwd
   > photometry/m92/niriss/raw
- > cp *cal.fits ../
- > cp *i2d.fits ../
- > cd ../
- > ls *cal.fits
- >jw01334001001_02201_00001_nis_cal.fits
- >jw01334001001_04201_00001_nis_cal.fits
- >jw01334001001_02201_00002_nis_cal.fits
- >jw01334001001_04201_00002_nis_cal.fits
- > ls *i2d.fits
- >jw01334-o001_t001_niriss_clear-f090w_i2d.fits
- >jw01334-o001_t001_niriss_clear-f150w_i2d.fits
+  > cp *cal.fits ../
+  > cp *i2d.fits ../
+  > cd ../
+  > ls *cal.fits
+  >jw01334001001_02201_00001_nis_cal.fits
+  >jw01334001001_04201_00001_nis_cal.fits
+  >jw01334001001_02201_00002_nis_cal.fits
+  >jw01334001001_04201_00002_nis_cal.fits
+  > ls *i2d.fits
+  >jw01334-o001_t001_niriss_clear-f090w_i2d.fits
+  >jw01334-o001_t001_niriss_clear-f150w_i2d.fits
 
 We run the images through the masking routine:
 
