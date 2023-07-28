@@ -11,4 +11,5 @@ Where X and Y are the input position on the reference image coordinate system, a
 
 From this file, we can use the measured properties of the input ASTs to characterize the performance of our photometric reduction. For instance, the difference between the input and output magnitude, is a good tracer of the real photometric uncertainty which, especially at low SNR, can differ substantially from the photometric error provided by *dolphot*:
 
-.. figure: ../images/
+.. figure: ../images/M92_Doc_rawAST.png
+  width: 400
