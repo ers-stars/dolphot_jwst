@@ -17,7 +17,7 @@ In our M92 example, we are going to execute *calcsky* on the reference image:
 
   > calcsky jw01334-o001_t001_nircam_clear-f150w_i2d 10 25 -64 2.25 2.00
   
-And on each of the CRF files:
+And on each of the CAL files:
 
 .. code-block:: bash
 
