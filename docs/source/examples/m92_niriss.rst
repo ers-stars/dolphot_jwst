@@ -117,7 +117,7 @@ The reduction return the following information in the log:
    GAIN=1.61 EXP=300s NOISE=11.88 BAD=-2074.27 SAT=532400.44
  Reading IMAGE extension: 2048x2048
    GAIN=1.61 EXP=300s NOISE=11.88 BAD=-2882.79 SAT=517904.66
-Reading IMAGE extension: 2051x2073
+ Reading IMAGE extension: 2051x2073
   GAIN=1.61 EXP=1202s NOISE=11.88 BAD=-4959.61 SAT=863273.44
  ...
 
