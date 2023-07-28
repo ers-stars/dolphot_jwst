@@ -21,4 +21,12 @@ Alternatively, we can use the number of ASTs recovered, as a function of magnitu
   :width: 800
   :align: center
 
-It is important to remeber that the ASTs needs to be postprocessed **exactly** in the same way as the primary photometric catalog. This includes spatial cuts, color cuts and culling through the photometric quality metrics. This is necessary to ensure that the ASTs provide a truthful reprensenation of the final photometric performance. In our M92 example, we can apply the 
+It is important to remeber that the ASTs needs to be postprocessed **exactly** in the same way as the primary photometric catalog. This includes spatial cuts, color cuts and culling through the photometric quality metrics. This is necessary to ensure that the ASTs provide a truthful reprensenation of the final photometric performance. In our M92 example, we can apply the `Warfield et al. (2023) <https://ui.adsabs.harvard.edu/abs/2023RNAAS...7...23W/abstract>`_ cuts to our AST catalog, to quantify the effect of our selection criteria. Note how the completeness at low magnitude is affected by the stringent photometric requiements:
+
+.. figure:: ../images/M92_Doc_cutAST.png
+  :width: 800
+  :align: center
+
+.. figure:: ../images/M92_Doc_cutComplete.png
+  :width: 800
+  :align: center
