@@ -30,7 +30,7 @@ Where **photname** is the name of the *dolphot* output; **filter1** and **filter
 
 .. tip::
 
-  * **usexy** can be used to model more accurately the crowding properties of the images. This is, for instance, is useful if the field has a strong crowding gradient.
+  * **usexy** can be used to model more accurately the crowding properties of the images. This is, for instance, is useful if the field has a strong density gradient.
   * You can use **usecmd** to improve your computational efficiency, and avoid input stars with unphysical SED. Make sure that the input photometry cover the entire SED parameter space that you are trying to characterize
 
 .. note::
