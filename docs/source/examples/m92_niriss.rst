@@ -161,6 +161,12 @@ The reduction return the following information in the log:
 
  Note that the reduction process has encountered more difficulties than in the NIRCam case. The alignment step has used very few stars and has large residuals. This is due to the NIRISS frame capturing a very sparse stellar field ( XX arcmin away from M92 center). The central PSF adjustment are also larger than for the NIRCam reduction. This is due to current limitations of the NIRISS PSF models.
 
+We can inspect the output of the photometric catalog and note that the reduction has been successful, although the quality of the photometry is not as good as for NIRCam, for the reasons discussed above:
+
+.. figure:: ../images/M92_Doc_NIRISSQuality.png
+  :width: 800
+  :align: center
+
 
 
 
