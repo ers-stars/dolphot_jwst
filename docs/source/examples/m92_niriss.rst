@@ -177,7 +177,7 @@ We can build a color-magnitude diagram from the raw catalog:
 
 Or apply stricter culling criteria (those of `Warfield et al. 2023 <https://ui.adsabs.harvard.edu/abs/2023RNAAS...7...23W/abstract>`_, in this example):
 
-.. figure:: ../images/M92_Doc_NIRISSpure.png
+.. figure:: ../images/M92_Doc_NIRISSPure.png
 
   :width: 400
   :align: center
