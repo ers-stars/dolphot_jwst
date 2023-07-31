@@ -182,5 +182,79 @@ Or apply stricter culling criteria (those of `Warfield et al. 2023 <https://ui.a
   :width: 400
   :align: center
 
+ARTIFICIAL STAR TESTS
+--------------------------
 
+With the reduction process complete, we can now perform ASTs. We first create the input star list:
+
+.. code-block:: bash
+
+ > fakelist M92_NIRISS_example.phot NIRISS_F090W NIRISS_F150W 17 31 -0.5 2 -nstar=500000 > NIRISS_fake.inputlist
+
+We then create a new parameter file, **NIRISS_fake.param**: 
+
+.. code-block:: bash
+  
+ Nimg = 4
+ img0_file = jw01334-o001_t001_niriss_clear-f150w_i2d
+ img1_file = jw01334001001_02201_00001_nis_cal
+ img2_file = jw01334001001_02201_00002_nis_cal
+ img3_file = jw01334001001_04201_00001_nis_cal
+ img4_file = jw01334001001_04201_00002_nis_cal
+ 
+ raper = 3
+ rchi = 2.0
+ rsky0 = 15
+ rsky1 = 35
+ rsky2 = 4 10
+ rpsf = 15
+ apsky = 20 35
+ FitSky = 2
+ SigPSF = 5.0
+ FlagMask = 4
+ SecondPass = 5
+ PSFPhotIt = 2
+ NoiseMult = 0.1
+ RCombine = 1.5
+ CombineChi = 0
+ InterpPSFlib = 1
+ UseWCS = 2
+
+ FakeStars = NIRISS_fake.inputlist
+ FakeOut = M92_NIRISS_example.fake
+ RandomFake = 1
+ FakeMatch = 3.0
+ FakePad = 0
+ FakeStarPSF = 0
+ FakePSF = 1.5
+
+We can now run *dolphot* in AST mode:
+
+.. code-block:: bash
+  
+ > dolphot M92_NIRISS_example.phot -pNIRISS_fake.param > NIRISS_fake.log
+
+Finally we can inspect the ASTs output:
+
+.. figure:: ../images/M92_Doc_NIRISSrawAST.png
+
+  :width: 800
+  :align: center
+
+.. figure:: ../images/M92_Doc_NIRISSrawComplete.png
+
+  :width: 800
+  :align: center
+
+And apply our desired culling criteria:
+
+.. figure:: ../images/M92_Doc_NIRISScutAST.png
+
+  :width: 800
+  :align: center
+
+.. figure:: ../images/M92_Doc_NIRISScutComplete.png
+
+  :width: 800
+  :align: center
 
