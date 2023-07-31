@@ -164,6 +164,7 @@ The reduction return the following information in the log:
 We can inspect the output of the photometric catalog and note that the reduction has been successful, although the quality of the photometry is not as good as for NIRCam, for the reasons discussed above:
 
 .. figure:: ../images/M92_Doc_NIRISSQuality.png
+
   :width: 800
   :align: center
 
