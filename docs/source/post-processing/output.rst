@@ -28,13 +28,14 @@ After the images are read in correctely, a common source of problems involves th
 
 .. code-block:: bash
 
-  38234 stars for alignment
-  image 1: 1829 matched, 1781 used, 0.15 -0.02 1.000000 0.00000 -0.004, sig=0.10
-  image 2: 2043 matched, 1971 used, 0.18 -0.12 1.000000 0.00000 0.003, sig=0.12
-  image 3: 4142 matched, 3964 used, 0.06 0.00 1.000000 0.00000 0.000, sig=0.12
-  image 4: 4885 matched, 4661 used, 0.07 -0.13 1.000000 0.00000 -0.004, sig=0.13
-  image 5: 1436 matched, 1404 used, 0.13 -0.01 1.000000 0.00000 -0.004, sig=0.13
-  image 6: 1506 matched, 1458 used, 0.15 -0.10 1.000000 0.00000 0.003, sig=0.11
+  48010 stars for alignment
+  image 1: 2164 matched, 2119 used, 0.13 -0.04 1.000000 0.00000 -0.002, sig=0.10
+  image 2: 2404 matched, 2347 used, 0.15 -0.14 1.000000 0.00000 0.004, sig=0.12
+  image 3: 6059 matched, 5844 used, 0.07 -0.03 1.000000 0.00000 0.000, sig=0.13
+  image 4: 6924 matched, 6609 used, 0.08 -0.13 1.000000 0.00000 -0.003, sig=0.12
+  image 5: 2557 matched, 2514 used, 0.10 -0.03 1.000000 0.00000 -0.003, sig=0.13
+  image 6: 2284 matched, 2234 used, 0.11 -0.10 1.000000 0.00000 0.003, sig=0.11
+
   ...
   
 The two key metrics to monitor here are the number of matched stars for each image, and the **sig** values, which is the rms residual in *px* around the best-fit transformation. The acceptable values for matched stars and **sig** depend somewhat on how dense the stellar field is and what camera is being analyzed. For a moderately populated NIRCam field, we want most of the images to have at least 100 matched stars and **sig** values below 0.30. 
@@ -46,14 +47,14 @@ Once we have made sure that the frames are properly aligned, we may wish to asse
 
 .. code-block:: bash
 
-  10961 PSF stars; 766403 neighbors
+  4267 PSF stars; 388810 neighbors
   Central pixel PSF adjustments:
-  image 1: 281 stars, -0.009912
-  image 2: 264 stars, -0.010519
-  image 3: 241 stars, -0.020580
-  image 4: 255 stars, -0.017795
-  image 5: 255 stars, -0.032865
-  image 6: 193 stars, -0.033044
+  image 1: 281 stars, -0.008473
+  image 2: 242 stars, -0.009880
+  image 3: 287 stars, -0.021538
+  image 4: 236 stars, -0.015164
+  image 5: 272 stars, -0.030575
+  image 6: 212 stars, -0.032961
   ...
   
 In a moderately populated NIRCam field, having at least 100 PSF stars per image would be desirable. Besides the number of PSF stars used for every image, *dolphot* also lists the average PSF adjustment. This is the fractional flux difference in the central PSF pixel, between the model PSFs and the profile of the PSF stars. Ideally, this number should be as close to 0 as possible. Absolute PSF adjustments below 0.05 should provide enough photometric accuracy for most applications.
@@ -68,28 +69,28 @@ Finally, the log file contains details about the aperture correction step. Again
   Aperture corrections:
   image 1: 200 total aperture stars
     200 stars used, -0.003 (-0.003 +/- 0.000, 0.001)
-    200 stars used,  0.003 (0.003 +/- 0.000, 0.001)
+    200 stars used,  0.001 (0.001 +/- 0.000, 0.001)
     200 stars used,  0.128 (0.128 +/- 0.000, 0.001)
   image 2: 200 total aperture stars
     200 stars used, -0.003 (-0.003 +/- 0.000, 0.001)
-    199 stars used,  0.002 (0.002 +/- 0.000, 0.001)
+    199 stars used,  0.001 (0.001 +/- 0.000, 0.001)
     200 stars used,  0.096 (0.097 +/- 0.000, 0.001)
   image 3: 200 total aperture stars
-    200 stars used, -0.006 (-0.006 +/- 0.000, 0.001)
-    200 stars used,  0.003 (0.002 +/- 0.000, 0.001)
-    200 stars used,  0.139 (0.138 +/- 0.000, 0.001)
-  image 4: 200 total aperture stars
     200 stars used, -0.005 (-0.005 +/- 0.000, 0.001)
-    200 stars used,  0.006 (0.006 +/- 0.000, 0.001)
+    199 stars used,  0.000 (0.000 +/- 0.000, 0.001)
+    200 stars used,  0.137 (0.137 +/- 0.000, 0.001)
+  image 4: 200 total aperture stars
+    200 stars used, -0.003 (-0.004 +/- 0.000, 0.001)
+    200 stars used,  0.005 (0.005 +/- 0.000, 0.001)
     200 stars used,  0.102 (0.102 +/- 0.000, 0.001)
   image 5: 200 total aperture stars
     200 stars used, -0.006 (-0.006 +/- 0.000, 0.001)
-    200 stars used, -0.006 (-0.006 +/- 0.000, 0.001)
-    200 stars used,  0.094 (0.094 +/- 0.000, 0.001)
+    199 stars used, -0.005 (-0.006 +/- 0.000, 0.001)
+    200 stars used,  0.095 (0.095 +/- 0.000, 0.001)
   image 6: 200 total aperture stars
-    200 stars used, -0.009 (-0.009 +/- 0.000, 0.001)
-    198 stars used, -0.005 (-0.005 +/- 0.000, 0.001)
-    200 stars used,  0.126 (0.126 +/- 0.000, 0.001)
+    200 stars used, -0.007 (-0.007 +/- 0.000, 0.001)
+    199 stars used, -0.008 (-0.008 +/- 0.000, 0.001)
+    200 stars used,  0.124 (0.124 +/- 0.000, 0.001)
   ...
 
 If inspection of the log file does not reveal any anomaly, the reduction has most likely been successful. When *dolphot* is run with the following syntax:
