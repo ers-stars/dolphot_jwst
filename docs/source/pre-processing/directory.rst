@@ -20,24 +20,30 @@ For this dataset, the contents of the raw subdirectory are
  > pwd
  > photometry/m92/nircam/
  > ls raw/
- >jw01334-o001_t001_nircam_clear-f090w_i2d.fits
- >jw01334-o001_t001_nircam_clear-f150w_i2d.fits
- >jw01334001001_02101_00001_nrca1_o001_cal.fits
- >jw01334001001_02101_00001_nrca2_o001_cal.fits
- >jw01334001001_02101_00001_nrca3_o001_cal.fits
- >jw01334001001_02101_00001_nrca4_o001_cal.fits
- >jw01334001001_02101_00002_nrca1_o001_cal.fits
- >jw01334001001_02101_00002_nrca2_o001_cal.fits
- >jw01334001001_02101_00002_nrca3_o001_cal.fits
- >jw01334001001_02101_00002_nrca4_o001_cal.fits
- >jw01334001001_04101_00001_nrca1_o001_cal.fits
- >jw01334001001_04101_00001_nrca2_o001_cal.fits
- >jw01334001001_04101_00001_nrca3_o001_cal.fits
- >jw01334001001_04101_00001_nrca4_o001_cal.fits
- >jw01334001001_04101_00002_nrca1_o001_cal.fits
- >jw01334001001_04101_00002_nrca2_o001_cal.fits
- >jw01334001001_04101_00002_nrca3_o001_cal.fits
- >jw01334001001_04101_00002_nrca4_o001_cal.fits
+ >jw01334001001_02101_00001_nrca1_cal.fits
+ >jw01334001001_02101_00001_nrca2_cal.fits
+ >jw01334001001_02101_00001_nrca3_cal.fits
+ >jw01334001001_02101_00001_nrca4_cal.fits
+ >jw01334001001_02101_00001_nrcb1_cal.fits
+ >jw01334001001_02101_00001_nrcb2_cal.fits
+ >jw01334001001_02101_00001_nrcb3_cal.fits
+ >jw01334001001_02101_00001_nrcb4_cal.fits
+ >jw01334001001_02101_00002_nrca1_cal.fits
+ >jw01334001001_02101_00002_nrca2_cal.fits
+ >jw01334001001_02101_00002_nrca3_cal.fits
+ >jw01334001001_02101_00002_nrca4_cal.fits
+ >jw01334001001_02101_00002_nrcb1_cal.fits
+ >jw01334001001_02101_00002_nrcb2_cal.fits
+ >jw01334001001_02101_00002_nrcb3_cal.fits
+ >jw01334001001_02101_00002_nrcb4_cal.fits
+ >jw01334001001_02101_00004_nrca1_cal.fits
+ >jw01334001001_02101_00004_nrca2_cal.fits
+ >jw01334001001_02101_00004_nrca3_cal.fits
+ >jw01334001001_02101_00004_nrca4_cal.fits
+ >jw01334001001_02101_00004_nrcb1_cal.fits
+ >jw01334001001_02101_00004_nrcb2_cal.fits
+ ...
+
 
 
 
@@ -52,26 +58,34 @@ Because DOLPHOT modifies the image files, we want to preserve the original files
  > cp *cal.fits ../
  > cp *i2d.fits ../
  > cd ../
- > ls *cal.fits
- >jw01334001001_02101_00001_nrca1_o001_cal.fits
- >jw01334001001_02101_00001_nrca2_o001_cal.fits
- >jw01334001001_02101_00001_nrca3_o001_cal.fits
- >jw01334001001_02101_00001_nrca4_o001_cal.fits
- >jw01334001001_02101_00002_nrca1_o001_cal.fits
- >jw01334001001_02101_00002_nrca2_o001_cal.fits
- >jw01334001001_02101_00002_nrca3_o001_cal.fits
- >jw01334001001_02101_00002_nrca4_o001_cal.fits
- >jw01334001001_04101_00001_nrca1_o001_cal.fits
- >jw01334001001_04101_00001_nrca2_o001_cal.fits
- >jw01334001001_04101_00001_nrca3_o001_cal.fits
- >jw01334001001_04101_00001_nrca4_o001_cal.fits
- >jw01334001001_04101_00002_nrca1_o001_cal.fits
- >jw01334001001_04101_00002_nrca2_o001_cal.fits
- >jw01334001001_04101_00002_nrca3_o001_cal.fits
- >jw01334001001_04101_00002_nrca4_o001_cal.fits
  > ls *i2d.fits
  >jw01334-o001_t001_nircam_clear-f090w_i2d.fits
  >jw01334-o001_t001_nircam_clear-f150w_i2d.fits
+ > ls *cal.fits
+ >jw01334001001_02101_00001_nrca1_cal.fits
+ >jw01334001001_02101_00001_nrca2_cal.fits
+ >jw01334001001_02101_00001_nrca3_cal.fits
+ >jw01334001001_02101_00001_nrca4_cal.fits
+ >jw01334001001_02101_00001_nrcb1_cal.fits
+ >jw01334001001_02101_00001_nrcb2_cal.fits
+ >jw01334001001_02101_00001_nrcb3_cal.fits
+ >jw01334001001_02101_00001_nrcb4_cal.fits
+ >jw01334001001_02101_00002_nrca1_cal.fits
+ >jw01334001001_02101_00002_nrca2_cal.fits
+ >jw01334001001_02101_00002_nrca3_cal.fits
+ >jw01334001001_02101_00002_nrca4_cal.fits
+ >jw01334001001_02101_00002_nrcb1_cal.fits
+ >jw01334001001_02101_00002_nrcb2_cal.fits
+ >jw01334001001_02101_00002_nrcb3_cal.fits
+ >jw01334001001_02101_00002_nrcb4_cal.fits
+ >jw01334001001_02101_00004_nrca1_cal.fits
+ >jw01334001001_02101_00004_nrca2_cal.fits
+ >jw01334001001_02101_00004_nrca3_cal.fits
+ >jw01334001001_02101_00004_nrca4_cal.fits
+ >jw01334001001_02101_00004_nrcb1_cal.fits
+ >jw01334001001_02101_00004_nrcb2_cal.fits
+ ...
+ 
  
 .. note::
  DOLPHOT works best when used on non-drizzled images (i.e., CAL or CRF files in the case of JWST, FLT or FLC in the case of HST). However, it is useful to include a deeper stacked image as a reference frame, to help image alignment and improve the overall photometry. In this example, we are going to use the stacked I2D image in the F150W band.
