@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'DOLPHOT JWST'
-copyright = '2022, Dan Weisz'
+copyright = '2022, 2023 Dan Weisz'
 author = 'Weisz et al.'
 
 release = '0.1'
