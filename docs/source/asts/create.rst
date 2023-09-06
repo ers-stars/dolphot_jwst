@@ -25,13 +25,13 @@ The input star list can be created by hand or generated using the routine *fakel
 Where **photname** is the name of the *dolphot* output; **filter1** and **filter2** are the name of the two filters; and **f1min**, **f1max**, **cmin** and **cmax** set the range in magnitude and color of the input mock stars. Commonly used options of *fakelist* include:
 
 * **nstar**: set the number of input stars to be generated. Default is 1.
-* **usexy**: provide the name of a file containing a list of positions (in the format '1 1 X Y'). The generated star list will follow the same spatial probability distribution. Default is uniform spatial distribution.
+* **UseXY**: provide the name of a file containing a list of positions (in the format '1 1 X Y'). The generated star list will follow the same spatial probability distribution. Default is uniform spatial distribution.
 * **usecmd**: provide a name of a file containing a list of magnitudes (in the format '1 1 X Y Magnitude Color'). The generated star list fill follow the same probability distribution on the CMD. Default is uniform distribution on the CMD.
 
 .. tip::
 
-  * **usexy** can be used to model more accurately the crowding properties of the images. This is, for instance, is useful if the field has a strong density gradient.
-  * You can use **usecmd** to improve your computational efficiency, and avoid input stars with unphysical SED. Make sure that the input photometry cover the entire SED parameter space that you are trying to characterize
+  * **UseXY** can be used to model more accurately the crowding properties of the images. This is, for instance, is useful if the field has a strong density gradient.
+  * You can use **UseCMD** to improve your computational efficiency, and avoid input stars with unphysical SED. Make sure that the input photometry cover the entire SED parameter space that you are trying to characterize
 
 .. note::
 
