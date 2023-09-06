@@ -1,8 +1,8 @@
 Examining the logs
 ============
-When *dolphot* has completed running, we need to make sure the reduction run is successful and the photometry reliable. This is done through inspection of the many diagnostic files produced during reduction, as well as inspection of the output photometric catalog.
+When *dolphot* has finished running, we first verify the success of the run by examining several of the diagnostic files produced during the reduction, as well as inspection of the output photometric catalog.
 
-The first file we may want to examine is the log file where we captured *dolphot*'s standard output. This log contains useful information on about the many steps of the reduction. The first step is to make sure the images were read in correctly and the CCD parameters were set to reasonable values. In the case of our M92 example, our log reports:
+The first file we may want to examine is the log file where we captured *dolphot*'s standard output. This log contains useful information about much of the reduction. The first step is to make sure the images were read in correctly and the CCD parameters were set to reasonable values. In the case of our M92 example, our log reports:
 
 .. code-block:: bash
 
@@ -22,9 +22,9 @@ The first file we may want to examine is the log file where we captured *dolphot
    GAIN=1.94 EXP=311s NOISE=11.85 BAD=-253.31 SAT=397041.56
   ...
   
-If anything did not proceed correctly with the pre-processing routines (e.g., *nircammask*) it will usually manifest in the image parameters. Make sure that **GAIN**, **BAD** and **SAT** are *reasonable* values (i.e., low unity, moderatley negative numbers, and large positive numbers, respectively). 
+If anything did not proceed correctly with the pre-processing routines (e.g., *nircammask*) it will usually be evident in the image parameters. Make sure that **GAIN**, **BAD** and **SAT** are *reasonable* values (i.e., low unity, moderatley negative numbers, and large positive numbers, respectively). 
 
-After the images are read in correctely, a common source of problems involves the astrometric alignment of the frames. DOLPHOT calculates geometric transformations between each of the science frames and the reference image. If the transformations are not sufficiently accurate, the photometry will typically be suboptimal. In our M92 example, we can check the aligment in the log file:
+After the images are read in correctely, a common source of poor photometry is the astrometric alignment of the frames. DOLPHOT calculates geometric transformations between each of the science frames and the reference image. If the transformations are not sufficiently accurate, the photometry will typically be suboptimal. In our M92 example, we can check the aligment in the log file:
 
 .. code-block:: bash
 
@@ -41,7 +41,7 @@ After the images are read in correctely, a common source of problems involves th
 The two key metrics to monitor here are the number of matched stars for each image, and the **sig** values, which is the rms residual in *px* around the best-fit transformation. The acceptable values for matched stars and **sig** depend somewhat on how dense the stellar field is and what camera is being analyzed. For a moderately populated NIRCam field, we want most of the images to have at least 100 matched stars and **sig** values below 0.30. 
 
 .. tip::
-  If the alignment solutions are sub-optimal, you may try using a different frame as reference image. This is sometimes sufficient to solve the issue.
+  If the alignment solutions are sub-optimal, you may first try to increase the AlignTol parameter.  Alternatively, you may try a different reference image.
 
 Once we have made sure that the frames are properly aligned, we may wish to assess that the subsequent steps of the reduction have been successful. This includes making sure that enough PSF stars have been identified:
 
@@ -60,7 +60,7 @@ Once we have made sure that the frames are properly aligned, we may wish to asse
 In a moderately populated NIRCam field, having at least 100 PSF stars per image would be desirable. Besides the number of PSF stars used for every image, *dolphot* also lists the average PSF adjustment. This is the fractional flux difference in the central PSF pixel, between the model PSFs and the profile of the PSF stars. Ideally, this number should be as close to 0 as possible. Absolute PSF adjustments below 0.05 should provide enough photometric accuracy for most applications.
 
 .. note::
-  Due to current model limitations, NIRCam PSF models are known to be too concentrated compared to actual data (i.e. negative PSF adjustments). For filters in the short wavelength channel, this effect is between 2% and 4% of the central pixel flux. Filters in the long wavelength channel can be affected more severely.
+  Due to current model limitations, NIRCam WebbPSF-based PSF models are known to be too concentrated compared to actual data (i.e. negative PSF adjustments). For filters in the short wavelength channel, this effect is between 2% and 4% of the central pixel flux. Filters in the long wavelength channel can be affected more severely.
 
 Finally, the log file contains details about the aperture correction step. Again, make sure that at least 100 stars are used in each image:
 
@@ -99,7 +99,13 @@ If inspection of the log file does not reveal any anomaly, the reduction has mos
 
   > dolphot <outputname> <options> > <logfile>
 
-Additional diagnostic files are generated, using **outputname** as root. In particular, **outputname**.warnings contains potential anomalies that have been encountered during reduction and could have compromised photometric quality. Be sure to inspect the content of this file. In our M92 example, M92_example.phot.warnings is empty.
+
+
+Additional diagnostic files are generated, using **outputname** as root. 
+
+.. note::
+The **outputname**.warnings contains potential anomalies that have been encountered during reduction and could have compromised photometric quality. Be sure to check this file. In our M92 example, M92_example.phot.warnings is empty.
+
 
 Examining the catalog
 ============
