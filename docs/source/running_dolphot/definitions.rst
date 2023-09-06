@@ -21,6 +21,9 @@ Alignment
 * **img_shift** = 0 0: The offset of a science image relative to reference image. This value can be an initial guess that is later adjusted by DOLPHOT. Values are x and y on the image minus x and y on the reference image. Note that this parameter should not be set for the reference image.
 * **img_xform** =1 0 0: The scale ratio, cubic distortion, and rotation of a science image relative to the reference image. This value can be an initial guess that is later adjusted by DOLPHOT. This parameter should not be set for the reference image, only for science images (i.e., img1_xform to imgN_xform).
 
+.. note::
+   * JWST requires UseWCS=2.  UseWCS=2 should also be set when running JWST and HST data together, even though it is not optimal for HST photometry alone.
+
 
 Star Finding Parameters
 ----------
@@ -40,8 +43,8 @@ Photometry
 ---------
 
 * **PSFPhot** = 1: Type of photometry to be run. Options are 0 (aperture), 1 (standard PSF-fit), 2 (PSF-fit weighted for central pixels). Option 1 is suggested for most photometric needs, but option 0 can provide superior photometry if the signal-to- noise is high and the field is uncrowded.
-* **PSFPhotIT** = 1: Number of iterations on the PSF photometry solution, if PSFPhot is 1 or 2. This will refine the noise estimates on the pixels based on the model fit.
-* **FitSky** = 1: Sky-fitting setting. Options are 0 (use the sky map from calcsky), 1 (fit the sky normally prior to each photometry measurement), 2 (fit the sky inside the PSF region but outside the photometry aperture), 3 (fit the sky within the photometry aperture as a 2-parameter PSF fit), and 4 (fit the sky within the photometry aperture as a 4-parameter PSF fit). Options 1 and 3 are the suggested settings. Option 0 should be used only if the field is very uncrowded; option 2 can be used in extremely crowded fields; option 4 can help in fields with strong background gradients.
+* **PSFPhotIT** = 2: Number of iterations on the PSF photometry solution, if PSFPhot is 1 or 2. This will refine the noise estimates on the pixels based on the model fit.
+* **FitSky** = 1: Sky-fitting setting. Options are 0 (use the sky map from calcsky), 1 (fit the sky normally prior to each photometry measurement), 2 (fit the sky inside the PSF region but outside the photometry aperture), 3 (fit the sky within the photometry aperture as a 2-parameter PSF fit), and 4 (fit the sky within the photometry aperture as a 4-parameter PSF fit). Options 1 and 3 are the suggested settings. Option 0 should be used only if the field is very uncrowded; option 2 can be used in extremely crowded fields; option 4 can help in fields with strong background gradients. FitSky=4 is unstable and not recommended except in extreme gradients.
 * **SkipSky** = 1: Sampling of sky annulus; set to a number higher than 1 to gain speed at the expense of precision. This is only used if FitSky is set to 1. In general, this should never be larger than the FWHM of the PSF.
 * **SkySig** = 2.25: Sigma rejection threshold for sky fit; only used if FitSky is set to 1.
 * **MaxIT** = 25: Maximum number of photometry iterations.
@@ -49,11 +52,16 @@ Photometry
 * **SigPSF** = 10.0: Minimum signal-to-noise for a PSF solution to be attempted on a star. Fainter detections are assigned type 2.
 * **CombineChi** = 0: CombineChi affects the combined photometry blocks. If set to zero, photometry will be combined weighted by 1/σ2 to maximize signal to noise. If set to one, weights will be 1/σ2max(1, χ2) to reduce the impact of epochs with bad photometry. Note that using CombineChi of one will require tuning NoiseMult so that well measured stars have χ = 1 at all magnitudes (plots of chi vs. magnitude should show this). Note also that this will result in larger uncertainties for combined (but not individual image) magnitudes and normalized count rates, as the individual image uncertainties are effectively multiplied by χ when calculating combined magnitudes.
 
+.. note::
+   * In general, FitSky=2 provides the most robust results across a wide range of crowding.
+
+
 Camera Specific
 -----------
 
 * **img_rsky** *(int int)*: Inner and outer radii for computing sky values, if FitSky=1 is being used. Also used in a few places if using FitSky = 2, 3, or 4, so should always be set. The inner radius (first number) should be outside the bulk of the light from the star; the outer (second) should be sufficiently large to compute an accurate sky.
-* **img_psf**:
+* **img_rsky2** *(int int)**: The annulus setting when using FitSky=2.
+* **img_RSF**: The size of the PSF used for star subtraction, as well as the size of the PSF residual calculated if PSFRes is set to 1
 * **img_apsky** *(int int)*: Set the inner and outer radii of the annulus used for calculating sky values for aperture corrections.
 
 Other
