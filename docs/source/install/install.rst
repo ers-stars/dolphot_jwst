@@ -87,7 +87,7 @@ Pre-computed PSF models are available for download on the `DOLPHOT homepage <htt
 * Detector position: 3x3 (NIRCam) or 5x5 (NIRISS) spatial grid distributed uniformly on each of the chips.
 * PSF FoV: 51x51 px square FoV
 * Spatial oversampling factor: 5
-* Number of used wavelenghts: 5 for W filters, 3 for M filters and 1 for N filters, sampling flux from a G5V Phoenix atmosphere model.
+* Number of used wavelengths: 5 for W filters, 3 for M filters and 1 for N filters, sampling flux from a G5V Phoenix atmosphere model.
 * Optical Path Delay (OPD) map from Jul. 24th, 2022 (O2022072401-NRCA3_FP1-1.fits).
 
 However, users who want to use different PSF grids (e.g., to use different OPD maps) can do so with help of the *nircammakepsf/nirissmakepsf* routines. First, we create a 'tmp' subdirectory in the DOLPHOT folder:
