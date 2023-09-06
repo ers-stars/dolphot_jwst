@@ -17,7 +17,8 @@ Requirements
 .. note::
    * DOLPHOT can be compiled and run without PGPLOT and Fortran, but it will not be able to generate diagnostic plots.
    * DOLPHOT generally complies fine on UNIX/LINUX/MacOS, but it untested on other operating systems (e.g., Windows).
-   * See `this workaround <https://github.com/kazuakiyama/homebrew-pgplot>`_ for installing PGPLOT via `Homebrew <https://brew.sh>`_.
+   * For Mac, PGPLOT is available via package managers like `Macports <https://www.macports.org>`_ and `Homebrew <https://brew.sh>`_.
+   * See `this workaround <https://github.com/kazuakiyama/homebrew-pgplot>`_ for installing PGPLOT via Homebrew.
    
    
 
@@ -54,10 +55,10 @@ Individual camera models are not installed by default.  For example, to install 
    export CFLAGS+= -DMAXNIMG=100
    export CFLAGS+= -DMAXNSTARS=2000000
 
-DOLPHOT allocates memory based on a pre-set maximum number of images (DMAXNIMG) and stars (DMAXNSTARS). The default values are good for most cases, but if larger number of images or stars are expected, edit these lines in the Makefile. 
+DOLPHOT allocates memory based on a pre-set maximum number of images (DMAXNIMG) and detections (DMAXNSTARS). The default values are good for most cases, but if larger number of images or detections are expected, edit these lines in the Makefile. 
 
 .. tip::
-   Remeber to re-compile DOLPHOT if the number of images or stars is edited in the Makefile.
+   Remeber to re-compile DOLPHOT if the number of images or detections is edited in the Makefile.
 
 
 Compiling
@@ -67,7 +68,7 @@ To compile DOLPHOT, enter the DOLPHOT directory and type:
 
 .. code-block:: bash
 
-   make all
+   make
    
 .. note::
   *  Some compliers may throw warnings, but these do not generally affect the DOLPHOT installation. 
