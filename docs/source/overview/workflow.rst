@@ -3,8 +3,9 @@ DOLPHOT Workflow
 
 For most use cases, the process of applying DOLPHOT to NIRCam or NIRISS images is fairly straightforward.  The main steps are
 
-#. Download and install DOLPHOT base sources and the DOLPHOT NIRcam and/or NIRISS modules
-#. Download the JWST images of interest from MAST
+#. Download and install DOLPHOT base sources and separately download DOLPHOT sources for relevant modules (e.g., NIRCam, NIRISS, HST -- if doing cross-facility photometry)
+#. Download and install PSF models for relevant cameras and filters
+#. Download the images (JWST, HST) of interest from MAST
 #. Use the masking utilities from DOLPHOT to mask bad pixels in the JWST images
 #. Set up your DOLPHOT parameter file
 #. Run DOLPHOT
