@@ -30,7 +30,7 @@ Where **photname** is the name of the *dolphot* output; **filter1** and **filter
 
 .. tip::
 
-  * **UseXY** can be used to model more accurately the crowding properties of the images. This is, for instance, is useful if the field has a strong density gradient.
+  * **UseXY** can be used to model more accurately the crowding properties of the images. This is, for instance, useful if the field has a strong density gradient.
   * You can use **UseCMD** to improve your computational efficiency, and avoid input stars with unphysical SED. Make sure that the input photometry cover the entire SED parameter space that you are trying to characterize
 
 .. note::
@@ -61,4 +61,4 @@ To obtain a file called fake.inputlist, with the following content:
   1 1 6603.46 1673.33 17.239 16.038
   ...
 
-We are now ready to run the ASTs on DOLPHOT.
+We are now ready to run the ASTs with DOLPHOT.
