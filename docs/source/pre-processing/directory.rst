@@ -54,10 +54,9 @@ Because DOLPHOT modifies the image files, we want to preserve the original files
 .. code-block:: bash
  
  > pwd
- > photometry/m92/nircam/raw
- > cp *cal.fits ../
- > cp *i2d.fits ../
- > cd ../
+ > photometry/m92/nircam
+ > cp raw/*cal.fits .
+ > cp raw/*i2d.fits .
  > ls *i2d.fits
  >jw01334-o001_t001_nircam_clear-f090w_i2d.fits
  >jw01334-o001_t001_nircam_clear-f150w_i2d.fits
@@ -88,5 +87,5 @@ Because DOLPHOT modifies the image files, we want to preserve the original files
  
  
 .. note::
- DOLPHOT works best when used on non-drizzled images (i.e., CAL or CRF files in the case of JWST, FLT or FLC in the case of HST). However, it is useful to include a deeper stacked image as a reference frame, to help image alignment and improve the overall photometry. In this example, we are going to use the stacked I2D image in the F150W band.
+ DOLPHOT works only on non-drizzled images (i.e., CAL or CRF files in the case of JWST, FLT or FLC in the case of HST). However, it is useful to include a deeper stacked image as a reference frame to help image alignment and improve the overall photometry. In this example, we are going to use the stacked I2D image in the F150W band.
  
