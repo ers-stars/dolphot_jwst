@@ -87,5 +87,6 @@ Because DOLPHOT modifies the image files, we want to preserve the original files
  
  
 .. note::
- DOLPHOT works only on non-drizzled images (i.e., CAL or CRF files in the case of JWST, FLT or FLC in the case of HST). However, it is useful to include a deeper stacked image as a reference frame to help image alignment and improve the overall photometry. In this example, we are going to use the stacked I2D image in the F150W band.
+ DOLPHOT is designed to only work on non-drizzled images (i.e., CAL or CRF files in the case of JWST, FLT or FLC in the case of HST). However, it is useful to include a deeper stacked image as a reference frame to help image alignment and improve the overall photometry. In this example, we are going to use the stacked I2D image in the F150W band.  
+We strongly recommend using CAL files for photometry. We have found cases in which the CRF files simply do not work for photometry.
  
