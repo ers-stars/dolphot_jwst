@@ -22,9 +22,9 @@ The first file we may want to examine is the log file where we captured *dolphot
    GAIN=1.94 EXP=311s NOISE=11.85 BAD=-253.31 SAT=397041.56
   ...
   
-If anything did not proceed correctly with the pre-processing routines (e.g., *nircammask*) it will usually be evident in the image parameters. Make sure that **GAIN**, **BAD** and **SAT** are *reasonable* values (i.e., low unity, moderatley negative numbers, and large positive numbers, respectively). 
+If anything did not proceed correctly with the pre-processing routines (e.g., *nircammask*) it will usually be evident in the image parameters. Make sure that **GAIN**, **BAD** and **SAT** are *reasonable* values (i.e., close to unity, moderately negative numbers, and large positive numbers, respectively). 
 
-After the images are read in correctely, a common source of poor photometry is the astrometric alignment of the frames. DOLPHOT calculates geometric transformations between each of the science frames and the reference image. If the transformations are not sufficiently accurate, the photometry will typically be suboptimal. In our M92 example, we can check the aligment in the log file:
+After the images are read in correctly, a common source of poor photometry is the astrometric alignment of the frames. DOLPHOT calculates geometric transformations between each of the science frames and the reference image. If the transformations are not sufficiently accurate, the photometry will typically be suboptimal. In our M92 example, we can check the aligment in the log file:
 
 .. code-block:: bash
 
@@ -167,7 +167,7 @@ The output photometric catalog is stored in the **outputname** file. This file c
   ...
 
 
-While the frame-by-frame photometric output (columns 38 and below, in our example) can be useful for, e.g. variable star work, for the purpose of generating a photometric catlog, we are only interested in the global properties of the source (columns 3-11) and in the combined photometry properties (columns 12-37). We can use these quantity for instance, to perform a first inspection of the photometry and confirm that the reduction has produced good quality output. In our example, we can see in the plot below that the photometric error and the signal-to-noise follow expected and well-defined trends as function of source magnitude. The sharpness values (see `Culling the catalog <../catalogs.srt>`_ for more details) are also close to 0 for a large range of magnitudes, demonstrating the good outcome of the PSF-photometry. 
+While the frame-by-frame photometric output (columns 38 and below, in our example) can be useful for, e.g. variable star work, for the purpose of generating a photometric catlog, we are only interested in the global properties of the source (columns 3-11) and in the combined photometry properties (columns 12-37). For example, we can use these quantities to perform a first inspection of the photometry. In our example, we can see in the plot below that the photometric error and the signal-to-noise follow expected and well-defined trends as function of source magnitude. The sharpness values (see `Culling the catalog <../catalogs.srt>`_ for more details) are also close to 0 for a large range of magnitudes, demonstrating the good outcome of the PSF-photometry. 
 
 .. figure:: ../images/M92_Doc_Catplot.png
   :width: 800
