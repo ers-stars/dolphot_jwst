@@ -224,7 +224,7 @@ With the reduction process complete, we can now perform ASTs. We first create th
 
 .. code-block:: bash
 
- > fakelist M92_NIRISS_example.phot NIRISS_F090W NIRISS_F150W 17 31 -0.5 2 -nstar=1000000 > NIRISS_fake.inputlist
+ > fakelist M92_NIRISS_example.phot NIRISS_F090W NIRISS_F150W 17 32 -0.5 2 -nstar=1000000 > NIRISS_fake.inputlist
 
 We then create a new parameter file, **NIRISS_fake.param**: 
 
