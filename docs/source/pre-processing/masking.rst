@@ -4,7 +4,7 @@ Before running the DOLPHOT photometric pipeline, the images need to be pre-proce
 This is accomplished through the mask routines *nircammask* and *nirissmask*. Specifically, these routines will:
 
 * Mask out bad or saturated pixels using the Data Quality (DQ) array included in the images.
-* Convert units from MJy/sr to DN. This is done by diving the pixel values by the FITS keyword PHOTMJSR and multiplying them by exposure time (see Note).
+* Convert units from MJy/sr to DN. This is done by diving the pixel values by the FITS keyword PHOTMJSR and multiplying them by the exposure time (see Note).
 * For distorted images (non-drizzled) multiply the pixel value by the pixel area map.
 * Add the readout noise and gain values in the FITS header.
 
