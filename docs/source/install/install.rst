@@ -82,12 +82,12 @@ To compile DOLPHOT, enter the DOLPHOT directory and type:
 Using custom PSF models
 ------------
 
-Pre-computed PSF models are available for download on the `DOLPHOT homepage <http://americano.dolphinsim.com/dolphot/>`_. These include up-to-date NIRCam and NIRISS PSF models. These models have been generated with `WebbPSF <https://webbpsf.readthedocs.io/en/latest/>`_ v1.0.1, and have the following characteristics:
+Pre-computed PSF models are available for download on the `DOLPHOT homepage <http://americano.dolphinsim.com/dolphot/>`_. These include up-to-date NIRCam and NIRISS PSF models. These models have been generated with `WebbPSF <https://webbpsf.readthedocs.io/en/latest/>`_ v1.2.1, and have the following characteristics:
 
-* Detector position: 3x3 (NIRCam) or 5x5 (NIRISS) spatial grid distributed uniformly on each of the chips.
+* Detector position: 5x5 spatial grid distributed uniformly on each of the chips.
 * PSF FoV: 51x51 px square FoV
 * Spatial oversampling factor: 5
-* Number of used wavelengths: 5 for W filters, 3 for M filters and 1 for N filters, sampling flux from a G5V Phoenix atmosphere model.
+* Number of used wavelengths: 21 for W filters, 9 for M filters and 5 for N filters, sampling flux from a G5V Phoenix atmosphere model.
 * Optical Path Delay (OPD) map from Jul. 24th, 2022 (O2022072401-NRCA3_FP1-1.fits).
 
 However, users who want to use different PSF grids (e.g., to use different OPD maps) can do so with help of the *nircammakepsf/nirissmakepsf* routines. First, we create a 'tmp' subdirectory in the DOLPHOT folder:
