@@ -4,7 +4,7 @@ Before running the DOLPHOT photometric pipeline, the images need to be pre-proce
 This is accomplished through the mask routines *nircammask* and *nirissmask*. Specifically, these routines will:
 
 * Mask out bad or saturated pixels using the Data Quality (DQ) array included in the images.
-* Convert units from MJy/sr to DN. This is done by diving the pixel values by the FITS keyword PHOTMJSR and multiplying them by the FITS keyword EFFEXPTM.
+* Convert units from MJy/sr to DN. This is done by diving the pixel values by the FITS keyword PHOTMJSR and multiplying them by exposure time (see Note).
 * For distorted images (non-drizzled) multiply the pixel value by the pixel area map.
 * Add the readout noise and gain values in the FITS header.
 
@@ -25,6 +25,6 @@ And on each of the CAL files:
 
 .. note::
   * While the mask routines are ultimately intended to use the DQ array for pixel flagging, as of writing, *nircammask* and *nirissmask* use a different strategy, to compensate for current JWST DQ limitations. In particular bad pixels in CAL and CRF images are identified by having a SCI array value of exactly zero, while saturated pixels are identified by having a DQ flag of two. Bad pixels on the I2D images are identified by having a WHT array value of exactly zero. The mask utilities have been updated to accept NaN as a secondary signal for a bad pixel.
-  * For JWST cameras, the exposure time needed in the mask routine is the *Time Between First and Last Measurement*, which can differ from both the EFFEXPTM and DURATION keywords. Use of the *-etctime* flag ensures that the exposure time is accurately calculated. Executing the mask routine without the *-etctime* flag will use the EFFEXPTM keyword instead.
+  * For JWST cameras, the exposure time needed in the mask routine is the *Time Between First and Last Measurement*, which can differ from both the EFFEXPTM and DURATION FITS keywords. Use of the *-etctime* flag ensures that the exposure time is accurately calculated. Executing the mask routine without the *-etctime* flag will use the EFFEXPTM FITS keyword instead.
   * Similar routines (e.g., *acsmask*, *wfc3mask*) exist within the HST modules of DOLPHOT. Usage is similar to *nircammask* and *nirissmak*. However, for HST cameras that contain multiple chips, such as ACS/WFC, and additional step is required after masking. This step is needed to save individual chip images into separate .fits files, and it is achieved using the *splitgroups* routine. 
   * The *splitgroups* step is not required if only JWST images are being run with DOLPHOT, as the STScI pipeline creates individual .fits files for each of the detector chips. However, if JWST and HST images are being run through DOLPHOT together, then *splitrgoups* needs to be run on all images (JWST and HST) to ensure consistent file formats for DOLPHOT.
