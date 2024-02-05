@@ -29,9 +29,9 @@ Here we provide guidelines on how to use these metrics and standard recommendati
 A loose, completenss-oriented, selection to reject obvious outliers but preserve as many stars as possible can be done using the following parameters:
 
 * SNR >=4
-* Sharp^2 <= 0.1
+* Sharp^2 <= 0.2
 * Crowding <= 2.25
-* Flag <= 2
+* Flag <= 3
 * Type <= 2
 
 Those criteria should be satisfied by all sufficiently deep filters. In our M92 example, we apply these cuts to both F090W and F150W, and obtain the following color-magnitude diagram.
@@ -40,14 +40,14 @@ Those criteria should be satisfied by all sufficiently deep filters. In our M92 
   :width: 500
   :align: center
 
-As a rule of thumb, higher purity can be achieved by applying stricter cuts to **Sharpness** and **Crowding**. However, completeness, especially at low **SNR**, will also be decreased. For F090W and F150W, we have developed a strict, purity-oriented selection in `Warfield et al. (2023) <https://ui.adsabs.harvard.edu/abs/2023RNAAS...7...23W/abstract>`_:
+As a rule of thumb, higher purity can be achieved by applying stricter cuts to **Sharpness** and **Crowding**. However, completeness, especially at low **SNR**, will also be decreased. For F090W and F150W, we can use the stricter, purity-oriented selection of `Weisz et al. (2024) <https://DUD>`_:
 
 * Sharp^2 <= 0.01
 * Crowding <= 0.5
 * Flag <= 2
 * Type <= 2
 
-To be satisfied in F090W and F150W simultaneously. This selection has been shown to be mostly pure down to **SNR** of 10. A higher level of residual contaminants might remain below that threshold. Applying these cuts to our M92 catalog (including a **SNR** <= 10 cut), we obtain the following color-magnitude diagram.
+To be satisfied in F090W and F150W simultaneously. This selection has been shown to be mostly pure down to **SNR** of 10 (`Warfield et al. 2023 <https://ui.adsabs.harvard.edu/abs/2023RNAAS...7...23W/abstract>`_). A higher level of residual contaminants might remain below that threshold. Applying these cuts to our M92 catalog (including a **SNR** <= 10 cut), we obtain the following color-magnitude diagram.
 
 .. figure:: ../images/M92_Doc_Pure.png
   :width: 500
