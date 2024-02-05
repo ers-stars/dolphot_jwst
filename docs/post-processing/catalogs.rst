@@ -29,7 +29,7 @@ Here we provide guidelines on how to use these metrics and standard recommendati
 A loose, completenss-oriented, selection to reject obvious outliers but preserve as many stars as possible can be done using the following parameters:
 
 * SNR >=4
-* Sharp^2 <= 0.2
+* Sharp^2 <= 0.1
 * Crowding <= 2.25
 * Flag <= 3
 * Type <= 2
