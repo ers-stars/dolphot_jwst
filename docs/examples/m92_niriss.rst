@@ -3,7 +3,7 @@ M92 NIRISS
 
 Here we provide a working example of the reduction of M92 NIRISS data. The workflow is completely analogous to what presented in the main documentation, provided all the relevant NIRCam routines are replaced by the corresponding NIRISS routines.
 
-PRE-PROCESSING
+Pre-processing
 ---------------
 
 We start by setting up a directory in which we will perform the NIRISS reduction:
@@ -70,7 +70,7 @@ And calculate the sky maps:
   > calcsky jw01334001001_04201_00002_nis_cal.fits 10 25 -64 2.25 2.00
   >j calcsky w01334001001_04201_00004_nis_cal.fits 10 25 -64 2.25 2.00
 
-RUNNING DOLPHOT
+Running DOLPHOT
 -----------
 
 Now that we have pre-processed the images, we can create the photometry parameter file, **phot.param**:
@@ -124,7 +124,7 @@ We are now ready to execute the PSF-photometry routine:
 
   > dolphot M92_NIRISS_example.phot -pphot.param > phot.log
 
-POST-PROCESSING
+Post-processing
 ---------
 
 The reduction return the following information in the log:
@@ -216,7 +216,7 @@ Or apply stricter culling criteria (those of `Warfield et al. 2023 <https://ui.a
   :width: 400
   :align: center
 
-ARTIFICIAL STAR TESTS
+Artificial star tests
 --------------------------
 
 With the reduction process complete, we can now perform ASTs. We first create the input star list:
