@@ -38,7 +38,10 @@ A practical example of how to use *fakelist* to generate an input star list is p
   * **UseXY** can be used to model more accurately the crowding properties of the images. This is, for instance, useful if the field has a strong density gradient.
   * You can use **UseCMD** to improve your computational efficiency, and avoid input stars with unphysical SED. Make sure that the input photometry cover the entire SED parameter space that you are trying to characterize
 
+ASTs for Multi-Band Photometry
+-----------------------------
 
+If working with more than 2 filters, the recommended procedure is to generate the ASTs outside of DOLPHOT. This can be done in several of ways. Distributing the input stars uniformly in the multi-band parameter space is a simple and effective strategy, but it is computationally inefficient, as most input stars have unphysical SEDs. This strategy also requires a very high number of ASTs, especially if working for many filters, to achieve the AST density needed for practical applications.
 
 
 
