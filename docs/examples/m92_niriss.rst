@@ -225,6 +225,24 @@ With the reduction process complete, we can now perform ASTs. We first create th
 
  > fakelist M92_NIRISS_example.phot NIRISS_F090W NIRISS_F150W 17 32 -0.5 2 -nstar=1000000 > NIRISS_fake.inputlist
 
+to obtain a file, called **NIRISS_fake.inputlist**, with the following content:
+
+.. code-block:: bash
+
+ 1 1  508.63  772.92 28.087 27.463
+ 1 1  764.48 1599.19 28.151 27.400
+ 1 1 1900.99  352.76 25.420 24.343
+ 1 1 1468.09   95.53 17.294 17.137
+ 1 1 1984.96 1745.81 30.240 29.935
+ 1 1 1652.47  941.67 28.648 27.971
+ 1 1  647.04  463.93 21.504 20.919
+ 1 1  122.71  449.34 22.915 22.747
+ 1 1 1096.84  626.13 20.064 18.274
+ 1 1  182.98  636.89 27.503 27.448
+ 1 1  397.27  255.57 27.949 26.320
+ 1 1 1119.31 1913.29 31.725 31.113
+ ...
+
 We then create a new parameter file, **NIRISS_fake.param**: 
 
 .. code-block:: bash
