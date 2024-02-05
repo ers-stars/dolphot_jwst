@@ -1,4 +1,4 @@
-Applying Image Masks
+Applying image masks
 ===========
 Before running the DOLPHOT photometric pipeline, the images need to be pre-processed to be suitable for PSF-fitting photometry.
 This is accomplished through the mask routines *nircammask* and *nirissmask*. Specifically, these routines will:
