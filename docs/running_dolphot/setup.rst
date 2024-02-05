@@ -7,13 +7,13 @@ Once the images have been preprocessed, we are ready to run the PSF-photometry r
 
   > dolphot <outputname> <options>
   
-The **outputname** file is where the photometric catalog will be stored. A number of auxiliary files, using **outputname** as root, will also be created to store additional information and diagnostics. The **options** keywords set the value of a number of parameters used during the PSF-photometry . This includes the name of each image that needs to be photometered (**img_<1-N>**), and which image has to be used as reference frame (**img_0**). A list of major dolphot parameters is provided in :ref:`Parameter Definitions`. The parameter values can be set from the command line:
+The **outputname** file is where the photometric catalog will be stored. A number of auxiliary files, using **outputname** as root, will also be created to store additional information and diagnostics. The **options** keywords set the value of a number of parameters used during the PSF-photometry . This includes the name of each image that needs to be photometered (**img_<1-N>**), and which image has to be used as reference frame (**img_0**). A list of major dolphot parameters is provided in :ref:`Parameter definitions`. The parameter values can be set from the command line:
 
 .. code-block:: bash
 
   > dolphot <outputname> <parametername>=<parametervalue>
   
-Any omitted parameter will be set at the default value (see :ref:`Parameter Definitions`). If we want to specify a large number of parameters, we can store them in a parameter file:
+Any omitted parameter will be set at the default value (see :ref:`Parameter definitions`). If we want to specify a large number of parameters, we can store them in a parameter file:
 
 .. code-block:: bash
 
