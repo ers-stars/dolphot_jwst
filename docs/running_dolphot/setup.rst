@@ -13,7 +13,7 @@ The **outputname** file is where the photometric catalog will be stored. A numbe
 
   > dolphot <outputname> <parametername>=<parametervalue>
   
-Any omitted parameter will be set at the default value (cf. `Parameter Definitions <./definitions.rst>`_). If we want to specify a large number of parameters, we can store them in a parameter file:
+Any omitted parameter will be set at the default value (see :ref:`Parameter Definitions`). If we want to specify a large number of parameters, we can store them in a parameter file:
 
 .. code-block:: bash
 
