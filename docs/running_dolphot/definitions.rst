@@ -1,5 +1,3 @@
-.. _Parameter Definitions:
-
 Parameter Definitions
 =========
 
