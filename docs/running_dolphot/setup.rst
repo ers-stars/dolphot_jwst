@@ -90,7 +90,7 @@ In this example, **phot.param** file contains the following input:
 
 
 .. note::
-  Because we are working with images from both the short-wavelength and long-wavelength channels, we need to speficy specific values of **raper**, **rchi**, and **rsky2** for each image, as the recommended value changes between the two sets of images (see). If working with a homogeneous set 
-  of images (e.g., only from the short-wavelength channel), the parameter value can be set just once. This is done by replacing the list of **img<1-N>_<parametername> =** with a single **<parametername> =** instance. 
+  Because we are working with images from both the short-wavelength and long-wavelength channels, we need to speficy specific values of **raper**, **rchi**, and **rsky2** for each image, as the recommended value changes between the two sets of images (see `Weisz et al. (2024) 
+  <https://ui.adsabs.harvard.edu/abs/2023RNAAS...7...23W/abstract>`_). If working with a homogeneous set of images (e.g., only from the short-wavelength channel), the parameter value can be set just once. This is done by replacing the list of **img<1-N>_<parametername> =** with a single <parametername> =** instance. 
   
   
