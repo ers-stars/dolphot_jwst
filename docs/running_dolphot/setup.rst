@@ -51,42 +51,42 @@ In this example, **phot.param** file contains the following input:
  img52_file = jw01334001001_02101_00002_nrcblong_cal
  ...
 
-  img1_raper = 2
-  img1_rchi = 1.5
-  img1_rsky2 = 3 10
-  img2_raper = 2
-  img2_rchi = 1.5
-  img2_rsky2 = 3 10
-  ...
-  img49_raper = 3
-  img49_rhi = 2.0
-  img49_rsky2 = 4 10
-  ...
+ img1_raper = 2
+ img1_rchi = 1.5
+ img1_rsky2 = 3 10
+ img2_raper = 2
+ img2_rchi = 1.5
+ img2_rsky2 = 3 10
+ ...
+ img49_raper = 3
+ img49_rhi = 2.0
+ img49_rsky2 = 4 10
+ ...
 
-  rsky0 = 15
-  rsky1 = 35
-  rpsf = 15
-  apsky = 20 35
-  FitSky = 2
-  SigPSF = 5.0
-  FlagMask = 4
-  SecondPass = 5
-  PSFPhotIt = 2
-  ApCor = 1
-  FSat = 0.999
-  NoiseMult = 0.1
-  RCombine = 1.5
-  CombineChi = 0
-  MaxIT = 25
-  InterpPSFlib = 1
-  SigFindMult = 0.85
-  PSFPhot = 1
-  Force1 = 0
-  SkySig = 2.25
-  SkipSky = 1
-  UseWCS = 2
-  PSFres = 1
-  PosStep = 0.25
+ rsky0 = 15
+ rsky1 = 35
+ rpsf = 15
+ apsky = 20 35
+ FitSky = 2
+ SigPSF = 5.0
+ FlagMask = 4
+ SecondPass = 5
+ PSFPhotIt = 2
+ ApCor = 1
+ FSat = 0.999
+ NoiseMult = 0.1
+ RCombine = 1.5
+ CombineChi = 0
+ MaxIT = 25
+ InterpPSFlib = 1
+ SigFindMult = 0.85
+ PSFPhot = 1
+ Force1 = 0
+ SkySig = 2.25
+ SkipSky = 1
+ UseWCS = 2
+ PSFres = 1
+ PosStep = 0.25
 
 
   
