@@ -1,4 +1,4 @@
-User's Guide for DOLPHOT NIRCAM and NIRISS modules
+User's guide for DOLPHOT NIRCAM and NIRISS modules
 ===================================
 
 **DOLPHOT** is a widely used software package for resolved stellar photometry that is written and maintained by Andrew Dolphin.  General information about DOLPHOT can be found on its `homepage <http://americano.dolphinsim.com/dolphot/>`_.
