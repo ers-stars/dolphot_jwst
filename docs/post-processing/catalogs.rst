@@ -47,7 +47,7 @@ As a rule of thumb, higher purity can be achieved by applying stricter cuts to *
 * Flag <= 2
 * Type <= 2
 
-To be satisfied in F090W and F150W simultaneously. This selection has been shown to be mostly pure down to **SNR** of 10 (`Warfield et al. 2023 <https://ui.adsabs.harvard.edu/abs/2023RNAAS...7...23W/abstract>`_). A higher level of residual contaminants might remain below that threshold. Applying these cuts to our M92 catalog (including a **SNR** <= 10 cut), we obtain the following color-magnitude diagram.
+To be satisfied in F090W and F150W simultaneously. This selection has been shown to be mostly pure down to **SNR** of 10 (`Warfield et al. 2023 <https://ui.adsabs.harvard.edu/abs/2023RNAAS...7...23W/abstract>`_). A higher level of residual contaminants might remain below that threshold. Applying these cuts to our M92 catalog, we obtain the following color-magnitude diagram.
 
 .. figure:: ../images/M92_Doc_Pure.png
   :width: 500
