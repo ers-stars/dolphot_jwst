@@ -26,7 +26,7 @@ Alignment
    * JWST requires UseWCS=2.  UseWCS=2 should also be set when running JWST and HST data together, even though it is not optimal for HST photometry alone.
 
 
-Star finding parameters
+Star-finding parameters
 ----------
 
 * **SecondPass** = 1: Number of additional passes when finding stars to locate stars in the wings of brighter stars. Must be a non-negative value.
