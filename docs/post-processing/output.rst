@@ -108,7 +108,7 @@ The **outputname**.warnings contains potential anomalies that have been encounte
 Examining the catalog
 ============
   
-The output photometric catalog is stored in the **outputname** file. This file contains a output line for each point-source identified during the reduction run. For each line, the **outputname** file contains a long list of outputs. These include photometric measurements and quality flags on each indivual frame, as well as combined photometry from multiple images that use the same filter. The detailed list of all output columns can be found in the **outputname**.columns file. In our example, these are the first 50 columns of our output file:
+The output photometric catalog is stored in the **outputname** file. This file contains a output line for each point-source identified during the reduction run. For each line, the **outputname** file contains a long list of outputs. These include photometric measurements and quality flags on each indivual frame, as well as combined photometry from multiple images that use the same filter. The detailed list of all output columns can be found in the **outputname**.columns file. In our example, these are the first 70 columns of our output file:
 
 .. code-block:: bash
 
@@ -117,75 +117,75 @@ The output photometric catalog is stored in the **outputname** file. This file c
   3. Object X position on reference image (or first image, if no reference)
   4. Object Y position on reference image (or first image, if no reference)
   5. Chi for fit
-6. Signal-to-noise
-7. Object sharpness
-8. Object roundness
-9. Direction of major axis (if not round)
-10. Crowding
-11. Object type (1=bright star, 2=faint, 3=elongated, 4=hot pixel, 5=extended)
-12. Total counts, NIRCAM_F090W
-13. Total sky level, NIRCAM_F090W
-14. Normalized count rate, NIRCAM_F090W
-15. Normalized count rate uncertainty, NIRCAM_F090W
-16. Instrumental VEGAMAG magnitude, NIRCAM_F090W
-17. Transformed UBVRI magnitude, NIRCAM_F090W
-18. Magnitude uncertainty, NIRCAM_F090W
-19. Chi, NIRCAM_F090W
-20. Signal-to-noise, NIRCAM_F090W
-21. Sharpness, NIRCAM_F090W
-22. Roundness, NIRCAM_F090W
-23. Crowding, NIRCAM_F090W
-24. Photometry quality flag, NIRCAM_F090W
-25. Total counts, NIRCAM_F150W
-26. Total sky level, NIRCAM_F150W
-27. Normalized count rate, NIRCAM_F150W
-28. Normalized count rate uncertainty, NIRCAM_F150W
-29. Instrumental VEGAMAG magnitude, NIRCAM_F150W
-30. Transformed UBVRI magnitude, NIRCAM_F150W
-31. Magnitude uncertainty, NIRCAM_F150W
-32. Chi, NIRCAM_F150W
-33. Signal-to-noise, NIRCAM_F150W
-34. Sharpness, NIRCAM_F150W
-35. Roundness, NIRCAM_F150W
-36. Crowding, NIRCAM_F150W
-37. Photometry quality flag, NIRCAM_F150W
-38. Total counts, NIRCAM_F277W
-39. Total sky level, NIRCAM_F277W
-40. Normalized count rate, NIRCAM_F277W
-41. Normalized count rate uncertainty, NIRCAM_F277W
-42. Instrumental VEGAMAG magnitude, NIRCAM_F277W
-43. Transformed UBVRI magnitude, NIRCAM_F277W
-44. Magnitude uncertainty, NIRCAM_F277W
-45. Chi, NIRCAM_F277W
-46. Signal-to-noise, NIRCAM_F277W
-47. Sharpness, NIRCAM_F277W
-48. Roundness, NIRCAM_F277W
-49. Crowding, NIRCAM_F277W
-50. Photometry quality flag, NIRCAM_F277W
-51. Total counts, NIRCAM_F444W
-52. Total sky level, NIRCAM_F444W
-53. Normalized count rate, NIRCAM_F444W
-54. Normalized count rate uncertainty, NIRCAM_F444W
-55. Instrumental VEGAMAG magnitude, NIRCAM_F444W
-56. Transformed UBVRI magnitude, NIRCAM_F444W
-57. Magnitude uncertainty, NIRCAM_F444W
-58. Chi, NIRCAM_F444W
-59. Signal-to-noise, NIRCAM_F444W
-60. Sharpness, NIRCAM_F444W
-61. Roundness, NIRCAM_F444W
-62. Crowding, NIRCAM_F444W
-63. Photometry quality flag, NIRCAM_F444W
-64. Measured counts, jw01334001001_02101_00001_nrca1_f090w_cal (NIRCAM_F090W, 268.4 sec)
-65. Measured sky level, jw01334001001_02101_00001_nrca1_f090w_cal (NIRCAM_F090W, 268.4 sec)
-66. Normalized count rate, jw01334001001_02101_00001_nrca1_f090w_cal (NIRCAM_F090W, 268.4 sec)
-67. Normalized count rate uncertainty, jw01334001001_02101_00001_nrca1_f090w_cal (NIRCAM_F090W, 268.4 sec)
-68. Instrumental VEGAMAG magnitude, jw01334001001_02101_00001_nrca1_f090w_cal (NIRCAM_F090W, 268.4 sec)
-69. Transformed UBVRI magnitude, jw01334001001_02101_00001_nrca1_f090w_cal (NIRCAM_F090W, 268.4 sec)
-70. Magnitude uncertainty, jw01334001001_02101_00001_nrca1_f090w_cal (NIRCAM_F090W, 268.4 sec)
+  6. Signal-to-noise
+  7. Object sharpness
+  8. Object roundness
+  9. Direction of major axis (if not round)
+  10. Crowding
+  11. Object type (1=bright star, 2=faint, 3=elongated, 4=hot pixel, 5=extended)
+  12. Total counts, NIRCAM_F090W
+  13. Total sky level, NIRCAM_F090W
+  14. Normalized count rate, NIRCAM_F090W
+  15. Normalized count rate uncertainty, NIRCAM_F090W
+  16. Instrumental VEGAMAG magnitude, NIRCAM_F090W
+  17. Transformed UBVRI magnitude, NIRCAM_F090W
+  18. Magnitude uncertainty, NIRCAM_F090W
+  19. Chi, NIRCAM_F090W
+  20. Signal-to-noise, NIRCAM_F090W
+  21. Sharpness, NIRCAM_F090W
+  22. Roundness, NIRCAM_F090W
+  23. Crowding, NIRCAM_F090W
+  24. Photometry quality flag, NIRCAM_F090W
+  25. Total counts, NIRCAM_F150W
+  26. Total sky level, NIRCAM_F150W
+  27. Normalized count rate, NIRCAM_F150W
+  28. Normalized count rate uncertainty, NIRCAM_F150W
+  29. Instrumental VEGAMAG magnitude, NIRCAM_F150W
+  30. Transformed UBVRI magnitude, NIRCAM_F150W
+  31. Magnitude uncertainty, NIRCAM_F150W
+  32. Chi, NIRCAM_F150W
+  33. Signal-to-noise, NIRCAM_F150W
+  34. Sharpness, NIRCAM_F150W
+  35. Roundness, NIRCAM_F150W
+  36. Crowding, NIRCAM_F150W
+  37. Photometry quality flag, NIRCAM_F150W
+  38. Total counts, NIRCAM_F277W
+  39. Total sky level, NIRCAM_F277W
+  40. Normalized count rate, NIRCAM_F277W
+  41. Normalized count rate uncertainty, NIRCAM_F277W
+  42. Instrumental VEGAMAG magnitude, NIRCAM_F277W
+  43. Transformed UBVRI magnitude, NIRCAM_F277W
+  44. Magnitude uncertainty, NIRCAM_F277W
+  45. Chi, NIRCAM_F277W
+  46. Signal-to-noise, NIRCAM_F277W
+  47. Sharpness, NIRCAM_F277W
+  48. Roundness, NIRCAM_F277W
+  49. Crowding, NIRCAM_F277W
+  50. Photometry quality flag, NIRCAM_F277W
+  51. Total counts, NIRCAM_F444W
+  52. Total sky level, NIRCAM_F444W
+  53. Normalized count rate, NIRCAM_F444W
+  54. Normalized count rate uncertainty, NIRCAM_F444W
+  55. Instrumental VEGAMAG magnitude, NIRCAM_F444W
+  56. Transformed UBVRI magnitude, NIRCAM_F444W
+  57. Magnitude uncertainty, NIRCAM_F444W
+  58. Chi, NIRCAM_F444W
+  59. Signal-to-noise, NIRCAM_F444W
+  60. Sharpness, NIRCAM_F444W
+  61. Roundness, NIRCAM_F444W
+  62. Crowding, NIRCAM_F444W
+  63. Photometry quality flag, NIRCAM_F444W
+  64. Measured counts, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 268.4 sec)
+  65. Measured sky level, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 268.4 sec)
+  66. Normalized count rate, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 268.4 sec)
+  67. Normalized count rate uncertainty, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 268.4 sec)
+  68. Instrumental VEGAMAG magnitude, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 268.4 sec)
+  69. Transformed UBVRI magnitude, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 268.4 sec)
+  70. Magnitude uncertainty, jw01334001001_02101_00001_nrca1_cal (NIRCAM_F090W, 268.4 sec)
   ...
 
 
-While the frame-by-frame photometric output (columns 38 and below, in our example) can be useful for, e.g. variable star work, for the purpose of generating a photometric catlog, we are only interested in the global properties of the source (columns 3-11) and in the combined photometry properties (columns 12-37). For example, we can use these quantities to perform a first inspection of the photometry. In our example, we can see in the plot below that the photometric error and the signal-to-noise follow expected and well-defined trends as function of source magnitude. The sharpness values (see `Culling the catalog <../catalogs.srt>`_ for more details) are also close to 0 for a large range of magnitudes, demonstrating the good outcome of the PSF-photometry. 
+While the frame-by-frame photometric output (columns 64 and below, in our example) can be useful for, e.g. variable star work, for the purpose of generating a photometric catlog, we are only interested in the global properties of the source (columns 3-11) and in the combined photometry properties (columns 12-63). For example, we can use these quantities to perform a first inspection of the photometry. In our example, we can see in the plot below that the photometric error and the signal-to-noise follow expected and well-defined trends as function of source magnitude. The sharpness values (see `Culling the catalog <../catalogs.srt>`_ for more details) are also close to 0 for a large range of magnitudes, demonstrating the good outcome of the PSF-photometry. 
 
 .. figure:: ../images/M92_Doc_Catplot.png
   :width: 800
