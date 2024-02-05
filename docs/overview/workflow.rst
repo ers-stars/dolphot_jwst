@@ -1,4 +1,4 @@
-DOLPHOT Workflow
+DOLPHOT workflow
 ==========
 
 For most use cases, the process of applying DOLPHOT to NIRCam or NIRISS images is fairly straightforward.  The main steps are
