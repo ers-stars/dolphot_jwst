@@ -6,7 +6,7 @@ Parameter Definitions
 Default values are indicated for most parameters.  Note the difference between interger (1) and decimal values (1.0).  Values for camera-specific paraemters depend on the instrument used.
 
 .. tip::
-  A part from the **img_file** parameter, all the other image-specific parameters can either be assigned for each individual image (e.g., **img1_raper** = 2, **img2_raper** = 3, etc.), or they can be inzialized once and applied to all images (e.g., **raper =** 2).
+  Apart from the **img_file** parameter, all the other image-specific parameters can either be assigned for each individual image (e.g., **img1_raper** = 2, **img2_raper** = 3, etc.), or they can be inzialized once and applied to all images (e.g., **raper =** 2).
 
 Files
 ----------
