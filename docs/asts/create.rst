@@ -36,35 +36,29 @@ A practical example of how to use *fakelist* to generate an input star list is p
 .. tip::
 
   * **UseXY** can be used to model more accurately the crowding properties of the images. This is, for instance, useful if the field has a strong density gradient.
-  * You can use **UseCMD** to improve your computational efficiency, and avoid input stars with unphysical SED. Make sure that the input photometry cover the entire SED parameter space that you are trying to characterize
+  * You can use **UseCMD** to improve your computational efficiency, and avoid input stars with unphysical spectral energy distributions (SEDs). Make sure that the input photometry cover the entire SED parameter space that you are trying to characterize
 
 ASTs for Multi-Band Photometry
 -----------------------------
 
-If working with more than 2 filters, the recommended procedure is to generate the ASTs outside of DOLPHOT. This can be done in several of ways. Distributing the input stars uniformly in the multi-band parameter space is a simple and effective strategy, but it is computationally inefficient, as most input stars have unphysical SEDs. This strategy also requires a very high number of ASTs, especially if working for many filters, to achieve the AST density needed for practical applications.
+If working with more than 2 filters, the recommended procedure is to generate the ASTs outside of DOLPHOT. This can be done in several of ways. Distributing the input stars uniformly in the multi-band parameter space is a simple and effective strategy, but it is computationally inefficient, as most input stars have unphysical SEDs. This strategy also requires a very high number of ASTs, especially if working for many filters, to achieve the AST density needed for practical applications. A more efficient solution is to generate the input star photometry using realistic SED models. This can be done using SED fitting codes (such as the BEAST, `Gordon et al. 2016 <https://ui.adsabs.harvard.edu/abs/2016ApJ...826..104G/abstract>`_), or directly sampling stellar evolution models.
 
 
-
-In our M92 example, we generated the input star list using the following example:
-
-.. code-block:: bash
-
-  > fakelist M92_example.phot NIRCAM_F090W NIRCAM_F150W 17 31 -0.5 2 -nstar=500000 > fake.inputlist
-
-To obtain a file called fake.inputlist, with the following content:
+In our M92 example, we generate the input star list by sampling a set of stellar isochrones, with a large distribution of ages and metallicities. We then perturbe the photometry by using a scatter of 0.15 mag, to increase our AST coverage and mitigate possible discrepancies between models and observations. We store the input star list in a file called **fake.inputlist**, with the following content:
 
 .. code-block:: bash
 
-  1 1 8401.39 3286.06 18.048 16.948
-  1 1 5798.94 2501.16 20.389 19.237
-  1 1 5137.11 3419.04 26.617 25.481
-  1 1 3979.63  252.10 19.353 19.092
-  1 1 2748.14  192.39 28.882 27.321
-  1 1 3046.70 1936.77 25.350 25.699
-  1 1 3066.30  248.43 23.009 22.523
-  1 1 2107.61 3015.06 27.802 26.943
-  1 1 9111.63 3908.34 18.795 18.467
-  1 1 6603.46 1673.33 17.239 16.038
+  1 1 2266.48  139.33 22.644 21.298 20.863 20.690
+  1 1 3283.65 3772.26 27.523 25.788 25.538 24.878
+  1 1  609.75  215.64 27.494 26.098 25.423 24.776
+  1 1 2257.56 3461.87 25.982 24.199 23.781 22.849
+  1 1 1296.89 2335.19 25.591 24.058 23.375 23.208
+  1 1 3716.76  348.85 26.783 25.293 24.652 24.181
+  1 1  941.47  558.97 18.401 17.536 17.313 17.610
+  1 1  714.05 3823.13 28.582 26.655 25.844 24.900
+  1 1 1663.79 3586.35 21.612 20.538 20.067 19.936
+  1 1  129.95 1751.45 21.009 20.059 19.822 19.691
+  1 1 2716.72 2168.35 21.290 20.531 20.140 20.163
   ...
 
 We are now ready to run the ASTs with DOLPHOT.
