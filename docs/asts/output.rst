@@ -11,7 +11,7 @@ Where X and Y are the input position on the reference image coordinate system, a
 
 .. note::
 
-  When working with ASTs, it is important to perserve information about non-detections, e.g., record its magnitude as 99.999, or however you choose to designate non-detections.
+  When working with ASTs, it is important to preserve information about non-detections, e.g., record their magnitude as 99.999, or however you choose to designate non-detections, rather then simply discarding the non-detected stars. This is because non-detected stars are needed to compute the completeness properties of the catalog.
 
 From this file, we can use the measured properties of the input ASTs to characterize the performance of our photometric reduction. For example, the difference between the output and input magnitude is a good tracer of the real photometric uncertainty which, especially at low SNR, can differ substantially from the nominal photometric error provided by *dolphot*:
 
