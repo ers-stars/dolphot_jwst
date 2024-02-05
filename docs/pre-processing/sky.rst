@@ -1,4 +1,4 @@
-Calculating the Sky
+Calculating the sky
 ==========
 After pre-processing the frames with the *mask* routines (and splitting multi-chip frames with *splitgroup*, if necessary), the last step before running PSF-photometry is to calculate a sky image for each of our frames. This is done through the routine *calcsky*, which has syntax:
 
