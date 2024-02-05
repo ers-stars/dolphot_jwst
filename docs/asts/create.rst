@@ -32,6 +32,7 @@ Where **photname** is the name of the *dolphot* output; **filter1** and **filter
 * **usecmd**: provide a name of a file containing a list of magnitudes (in the format '1 1 X Y Magnitude Color'). The generated star list fill follow the same probability distribution on the CMD. Default is uniform distribution on the CMD.
 
 A practical example of how to use *fakelist* to generate an input star list is provided in the `NIRISS workflow <../../examples/m92_niriss.srt>`_
+
 .. tip::
 
   * **UseXY** can be used to model more accurately the crowding properties of the images. This is, for instance, useful if the field has a strong density gradient.
