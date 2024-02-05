@@ -1,4 +1,4 @@
-Parameter Definitions
+Parameter definitions
 =========
 
 Default values are indicated for most parameters.  Note the difference between interger (1) and decimal values (1.0).  Values for camera-specific paraemters depend on the instrument used.
@@ -26,7 +26,7 @@ Alignment
    * JWST requires UseWCS=2.  UseWCS=2 should also be set when running JWST and HST data together, even though it is not optimal for HST photometry alone.
 
 
-Star Finding Parameters
+Star finding parameters
 ----------
 
 * **SecondPass** = 1: Number of additional passes when finding stars to locate stars in the wings of brighter stars. Must be a non-negative value.
@@ -57,7 +57,7 @@ Photometry
    * In general, FitSky=2 provides the most robust results across a wide range of crowding.
 
 
-Camera Specific
+Camera specific
 -----------
 
 * **img_rsky** *(int int)*: Inner and outer radii for computing sky values, if FitSky=1 is being used. Also used in a few places if using FitSky = 2, 3, or 4, so should always be set. The inner radius (first number) should be outside the bulk of the light from the star; the outer (second) should be sufficiently large to compute an accurate sky.
