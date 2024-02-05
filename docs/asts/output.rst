@@ -23,7 +23,7 @@ Alternatively, we can use the number of ASTs recovered, as a function of magnitu
 
 .. note::
 
-  When working with ASTs, it is important to preserve information about non-detections, e.g., record their magnitude as 99.999, or however you choose to designate non-detections, rather then simply discarding the non-detected stars. This is because non-detected stars are needed to compute the completeness properties of the catalog.
+  When working with ASTs, it is important to preserve information about non-detections, e.g., record their magnitude as 99.999, or however you choose to designate non-detections, rather then simply discarding the non-detected\culled stars. This is because non-detected stars are needed to compute the completeness properties of the catalog.
 
 It is important to remeber that the ASTs needs to be postprocessed **exactly** in the same way as the primary photometric catalog. This includes spatial cuts, color cuts and culling through the photometric quality metrics. This is necessary to ensure that the ASTs provide a truthful reprensenation of the final photometric performance. In our M92 example, we can apply the `Weisz et al. (2024) <https://DUD>`_ cuts to our AST catalog, to quantify the effect of our selection criteria. Note how the completeness at low magnitude is affected by the stringent photometric requirements:
 
