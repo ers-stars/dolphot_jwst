@@ -31,7 +31,7 @@ In this example, **phot.param** file contains the following input:
 
 .. code-block:: bash
 
- Nimg = 48
+ Nimg = 60
  img0_file = jw01334-o001_t001_nircam_clear-f150w_i2d
  img1_file = jw01334001001_02101_00001_nrca1_cal
  img2_file = jw01334001001_02101_00001_nrca2_cal
@@ -43,33 +43,28 @@ In this example, **phot.param** file contains the following input:
  img8_file = jw01334001001_02101_00001_nrcb4_cal
  img9_file = jw01334001001_02101_00002_nrca1_cal
  img10_file = jw01334001001_02101_00002_nrca2_cal
- img11_file = jw01334001001_02101_00002_nrca3_cal
- img12_file = jw01334001001_02101_00002_nrca4_cal
- img13_file = jw01334001001_02101_00002_nrcb1_cal
- img14_file = jw01334001001_02101_00002_nrcb2_cal
- img15_file = jw01334001001_02101_00002_nrcb3_cal
- img16_file = jw01334001001_02101_00002_nrcb4_cal
- img17_file = jw01334001001_02101_00004_nrca1_cal
- img18_file = jw01334001001_02101_00004_nrca2_cal
- img19_file = jw01334001001_02101_00004_nrca3_cal
- img20_file = jw01334001001_02101_00004_nrca4_cal
- img21_file = jw01334001001_02101_00004_nrcb1_cal
- img22_file = jw01334001001_02101_00004_nrcb2_cal
- img23_file = jw01334001001_02101_00004_nrcb3_cal
- img24_file = jw01334001001_02101_00004_nrcb4_cal
- img25_file = jw01334001001_04101_00001_nrca1_cal
- img26_file = jw01334001001_04101_00001_nrca2_cal
- img27_file = jw01334001001_04101_00001_nrca3_cal
- img28_file = jw01334001001_04101_00001_nrca4_cal
- img29_file = jw01334001001_04101_00001_nrcb1_cal
- img30_file = jw01334001001_04101_00001_nrcb2_cal
+ ...
+ img48_file = jw01334001001_04101_00004_nrcb4_cal
+ img49_file = jw01334001001_02101_00001_nrcalong_cal
+ img50_file = jw01334001001_02101_00001_nrcblong_cal
+ img51_file = jw01334001001_02101_00002_nrcalong_cal
+ img52_file = jw01334001001_02101_00002_nrcblong_cal
  ...
 
-  raper = 2
-  rchi = 1.5
+  img1_raper = 2
+  img1_rchi = 1.5
+  img1_rsky2 = 3 10
+  img2_raper = 2
+  img2_rchi = 1.5
+  img2_rsky2 = 3 10
+  ...
+  img49_raper = 3
+  img49_rhi = 2.0
+  img49_rsky2 = 4 10
+  ...
+
   rsky0 = 15
   rsky1 = 35
-  rsky2 = 3 10
   rpsf = 15
   apsky = 20 35
   FitSky = 2
