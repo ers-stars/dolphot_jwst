@@ -62,3 +62,7 @@ In our M92 example, we generate the input star list by sampling a set of stellar
   ...
 
 We are now ready to run the ASTs with DOLPHOT.
+
+.. tip::
+
+  It is advisable to generate an AST input list that extends below the observed detection limit, by 0.5-1 mag. This is because photometry near the *observed* detection limit tends to be biased bright, which pushes the *real* detection limit to slighly fainter magnitudes.
