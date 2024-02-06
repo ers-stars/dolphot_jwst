@@ -70,4 +70,24 @@ If you make use of DOLPHOT in your work please cite `Dolphin 2000 <https://ui.ad
    :name: examples
    
    examples/m92_niriss
- 
+
+
+<body>
+<!-- Default Statcounter code for JWST DOLPHOT
+https://dolphot-jwst.readthedocs.io/en/latest/ -->
+<script type="text/javascript">
+var sc_project=12964965; 
+var sc_invisible=1; 
+var sc_security="fbb84155"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="web statistics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12964965/0/fbb84155/1/"
+alt="web statistics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</body>
