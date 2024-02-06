@@ -27,7 +27,7 @@ Continuing with our example dataset, we will run the reduction on our M92 images
 
   > dolphot M92_example.phot -pphot.param > phot.log
   
-In this example, **phot.param** file contains the following input:
+In this example, [**phot.param**](phot.param) file contains the following input:
 
 .. code-block:: bash
 
