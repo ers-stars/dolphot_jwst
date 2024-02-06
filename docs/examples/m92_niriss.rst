@@ -68,7 +68,7 @@ And calculate the sky maps:
   > calcsky jw01334001001_02201_00004_nis_cal.fits 10 25 -64 2.25 2.00
   > calcsky jw01334001001_04201_00001_nis_cal.fits 10 25 -64 2.25 2.00
   > calcsky jw01334001001_04201_00002_nis_cal.fits 10 25 -64 2.25 2.00
-  >j calcsky w01334001001_04201_00004_nis_cal.fits 10 25 -64 2.25 2.00
+  > calcsky w01334001001_04201_00004_nis_cal.fits 10 25 -64 2.25 2.00
 
 Running DOLPHOT
 -----------
@@ -113,6 +113,9 @@ Now that we have pre-processed the images, we can create the photometry paramete
  UseWCS = 2
  PSFres = 1
  PosStep = 0.25
+
+
+You can find the full parameter file used in this example `here <https://github.com/ers-stars/dolphot_jwst/blob/main/docs/examples/m92_NIRISS_phot.param>`_.
 
 .. note::
 
