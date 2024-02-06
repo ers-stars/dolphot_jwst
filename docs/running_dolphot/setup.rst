@@ -27,7 +27,7 @@ Continuing with our example dataset, we will run the reduction on our M92 images
 
   > dolphot M92_example.phot -pphot.param > phot.log
   
-In this example, [**phot.param**](https://github.com/ers-stars/dolphot_jwst/blob/main/docs/running_dolphot/phot.param) file contains the following input:
+In this example, **phot.param** file contains the following input:
 
 .. code-block:: bash
 
@@ -91,6 +91,6 @@ In this example, [**phot.param**](https://github.com/ers-stars/dolphot_jwst/blob
 
 .. note::
   Because we are working with images from both the short-wavelength and long-wavelength channels, we need to speficy specific values of **raper**, **rchi**, and **rsky2** for each image, as the recommended value changes between the two sets of images (see `Weisz et al. 2024 
-  <https://DUD>`_). If working with a homogeneous set of images (e.g., only from the short-wavelength channel), the parameter value can be set just once. This is done by replacing the list of **img<1-N>_<parametername>** with a single **<parametername>** instance. 
+  <https://DUD>`_). If working with a homogeneous set of images (e.g., only from the short-wavelength channel), the parameter value can be set just once. This is done by replacing the list of **img<1-N>_<parametername>** with a single **<parametername>** instance.   You can download the full parameter file used in this example [here](https://github.com/ers-stars/dolphot_jwst/blob/main/docs/running_dolphot/phot.param).
   
   
