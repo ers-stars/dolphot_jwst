@@ -119,7 +119,7 @@ You can find the full parameter file used in this example `here <https://github.
 
 .. note::
 
- Note that certain keywords (**raper**, **rchi** and **rsky2**) differ from the NIRCam case. Those keywords are camera specific, and should be used following the recommendations of `Weisz et al. 2024 <dummy>`_.
+ Note that certain keywords (**raper**, **rchi** and **rsky2**) differ from the NIRCam case. Those keywords are camera specific, and should be used following the recommendations of `Weisz et al. 2024 <https://arxiv.org/abs/2402.03504>`_.
 
 We are now ready to execute the PSF-photometry routine:
 
