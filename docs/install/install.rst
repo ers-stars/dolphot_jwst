@@ -105,6 +105,9 @@ Then we place a folder, containing our preferred PSF models, in the 'tmp' direct
  > cd tmp
  > cp ~/PSFpath/MyPSFs ./
 
+.. note::
+   The recommended WebbPSF settings to create DOLPHOT-compatible PSFs are: fov=51, num=25, oversample=5, add_distortion=True, detsampled=False, norm='exit_pupil'
+
 Finally, we run *nircammakepsf/nirissmakepsf* specifying the desired filter and the PSF grid to use. The routine will convert the requested PSFs to binary files that are ready to use with DOLPHOT. The binary psfs will be located in the 'dolphot2.0/nircam/data/' or 'dolphot2.0/niriss/data/' subdirectory. For instance, if we want to create new PFSs for the NIRCam F090W filter:
 
 .. code-block:: bash
